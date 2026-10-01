@@ -143,7 +143,7 @@
     social.setAttribute('aria-label', 'Follow us on social media');
     social.innerHTML = `
       <span class="footer-social-label">Follow us</span>
-      <a href="https://www.facebook.com/AvilasElRanchito" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook (opens in a new tab)">
+      <a href="https://www.facebook.com/AvilasSanClemente/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook (opens in a new tab)">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.02.28-1.75 1.75-1.75H17V2.37A22.85 22.85 0 0 0 14.45 2C11.92 2 10 3.54 10 6.4v3.1H7V13h3v9z"/avilas-san-clemente-preview/></svg>
         <span>Facebook</span>
       </a>
