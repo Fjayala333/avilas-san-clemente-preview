@@ -1,0 +1,38 @@
+
+/* Shared copy and five-link navigation. Existing concept art direction stays intact. */
+.hospitality-story{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(28px,6vw,88px);padding-block:clamp(48px,7vw,90px);border-top:1px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.hospitality-story h2{font-size:clamp(34px,4vw,58px)}
+.hospitality-story p{font-size:18px;line-height:1.75;max-width:60ch}
+.hospitality-story .text-link{margin-top:20px}
+.story-sources{max-width:none;padding-block:0 35px;font-size:14px;line-height:1.8}
+.story-sources .source-link{display:inline;font:inherit}
+.story-layout .story-second{padding-block:28px 0;margin:0}
+.story-layout .story-second h2{margin-bottom:20px}
+.story-layout .story-second .text-link{margin-top:14px}
+.family .hospitality-story{border-top:4px solid var(--surface)}
+.hacienda .hospitality-story{border-top:4px double var(--accent)}
+.heritage .hospitality-story{border-top:4px double var(--ink)}
+.modern .hospitality-story h2{font-size:clamp(32px,3.4vw,48px)}
+@media(min-width:1001px){
+ .coastal .header{grid-template-columns:1fr 1fr 170px repeat(3,.6667fr);column-gap:16px}
+ .coastal .brand{grid-column:3}
+ .coastal .nav{grid-template-columns:1fr 1fr 170px repeat(3,.6667fr);gap:16px}
+ .coastal .nav a:nth-child(3){grid-column:4}
+ .nav a{white-space:nowrap}
+}
+@media(max-width:1000px){
+ .header,.coastal .header,.hacienda .header,.heritage .header{display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;position:relative}
+ .coastal .brand,.heritage .brand{margin-right:auto}
+ .hacienda .nav-toggle{position:static}
+ .js-nav .nav-toggle{display:block;margin-left:auto}
+ .nav,.coastal .nav,.hacienda .nav{width:100%;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:4px 22px;border-top:1px solid color-mix(in srgb,var(--ink) 25%,transparent);padding-top:12px}
+ .nav a,.coastal .nav a{font-size:14px;letter-spacing:.04em;min-height:44px}
+ .js-nav .nav,.js-nav .coastal .nav{display:none}
+ .js-nav .nav.open,.js-nav .coastal .nav.open{display:flex}
+}
+@media(max-width:650px){
+ .hospitality-story{grid-template-columns:1fr;gap:24px}
+ .hospitality-story p{font-size:16px}
+ .story-sources{font-size:14px}
+ .story-layout h2{font-size:clamp(32px,8vw,43px)}
+}

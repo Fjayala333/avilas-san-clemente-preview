@@ -1,0 +1,9 @@
+/* Production-only cleanup for the transferred Coastal build. */
+.topline {
+  display: none !important;
+}
+
+.footer > a[href$="index.html"],
+.footer > span:nth-of-type(2) {
+  display: none !important;
+}

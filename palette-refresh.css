@@ -1,0 +1,40 @@
+/* Approved September 2026 palettes. Images and the restaurant logo remain original. */
+body.coastal{--paper:#fbfaf5;--surface:#e6edf0;--ink:#173e55;--muted:#526674;--accent:#b14d3d;--on-accent:#fffaf5}
+body.hacienda{--paper:#f8f4ed;--surface:#eddbce;--ink:#512326;--muted:#75575a;--accent:#8b3f31;--on-accent:#fffaf5}
+body.family{--paper:#fff9ec;--surface:#f4df96;--ink:#174637;--muted:#52665c;--accent:#174637;--on-accent:#fff9ec}
+body.modern{--paper:#f7f3ec;--surface:#ebe3d8;--ink:#282624;--muted:#656059;--accent:#ad3327;--on-accent:#fffaf1}
+body.heritage{--paper:#f4efdf;--surface:#e5dac2;--ink:#293754;--muted:#67616b;--accent:#806021;--on-accent:#fffcf4}
+body:is(.coastal,.hacienda,.family,.modern,.heritage){
+ --sc-canvas:var(--paper);--sc-surface:var(--surface);--sc-ink:var(--ink);--sc-ink-soft:var(--muted);
+ --sc-accent:var(--accent);--sc-accent-ink:var(--on-accent);--sc-font-display:var(--display);--sc-font-text:var(--text);
+ background:var(--paper);color:var(--ink);
+}
+/* The menus, dialogs and small controls now belong to their selected concept too. */
+body.clean-menu{
+ --menu-ink:var(--ink);--menu-muted:var(--muted);--menu-paper:var(--paper);
+ --menu-line:color-mix(in srgb,var(--ink) 20%,var(--paper));--menu-accent:var(--accent);--menu-gold:var(--accent);
+}
+.clean-menu .menu-switch{background:var(--surface)}
+.clean-menu .menu-switch button[aria-selected=true]{box-shadow:0 1px 4px color-mix(in srgb,var(--ink) 12%,transparent)}
+body :is(.photo-dialog,.reel-dialog){background:var(--paper);color:var(--ink);border-color:var(--muted)}
+body .photo-dialog .photo-large{background:var(--surface)}
+body :is(.photo-dialog,.reel-dialog)::backdrop{background:color-mix(in srgb,var(--ink) 88%,transparent)}
+body .photo-dialog button{border-color:var(--muted)}
+body .reel-dialog button{background:var(--ink);color:var(--paper)}
+body :is(.photo-dialog,.reel-dialog) :focus-visible{outline-color:var(--ink)}
+body :is(.photo-open:after,.moment-play){background:var(--paper);color:var(--ink)}
+.coastal .coastal-gallery-caption h1 em{color:var(--accent)}
+.coastal .place-inner{box-shadow:0 12px 30px #173e5514}
+.hacienda .threshold{background:#512326;color:#f8f4ed;--ink:#f8f4ed;--muted:#eddbce;--accent:#f2b9a3;--on-accent:#512326}
+.hacienda .threshold-photo:before,.hacienda .threshold-photo:after{background:#512326}
+.family .family-corner{background:#f2ca52;color:#174637}
+.family .visit-strip{--ink:#fff9ec;--accent:#f2ca52;--on-accent:#174637;color:#fff9ec}
+.modern .gallery-expanded .photo-open:after{background:var(--paper);color:var(--ink)}
+.modern .moment-play{background:var(--paper);color:var(--ink)}
+.heritage .heritage-title .eyebrow,.heritage .journal-intro em{color:var(--accent)}
+.heritage-cabinet .cabinet-options button:focus-visible{outline-color:#d8b966}
+/* Keyboard focus retains a contrasting ink ring rather than a pale decorative gold. */
+body :is(.btn,.nav a,.text-link):focus-visible{outline-color:var(--ink)}
+@media print{
+ .hacienda .threshold{background:transparent;color:#512326;--ink:#512326;--accent:#8b3f31;--on-accent:#fffaf5}
+}

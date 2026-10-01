@@ -1,0 +1,181 @@
+/* Five story-page compositions. No home/menu/location styling is changed. */
+.story-page .story-opening { padding-block: 48px 64px; border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent); }
+.story-page .story-heading h1 { font-size: clamp(2.75rem, 5.2vw, 5rem); line-height: 1.06; max-width: 19ch; margin: 14px 0 24px; }
+.story-page .story-heading > p:last-of-type { font-size: 1.125rem; line-height: 1.7; max-width: 43ch; }
+.story-page .story-opening .actions { margin-top: 24px; }
+.story-page .story-frame { min-width: 0; margin: 0; }
+.story-page .story-frame img { width: 100%; height: auto; object-fit: contain; }
+.story-page .story-frame figcaption { font-size: .8125rem; line-height: 1.55; margin-top: 14px; max-width: 55ch; }
+.story-page .story-frame figcaption a { display: inline; text-decoration-thickness: 1px; }
+.story-page .story-chapter { padding-block: clamp(48px, 7vw, 94px); scroll-margin-top: 36px; }
+.story-page .story-chapter h2 { font-size: clamp(2.25rem, 4.1vw, 3.75rem); line-height: 1.08; max-width: 19ch; margin-bottom: 24px; }
+.story-page .story-chapter p { font-size: 1.0625rem; line-height: 1.8; }
+.story-page .story-chapter p + p { margin-top: 20px; }
+.story-page .story-copy { min-width: 0; max-width: 65ch; }
+.story-page .story-roots { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); align-items: center; gap: clamp(32px, 6vw, 88px); }
+.story-page .story-roots > .story-frame { max-width: 600px; }
+.story-page .story-roots--voices-only { grid-template-columns: minmax(0, 1fr); }
+.story-page .story-roots--voices-only > .story-copy { width: 100%; max-width: none; }
+.story-page .story-roots--voices-only .founder-voices { gap: clamp(48px, 10vw, 150px); margin-top: 0; padding: clamp(30px, 4vw, 48px) clamp(12px, 4vw, 52px); border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); }
+.story-page .story-roots--voices-only .founder-voices > div { max-width: 38ch; }
+.story-page .story-roots--voices-only .founder-voices > div:last-child { justify-self: end; }
+.story-page .founder-voices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 30px; padding-top: 24px; border-top: 1px solid color-mix(in srgb, var(--ink) 28%, transparent); }
+.story-page .founder-voices h3 { font: 600 1rem/1.5 var(--text); margin-bottom: 8px; }
+.story-page .founder-voices p { font-size: 1rem; line-height: 1.7; }
+.story-page .story-beginnings { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: center; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+.story-page .story-beginnings .story-frame { max-width: 700px; }
+.story-page .story-beginnings h2 { font-size: clamp(2.25rem, 3.3vw, 3.25rem); }
+.story-page .story-delmar { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(32px, 7vw, 90px); align-items: center; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+.story-page .story-delmar .story-frame { max-width: 495px; justify-self: end; }
+.story-page .story-text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .9375rem; margin-top: 20px; }
+.story-page .story-local { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 7vw, 90px); align-items: center; }
+.story-page .story-local .story-frame { max-width: 580px; }
+.story-page .story-local-note { border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent); padding-top: 24px; margin-top: 28px; }
+.story-page .story-local-note p { font-size: 1rem; }
+.story-page .story-soup { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(32px, 8vw, 110px); }
+.story-page .story-soup .story-frame { max-width: 370px; justify-self: center; }
+.story-page .story-soup .story-frame img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 54%; }
+.story-page .story-team { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(32px, 8vw, 110px); align-items: center; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+.story-page .story-team .story-reel { width: min(100%, 310px); justify-self: center; }
+.story-page .story-reel .moment-photo { aspect-ratio: 9 / 16; }
+.story-page .story-reel .moment-photo img { object-fit: contain; }
+.story-page .story-reel figcaption { font-size: .8125rem; line-height: 1.6; margin-top: 12px; }
+.story-page .story-team .film-note { font-size: .875rem; line-height: 1.65; color: var(--muted); }
+.story-page .story-staff-list { display: flex; flex-wrap: wrap; gap: 18px 32px; padding: 24px 0; margin: 24px 0; border-block: 1px solid color-mix(in srgb, var(--ink) 28%, transparent); list-style: none; }
+.story-page .story-staff-list li { font-size: 1.125rem; font-weight: 600; }
+.story-page .story-staff-list span { display: block; font-size: .875rem; font-weight: 400; margin-top: 4px; }
+.story-page .story-year { text-align: center; padding: 32px; border-block: 1px solid currentColor; }
+.story-page .story-year strong { display: block; font: 500 clamp(5rem, 10vw, 9rem)/1.15 var(--display); letter-spacing: -.04em; }
+.story-page .story-year p { margin-inline: auto; font-size: 1rem; }
+.story-page .story-soup-note { grid-template-columns: minmax(0, 1fr); padding-block: 48px; }
+.story-page .story-soup-note .story-copy { max-width: 800px; margin-inline: auto; text-align: center; }
+.story-page .story-soup-note h2,.story-page .story-soup-note p { margin-inline: auto; }
+.story-page .story-invitation { padding-block: 60px 70px; border-top: 1px solid color-mix(in srgb, var(--ink) 35%, transparent); }
+.story-page .story-invitation h2 { font-size: clamp(2.5rem, 4.5vw, 4.5rem); max-width: 20ch; margin-bottom: 24px; }
+.story-page .story-invitation > p { font-size: 1.0625rem; line-height: 1.8; }
+.story-page .story-references { padding-block: 22px 36px; border-top: 1px solid color-mix(in srgb, var(--ink) 20%, transparent); font-size: .875rem; }
+.story-page .story-references summary { cursor: pointer; min-height: 44px; padding-block: 10px; }
+.story-page .story-references ul { margin: 16px 0 0; padding-left: 20px; }
+.story-page .story-references li { margin-bottom: 12px; }
+.story-page .story-references p { font-size: .875rem; line-height: 1.7; margin-top: 16px; }
+
+/* Coastal: a spacious photo essay, with captions on their own paper plane. */
+.coastal.story-page .story-opening { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 6vw; align-items: center; }
+.coastal.story-page .story-opening .story-frame { max-width: 495px; position: relative; padding: 16px; background: #e6edf0; transform: translateY(calc((1 - var(--scene, 1)) * 14px)); }
+.coastal.story-page .story-opening .story-frame figcaption { background: var(--paper); padding: 16px 18px; margin: 0 -30px -30px 18px; position: relative; }
+.coastal.story-page .story-roots .story-frame { padding: 12px; background: #fffdf6; box-shadow: 0 16px 34px #173e5517; }
+.coastal.story-page .story-local { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
+.coastal.story-page .story-invitation { text-align: center; }
+.coastal.story-page .story-invitation h2,.coastal.story-page .story-invitation p { margin-inline: auto; }
+.coastal.story-page .story-invitation .actions { justify-content: center; }
+
+/* Hacienda: intimate kitchen-to-table chapters and architectural picture frames. */
+.hacienda.story-page .story-opening { text-align: center; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .65fr); align-items: center; gap: 7vw; }
+.hacienda.story-page .story-heading h1,.hacienda.story-page .story-heading > p { margin-inline: auto; }
+.hacienda.story-page .story-opening .actions { justify-content: center; }
+.hacienda.story-page .story-opening .story-frame { max-width: 330px; justify-self: center; }
+.hacienda.story-page .story-opening .story-frame img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 57%; border-radius: 48% 48% 0 0; border: 10px solid var(--surface); }
+.hacienda.story-page .story-roots { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.hacienda.story-page .story-roots > .story-frame { grid-column: 2; grid-row: 1; padding: 14px; border: 4px double var(--accent); }
+.hacienda.story-page .story-roots > .story-copy { grid-column: 1; grid-row: 1; }
+.hacienda.story-page .story-delmar .story-frame img { border-radius: 45% 45% 0 0; }
+.hacienda.story-page .story-local { padding-inline: 32px; background: var(--surface); border-block: 4px double var(--accent); }
+.hacienda.story-page .story-local h2 { max-width: 15ch; }
+.hacienda.story-page .story-invitation { text-align: center; border-top: 4px double var(--accent); }
+.hacienda.story-page .story-invitation h2,.hacienda.story-page .story-invitation p { margin-inline: auto; }
+.hacienda.story-page .story-invitation .actions { justify-content: center; }
+
+/* Family: community first, with the welcome note beside (never over) the faces. */
+.family.story-page .story-opening { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 24px; padding-bottom: 80px; }
+.family.story-page .story-heading { padding: 32px; background: #f2ca52; position: relative; z-index: 1; margin-right: 0; box-shadow: 0 14px 30px #17463712; transform: rotate(-1deg); }
+.family.story-page .story-heading h1 { font-size: clamp(2.75rem, 4.3vw, 4.375rem); }
+.family.story-page .story-opening .story-frame { padding: 12px 12px 20px; background: #fffdf5; transform: translateY(calc((1 - var(--scene, 1)) * 14px)) rotate(1deg); box-shadow: 0 14px 30px #1746371c; }
+.family.story-page .story-opening .story-frame figcaption { padding-inline: 6px; }
+.family.story-page .story-roots .story-frame,.family.story-page .story-beginnings .story-frame { padding: 14px 14px 22px; background: #fffdf5; box-shadow: 0 14px 30px #17463718; transform: rotate(calc((1 - var(--scene, 1)) * -2deg)); }
+.family.story-page .story-local { grid-template-columns: 1fr 1.2fr; gap: 5vw; padding: 48px; background: var(--ink); color: var(--paper); }
+.family.story-page .story-local .story-local-note { border-top-color: #fff9ec55; }
+.family.story-page .story-local .story-text-link { color: var(--paper); }
+.family.story-page .story-soup .story-frame { padding: 12px; background: #f2ca52; rotate: 2deg; }
+.family.story-page .story-invitation { background: #f2ca52; padding: 42px; margin-bottom: 50px; border: 0; }
+
+/* Modern: a bold contact sheet, then readable editorial bands. */
+.modern.story-page .story-heading h1 { font-size: clamp(2.625rem, 5.7vw, 5rem); max-width: none; text-transform: uppercase; }
+.modern.story-page .story-heading > p:last-of-type { max-width: 60ch; }
+.modern.story-page .story-contact-sheet { display: grid; grid-template-columns: 1.1fr 1.25fr .65fr; align-items: end; gap: 20px; margin-top: 42px; }
+.modern.story-page .story-contact-sheet .story-frame:nth-child(1) { padding-bottom: 60px; }
+.modern.story-page .story-contact-sheet .story-frame:nth-child(3) img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 54%; }
+.modern.story-page .story-contact-sheet figcaption { border-top: 2px solid var(--ink); padding-top: 10px; }
+.modern.story-page .story-roots { border-block: 2px solid var(--ink); grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+.modern.story-page .story-chapter h2 { font-size: clamp(2rem, 3.6vw, 3.5rem); text-transform: uppercase; max-width: 20ch; }
+.modern.story-page .story-delmar { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border: 0; }
+.modern.story-page .story-local { padding: 42px; background: #e6dcd0; gap: 5vw; }
+.modern.story-page .story-local .story-frame { border: 8px solid #fffaf1; }
+.modern.story-page .story-team { border-top-width: 2px; }
+.modern.story-page .story-invitation { border-top: 4px solid var(--ink); display: grid; grid-template-columns: 1.2fr 1fr; column-gap: 7vw; }
+.modern.story-page .story-invitation .actions { grid-column: 2; margin-top: 0; }
+.modern.story-page .story-invitation h2 { grid-row: 1 / 3; }
+
+/* Heritage: a family frontispiece and a chronological, unpinned journal. */
+.heritage.story-page .story-opening { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 6vw; align-items: center; border-block: 4px double var(--ink); }
+.heritage.story-page .story-opening .story-frame { grid-column: 1; grid-row: 1; padding: 12px; border: 1px solid #29375455; }
+.heritage.story-page .story-opening .story-heading { grid-column: 2; grid-row: 1; }
+.heritage.story-page .story-heading h1 { font-size: clamp(2.75rem, 4.5vw, 4.5rem); }
+.heritage.story-page .story-roots { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
+.heritage.story-page .story-roots .story-frame { padding: 10px; border: 1px solid #29375455; }
+.heritage.story-page .story-delmar { border-top: 4px double #29375470; }
+.heritage.story-page .story-local { border-block: 4px double #29375470; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+.heritage.story-page .story-local .story-frame { grid-column: 2; grid-row: 1; }
+.heritage.story-page .story-local .story-copy { grid-column: 1; grid-row: 1; }
+.heritage.story-page .story-soup .story-frame { padding: 10px; border: 1px solid #29375455; }
+.heritage.story-page .story-invitation { text-align: center; border-top: 4px double var(--ink); }
+.heritage.story-page .story-invitation h2,.heritage.story-page .story-invitation p { margin-inline: auto; }
+.heritage.story-page .story-invitation .actions { justify-content: center; }
+
+@media(max-width: 800px) {
+  .story-page .story-opening { padding-block: 30px 44px; }
+  .story-page .story-heading h1 { font-size: clamp(2.375rem, 9vw, 3.75rem); max-width: none; }
+  .story-page .story-heading > p:last-of-type { font-size: 1rem; }
+  .story-page .story-chapter { padding-block: 44px; }
+  .story-page .story-chapter h2 { font-size: clamp(2rem, 7.8vw, 3rem); max-width: none; }
+  .story-page .story-chapter p { font-size: 1rem; }
+  .story-page .story-roots,.story-page .story-beginnings,.story-page .story-delmar,.story-page .story-local,.story-page .story-soup,.story-page .story-team,
+  .coastal.story-page .story-opening,.hacienda.story-page .story-opening,.family.story-page .story-opening,.heritage.story-page .story-opening,
+  .hacienda.story-page .story-roots,.heritage.story-page .story-roots,.modern.story-page .story-roots,.coastal.story-page .story-local,.family.story-page .story-local,.heritage.story-page .story-local,.modern.story-page .story-delmar {
+    grid-template-columns: minmax(0, 1fr); gap: 28px;
+  }
+  .story-page .story-roots > .story-frame,.story-page .story-roots > .story-copy,
+  .hacienda.story-page .story-roots > .story-frame,.hacienda.story-page .story-roots > .story-copy,
+  .heritage.story-page .story-opening .story-frame,.heritage.story-page .story-opening .story-heading,
+  .heritage.story-page .story-local .story-frame,.heritage.story-page .story-local .story-copy { grid-column: auto; grid-row: auto; }
+  .story-page .founder-voices { gap: 20px; }
+  .story-page .story-delmar .story-frame { justify-self: start; }
+  .story-page .story-invitation { padding-block: 42px; }
+  .story-page .story-invitation h2 { font-size: clamp(2.25rem, 8vw, 3.5rem); }
+  .coastal.story-page .story-opening .story-frame { transform: none; margin-bottom: 18px; }
+  .coastal.story-page .story-opening .story-frame figcaption { margin-right: 0; }
+  .family.story-page .story-heading { margin: 0; transform: none; padding: 24px; }
+  .family.story-page .story-heading h1 { font-size: clamp(2.375rem, 9vw, 3.5rem); }
+  .family.story-page .story-opening .story-frame,.family.story-page .story-roots .story-frame,.family.story-page .story-beginnings .story-frame { transform: none; }
+  .family.story-page .story-soup .story-frame { rotate: 0deg; }
+  .family.story-page .story-local,.family.story-page .story-invitation,.modern.story-page .story-local,.hacienda.story-page .story-local { padding: 28px 20px; }
+  .modern.story-page .story-heading h1 { font-size: clamp(2.125rem, 7.3vw, 3.5rem); }
+  .modern.story-page .story-contact-sheet { grid-template-columns: 1fr 1fr; gap: 20px 14px; }
+  .modern.story-page .story-contact-sheet .story-frame:nth-child(1) { padding-bottom: 0; grid-column: 1 / -1; max-width: 495px; }
+  .modern.story-page .story-invitation { display: block; }
+  .modern.story-page .story-invitation .actions { margin-top: 24px; }
+  .heritage.story-page .story-heading h1 { font-size: clamp(2.5rem, 9vw, 3.75rem); }
+}
+@media(max-width: 480px) {
+  .story-page .founder-voices { grid-template-columns: 1fr; }
+  .story-page .story-roots--voices-only .founder-voices > div:last-child { justify-self: stretch; }
+  .story-page .story-reel .moment-photo { max-width: 280px; margin-inline: auto; }
+  .story-page .story-opening .btn,.story-page .story-invitation .btn { font-size: .875rem; padding-inline: 16px; }
+}
+.story-page.motion-off .story-frame,.story-page.motion-off .story-heading { transform: none !important; rotate: 0deg !important; }
+@media(prefers-reduced-motion: reduce) {
+  .story-page .story-frame,.story-page .story-heading { transform: none !important; rotate: 0deg !important; }
+}
+@media print {
+  .story-page .story-frame,.story-page .story-heading { transform: none !important; rotate: 0deg !important; }
+  .story-page .story-chapter { break-inside: avoid; }
+}

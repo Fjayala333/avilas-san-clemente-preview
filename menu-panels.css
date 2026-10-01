@@ -1,0 +1,16 @@
+/* Each existing tab owns its readable, keyboard-scrollable menu. */
+.clean-menu.menu-enhanced .menu-scroll{max-height:64vh;max-height:64dvh;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:var(--menu-ink) var(--menu-line);scrollbar-gutter:stable;padding:8px 20px 16px 2px;scroll-padding-block:16px;border-bottom:1px solid var(--menu-line)}
+.clean-menu .menu-viewport-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 0 16px;font:400 13px/1.5 var(--text);color:var(--menu-muted)}
+.clean-menu .menu-viewport-tools button{font:600 13px/1.5 var(--text);color:var(--menu-ink);background:transparent;border:1px solid var(--menu-line);padding:9px 14px;min-height:44px;border-radius:4px;cursor:pointer}
+.clean-menu .menu-viewport-tools button:focus-visible{outline:3px solid var(--menu-ink);outline-offset:3px}
+.clean-menu .menu-paper.menus-uncontained .menu-scroll{max-height:none;overflow:visible;padding-right:0;border-bottom:0}
+.clean-menu .menu-scroll:focus-visible{outline:2px solid var(--menu-ink);outline-offset:4px}
+.clean-menu .menu-description{margin-bottom:20px}
+.clean-menu .menu-scroll .menu-category{scroll-margin-top:16px}
+@media(max-width:650px){
+ .clean-menu.menu-enhanced .menu-scroll{max-height:58vh;max-height:58dvh;padding-right:10px}
+ .clean-menu .menu-paper.menus-uncontained .menu-scroll{max-height:none}
+ .clean-menu .menu-viewport-tools{font-size:12px}
+}
+@media(max-height:500px){.clean-menu.menu-enhanced .menu-scroll{max-height:70vh;max-height:70dvh}.clean-menu .menu-paper.menus-uncontained .menu-scroll{max-height:none}}
+@media print{.clean-menu .menu-viewport-tools{display:none}.clean-menu.menu-enhanced .menu-scroll{max-height:none;overflow:visible;border:0;padding:0}}

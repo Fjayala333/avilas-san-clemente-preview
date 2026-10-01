@@ -1,0 +1,925 @@
+{
+  "checked": "2026-09-09",
+  "officialPage": "https://avilaselranchito.com/san-clemente/",
+  "orderUrl": "https://order.online/store/AvilasElRanchito-36353517?hideModal=true&pickup=true",
+  "sources": {
+    "food": {
+      "url": "https://avilaselranchito.com/wp-content/uploads/2023/12/21125-AER-SC-RegularMenu-0124-v1.pdf",
+      "revision": "SC 6-2026"
+    },
+    "drinks": {
+      "url": "https://avilaselranchito.com/wp-content/uploads/2023/12/21125-AER-SC-Drinks-v1.pdf",
+      "revision": "SC 1-25"
+    },
+    "trays": {
+      "url": "https://avilaselranchito.com/wp-content/uploads/2024/01/Party-Trays-To-Go-1.pdf",
+      "revision": "4/26"
+    }
+  },
+  "hours": [
+    [
+      "Monday–Thursday",
+      "11 AM–9 PM"
+    ],
+    [
+      "Friday",
+      "11 AM–10 PM"
+    ],
+    [
+      "Saturday",
+      "10 AM–10 PM"
+    ],
+    [
+      "Sunday",
+      "10 AM–9 PM"
+    ]
+  ],
+  "categories": [
+    [
+      "appetizers",
+      "Appetizers",
+      "",
+      [
+        [
+          "Guacamole Fresco",
+          "$16",
+          "Avocado, tomato, cilantro, onion, garlic and lime; topped with shredded cheese."
+        ],
+        [
+          "Nachos Especiál",
+          "$19",
+          "Shredded chicken or beef, beans, Salsa Ranchera, pico de gallo, cheese, sour cream and guacamole."
+        ],
+        [
+          "Avila’s Appetizer",
+          "$28",
+          "Beef taquitos, chicken flautas, beef tacos and a quesadilla; guacamole and sour cream."
+        ],
+        [
+          "Ceviche",
+          "$23; shrimp $25",
+          "Lime-marinated seafood, tomato, onion, cilantro and avocado with tostada shells. The printed menu’s base seafood wording is ambiguous; confirm your choice when ordering."
+        ],
+        [
+          "Shrimp Cocktail",
+          "$25",
+          "Wild-caught shrimp, lime, cilantro and avocado in a tomato-based cocktail."
+        ]
+      ]
+    ],
+    [
+      "botanas",
+      "Botana platters",
+      "Served with avocado, tomato, onion, jalapeños, pico de gallo, lemon and warm tortillas. Add Mexican rice and beans for $5.",
+      [
+        [
+          "Shrimp Botana",
+          "$44",
+          "Mazatlán shrimp in garlic butter."
+        ],
+        [
+          "Fiesta Botana",
+          "$46",
+          "Garlic-butter shrimp, pork and grilled chicken."
+        ]
+      ]
+    ],
+    [
+      "soups",
+      "Soups & salads",
+      "",
+      [
+        [
+          "Mamá Avila’s Soup",
+          "$18",
+          "Chicken and rice soup with avocado, cilantro, onion, tomato and warm tortillas. Condiment plate with cheese, chips, avocado and jalapeños +$5."
+        ],
+        [
+          "Grande Taco Salad",
+          "$20",
+          "Flour tortilla shell, lettuce, beans, shredded chicken or beef, or grilled chicken; pico de gallo, cheese, guacamole and sour cream."
+        ],
+        [
+          "Azteca Chicken Salad",
+          "$20",
+          "Grilled chicken, cilantro-lime dressing, avocado, black beans, corn salsa and tortilla strips."
+        ],
+        [
+          "Grilled Chicken Salad",
+          "$20",
+          "Chicken, lettuce, tomato, cheese and avocado. Barbecue style on request."
+        ],
+        [
+          "Tostada",
+          "$19–$20",
+          "Shredded chicken or beef $19; grilled chicken or carnitas $20. Beans, lettuce, cheese, pico de gallo, guacamole and sour cream."
+        ],
+        [
+          "Avila’s Soup and Salad",
+          "$21",
+          "A bowl of Avila’s Soup and a green salad; tortillas on request."
+        ],
+        [
+          "Tacos and Caldo",
+          "$22",
+          "Small soup and two crispy tacos, taquitos or chicken flautas. Guacamole or sour cream +$1 each."
+        ],
+        [
+          "Albondigas Soup",
+          "$18",
+          "Meatballs and vegetables with warm tortillas."
+        ],
+        [
+          "Menudo",
+          "$18",
+          "Available Saturday and Sunday only. Beef tripe soup with tortillas."
+        ]
+      ]
+    ],
+    [
+      "combinations",
+      "Combinations",
+      "Includes Mexican rice and beans with melted cheese; frijoles frescos or black beans on request. Choose crispy taco, soft taco, flauta, taquito, enchilada, enchilada de tomatillo, chile relleno or tamale. Shrimp substitution +$4 per item for crispy tacos, soft tacos and either enchilada.",
+      [
+        [
+          "One Item Combo",
+          "$19",
+          "Choose one combination item."
+        ],
+        [
+          "Two Item Combo",
+          "$22",
+          "Choose two combination items."
+        ],
+        [
+          "Guanajuato",
+          "$19.50",
+          "Two flautas or taquitos."
+        ]
+      ]
+    ],
+    [
+      "entrees",
+      "Traditionales",
+      "Served with Mexican rice, beans with melted cheese, guacamole and warm tortillas; frijoles frescos or black beans on request. Add a cup of Avila’s Soup to any entrée for $5.",
+      [
+        [
+          "Carnitas",
+          "$26",
+          "Pork marinated with lemon and garlic."
+        ],
+        [
+          "Steak or Chicken Picado",
+          "$26–$27",
+          "Chicken $26; steak $27. Bell peppers, onions, tomatoes and El Ranchito sauce."
+        ],
+        [
+          "Shrimp al Mojo de Ajo",
+          "$30",
+          "Mazatlán shrimp sautéed in garlic butter."
+        ],
+        [
+          "Carne Asada",
+          "$29",
+          "Grilled rib-eye steak."
+        ],
+        [
+          "Pepe’s Grill Platter",
+          "$29",
+          "Steak or chicken over grilled onions with blackened tomatillo salsa and Ortega chiles. Substitute shrimp +$4."
+        ],
+        [
+          "Chile Verde",
+          "$26",
+          "Pork in green chile salsa."
+        ],
+        [
+          "Sizzling Fajitas",
+          "$22–$30",
+          "Mixed vegetables $22; chicken $27; steak $28; shrimp $30."
+        ],
+        [
+          "Asada and Shrimp al Mojo de Ajo",
+          "$30",
+          "Sliced steak and Mazatlán shrimp in garlic butter."
+        ],
+        [
+          "Chicken and Mole",
+          "$26",
+          "Chicken breast in Mamá Avila’s mole sauce with sour cream."
+        ],
+        [
+          "Chile Colorado",
+          "$27",
+          "Steak strips in red chile salsa."
+        ],
+        [
+          "Camarones Rancheros",
+          "$30",
+          "Shrimp with tomato salsa, bell peppers, tomatoes and onions."
+        ]
+      ]
+    ],
+    [
+      "favorites",
+      "Local favorites",
+      "",
+      [
+        [
+          "Baja Bowl",
+          "$22",
+          "Choice of chicken, steak or Mahi Mahi. Substitute shrimp +$5."
+        ],
+        [
+          "Ahi Bowl",
+          "$25",
+          "See the printed menu for full preparation details."
+        ],
+        [
+          "Grilled Fiesta Platter",
+          "$25",
+          "Chicken or steak; substitute shrimp +$5."
+        ],
+        [
+          "Quesadilla Avila",
+          "$21",
+          "Shredded chicken or beef; substitute shrimp +$5."
+        ],
+        [
+          "Chingolingas",
+          "$21",
+          "Chicken-filled pastry with rice, beans, guacamole and sour cream."
+        ],
+        [
+          "Tequila Shrimp",
+          "$30",
+          "See the printed menu for full preparation details."
+        ],
+        [
+          "Tampiqueña",
+          "$28",
+          "Steak and a cheese enchilada with rice, beans and guacamole."
+        ],
+        [
+          "Veggie Chile Relleno",
+          "$20; chicken $22",
+          "Vegetable chile relleno; grilled chicken option $22."
+        ],
+        [
+          "Enchiladas Camarones Ranchero",
+          "$28",
+          "Shrimp enchiladas."
+        ]
+      ]
+    ],
+    [
+      "tacos",
+      "Tacos",
+      "Plate prices below are for the stated number of tacos, not individual tacos. Individual options are under À la carte.",
+      [
+        [
+          "Street Tacos · three",
+          "$26",
+          "Carnitas with guacamole, pico de gallo and salsa negra, or carne asada with cilantro, onion and salsa negra. Rice and beans."
+        ],
+        [
+          "Tacos de Papa · two",
+          "$22",
+          "Potato and Ortega chiles with lettuce, pico de gallo and cheese; rice and frijoles frescos."
+        ],
+        [
+          "Tacos and Salad · two",
+          "$22",
+          "Crispy chicken or beef tacos with salad."
+        ],
+        [
+          "Shrimp Tacos · two",
+          "$28",
+          "Garlic-butter shrimp in flour tortillas with cabbage, aioli and pico de gallo; rice and black beans."
+        ],
+        [
+          "Blackened Mahi Mahi Tacos · two",
+          "$26",
+          "See the printed menu for full preparation details."
+        ],
+        [
+          "Avocado Tacos · two",
+          "$21",
+          "Add chicken +$3."
+        ],
+        [
+          "Surf & Turf Tacos · two",
+          "$26",
+          "See the printed menu for full preparation details."
+        ]
+      ]
+    ],
+    [
+      "light",
+      "Light cuisine",
+      "Category name from the restaurant’s menu; no dietary or allergen claims are implied.",
+      [
+        [
+          "Low Carb Fajitas",
+          "$28",
+          "Chicken or steak; substitute shrimp +$5."
+        ],
+        [
+          "Light Enchiladas · two",
+          "$22",
+          "See the printed menu for full preparation details."
+        ],
+        [
+          "Fajita Salad",
+          "$21",
+          "Chicken or steak; substitute shrimp +$5."
+        ],
+        [
+          "Filet Mignon Salad",
+          "$23",
+          "See the printed menu for full preparation details."
+        ]
+      ]
+    ],
+    [
+      "breakfast",
+      "Breakfast, all day",
+      "The printed menu lists breakfast as available all day and night. Includes rice and beans with melted cheese; frijoles frescos or black beans on request.",
+      [
+        [
+          "Huevos Rancheros",
+          "$20",
+          ""
+        ],
+        [
+          "Huevos con Chorizo",
+          "$21",
+          ""
+        ],
+        [
+          "Breakfast Burrito",
+          "$21.50",
+          "Chicken or chorizo."
+        ],
+        [
+          "Quesadilla Egg-Celente",
+          "$21.50",
+          ""
+        ],
+        [
+          "Steak & Eggs",
+          "$25",
+          ""
+        ],
+        [
+          "Machaca con Huevos",
+          "$21",
+          "Chicken or beef."
+        ],
+        [
+          "Omelet Mexican Style",
+          "$20",
+          ""
+        ],
+        [
+          "Chilaquiles",
+          "$20",
+          "Verde or roja."
+        ]
+      ]
+    ],
+    [
+      "burritos",
+      "Burritos",
+      "",
+      [
+        [
+          "Fresco Burrito",
+          "$22",
+          "Chicken, steak or Mahi Mahi; substitute shrimp +$5."
+        ],
+        [
+          "Azteca Burrito",
+          "$21",
+          "Shredded chicken, beef or chile verde."
+        ],
+        [
+          "Mayan Burrito",
+          "$21",
+          "Chicken and rice."
+        ],
+        [
+          "Autumn Burrito",
+          "$24",
+          "Chicken and vegetables."
+        ],
+        [
+          "Chimi-Changa",
+          "$21",
+          "Shredded beef, chicken or chile verde."
+        ],
+        [
+          "California Burrito",
+          "$21",
+          "Carne asada, fries, cheese, pico de gallo, guacamole and sour cream."
+        ]
+      ]
+    ],
+    [
+      "a-la-carte",
+      "À la carte",
+      "",
+      [
+        [
+          "Crispy Taco",
+          "$8",
+          "Shredded chicken or beef."
+        ],
+        [
+          "Enchilada",
+          "$9",
+          "Cheese, chicken or beef; salsa roja or tomatillo."
+        ],
+        [
+          "Flautas · two",
+          "$13",
+          "Chicken; sour cream and guacamole."
+        ],
+        [
+          "Soft Taco",
+          "$9",
+          "Grilled chicken, steak, carnitas or Mahi Mahi."
+        ],
+        [
+          "Taquitos · two",
+          "$13",
+          "Chicken or beef; sour cream and guacamole."
+        ],
+        [
+          "Chile Relleno",
+          "$13",
+          "Cheese-filled chile in egg batter with Salsa Ranchera."
+        ],
+        [
+          "Avila’s Burger",
+          "$20",
+          "Cheeseburger with avocado, tomato, onion, lettuce and pickled jalapeños; curly fries."
+        ]
+      ]
+    ],
+    [
+      "kids",
+      "For the kids",
+      "For children under 12. The six $11.50 meals include rice and beans or curly fries, plus a beverage. Orange, cranberry or pineapple juice +$2.",
+      [
+        [
+          "Quesadilla",
+          "$11.50",
+          ""
+        ],
+        [
+          "Burrito",
+          "$11.50",
+          ""
+        ],
+        [
+          "Taco",
+          "$11.50",
+          ""
+        ],
+        [
+          "Enchilada",
+          "$11.50",
+          ""
+        ],
+        [
+          "Taquito",
+          "$11.50",
+          ""
+        ],
+        [
+          "Chicken Fingers",
+          "$11.50",
+          ""
+        ],
+        [
+          "Toddler Plate",
+          "$6.50",
+          "Chicken, rice and frijoles frescos."
+        ],
+        [
+          "Baby Rice",
+          "$4",
+          "Rice with chicken broth."
+        ]
+      ]
+    ],
+    [
+      "desserts",
+      "Desserts",
+      "",
+      [
+        [
+          "Fried Ice Cream",
+          "$11.50",
+          "Vanilla ice cream, flaky crisps, chocolate syrup and whipped cream."
+        ],
+        [
+          "Flan",
+          "$10.50",
+          "Caramel custard with syrup and whipped cream."
+        ],
+        [
+          "Empanadillas",
+          "$12",
+          "Apple pastry with cinnamon sugar, vanilla ice cream, chocolate syrup and whipped cream."
+        ],
+        [
+          "Churros",
+          "$13",
+          "Cinnamon-sugar pastry with vanilla ice cream, chocolate syrup and whipped cream."
+        ]
+      ]
+    ],
+    [
+      "beverages",
+      "Beverages & mocktails",
+      "Soft drinks, coffee and tea list complimentary refills but no price in the printed menu. Ask the restaurant for pricing.",
+      [
+        [
+          "Soft drinks, coffee & tea",
+          "Price not listed",
+          "Coke, Diet Coke, Coke 0, Sprite, Pibb Xtra, Root Beer, Minute Maid Lemonade, coffee, iced tea and hot tea."
+        ],
+        [
+          "Seasonal Kombucha / Becks / Corona Cero",
+          "$8 each",
+          "Listed in the menu’s non-alcoholic section."
+        ],
+        [
+          "Capacity IPA / Capacity Mexican Lager",
+          "$9.50 each",
+          "Listed in the menu’s non-alcoholic section."
+        ],
+        [
+          "Mojito mocktail",
+          "$10",
+          "Mint, lime, simple syrup and soda water."
+        ],
+        [
+          "Paloma mocktail",
+          "$10",
+          "Orange, grapefruit, lime, Fresca and Tajín."
+        ],
+        [
+          "Piña Colada mocktail",
+          "$10",
+          "Pineapple, coconut and whipped cream."
+        ],
+        [
+          "Daiquiri mocktail",
+          "$10",
+          "Strawberry, lime and simple syrup."
+        ]
+      ]
+    ],
+    [
+      "drinks",
+      "House cocktails",
+      "From the official drink menu, printed January 2025. Availability and prices may change.",
+      [
+        [
+          "Paloma",
+          "$15",
+          ""
+        ],
+        [
+          "Victor’s Old Fashioned",
+          "$15.50",
+          ""
+        ],
+        [
+          "Berry Limonada",
+          "$15",
+          ""
+        ],
+        [
+          "Black Raspberry Mojito",
+          "$15.50",
+          ""
+        ],
+        [
+          "Mango Madness",
+          "$15",
+          ""
+        ],
+        [
+          "Tito’s Strawa",
+          "$15",
+          ""
+        ],
+        [
+          "One Love Tea",
+          "$14.50",
+          ""
+        ],
+        [
+          "Mexican Mojito",
+          "$15.50",
+          ""
+        ],
+        [
+          "Summer Breeze",
+          "$14",
+          ""
+        ],
+        [
+          "Tamarind Mule",
+          "$15",
+          ""
+        ]
+      ]
+    ],
+    [
+      "margaritas",
+      "Margaritas",
+      "",
+      [
+        [
+          "Green Mermaid",
+          "$15.50",
+          ""
+        ],
+        [
+          "Ultimate",
+          "$16",
+          "Make it a Cadillac +$2."
+        ],
+        [
+          "Strawberry Mint",
+          "$15",
+          ""
+        ],
+        [
+          "Smoked Mezcal",
+          "$15.50",
+          ""
+        ],
+        [
+          "Blueberry",
+          "$15.50",
+          ""
+        ],
+        [
+          "Raspberry",
+          "$16",
+          ""
+        ],
+        [
+          "Juan’s Tamarindo Chile",
+          "$15",
+          ""
+        ],
+        [
+          "Skinny Coconut",
+          "$15.50",
+          ""
+        ],
+        [
+          "Skinny",
+          "$15",
+          "Make it a Cadillac +$2."
+        ],
+        [
+          "Guava",
+          "$15",
+          ""
+        ],
+        [
+          "Cucumber Vodka",
+          "$15",
+          "Tequila available on request."
+        ],
+        [
+          "Watermelon",
+          "$15.50",
+          ""
+        ],
+        [
+          "Corona Rita",
+          "$19",
+          "XL house margarita with a 7 oz Corona."
+        ],
+        [
+          "Sangarita",
+          "$16",
+          ""
+        ],
+        [
+          "Pom & Passion",
+          "$16",
+          ""
+        ]
+      ]
+    ],
+    [
+      "beer-wine",
+      "Beer, wine & tequila",
+      "Full cocktail ingredients and the unpriced tequila selection are in the official drinks PDF.",
+      [
+        [
+          "Imported & craft beer",
+          "$8 each",
+          "Bohemia, Corona, Corona Light, Dos XX Amber or Lager, Negra Modelo, Tecate, Pacifico, Sculpin IPA, Blue Moon and Trestles IPA."
+        ],
+        [
+          "Draft beer",
+          "$8 each",
+          "Cerveza Avila, Modelo Especial and seasonal beer."
+        ],
+        [
+          "Domestic beer",
+          "$7.50 each",
+          "Coors Light and Bud Light."
+        ],
+        [
+          "Seltzers",
+          "$8 each",
+          "Watermelon, mango, passion and pineapple."
+        ],
+        [
+          "Josh Pinot Noir",
+          "$15",
+          ""
+        ],
+        [
+          "Coppola Diamond Collection Cabernet",
+          "$13",
+          ""
+        ],
+        [
+          "Las Olas Cabernet",
+          "$10.50",
+          ""
+        ],
+        [
+          "Austin Paso Robles Cabernet",
+          "$17",
+          ""
+        ],
+        [
+          "Predator Zinfandel",
+          "$11",
+          ""
+        ],
+        [
+          "Bianchi Merlot",
+          "$16",
+          ""
+        ],
+        [
+          "Rutherford Ranch Sauvignon Blanc",
+          "$13",
+          ""
+        ],
+        [
+          "San Angelo Pinot Grigio",
+          "$11",
+          ""
+        ],
+        [
+          "Las Olas Chardonnay",
+          "$10.50",
+          ""
+        ],
+        [
+          "Scott Chardonnay",
+          "$13",
+          ""
+        ],
+        [
+          "Stanford Brut Split",
+          "$8",
+          ""
+        ],
+        [
+          "Tequila selection",
+          "Prices not listed",
+          "See the original drinks PDF for brands and expressions; confirm availability and pricing by phone."
+        ]
+      ]
+    ],
+    [
+      "party-trays",
+      "Party trays to go",
+      "From the restaurant’s linked catering-to-go PDF (April 2026). Call (949) 498-5000 to arrange an order; suggested servings are the restaurant’s estimates.",
+      [
+        [
+          "Party Pack",
+          "$120",
+          "Suggested for 10: 10 chicken Chingolinga bites, 10 small beef tacos, 10 beef flautas and 10 bean-and-cheese burritos. Also includes guacamole, salsa and chips; see PDF for quantities."
+        ],
+        [
+          "Family Pack",
+          "$190",
+          "Suggested for 15: 15 each of chicken Chingolinga bites, small beef tacos, beef flautas and bean-and-cheese burritos. Salsa, guacamole, rice, beans and chips included; see PDF for quantities."
+        ],
+        [
+          "Azteca Chicken Salad tray",
+          "$50",
+          "Suggested for 10–15 as a side dish. Chicken, black beans, corn, peppers, tortilla strips and cilantro-lime dressing."
+        ],
+        [
+          "Small Crispy Tacos",
+          "$35 / dozen",
+          "Shredded beef or chicken."
+        ],
+        [
+          "Small Burritos",
+          "$30–$32 / dozen",
+          "Bean and cheese $30; chicken and rice $32."
+        ],
+        [
+          "Chingolinga Bites",
+          "$30 / 15 bites",
+          "Chicken-filled flour tortilla bites."
+        ],
+        [
+          "Flautas or Taquitos",
+          "$30 / 24 pieces",
+          "Shredded beef or chicken."
+        ],
+        [
+          "Enchiladas",
+          "$50 / dozen",
+          "Cheese, shredded beef or chicken; salsa roja, tomatillo or ranchera."
+        ],
+        [
+          "Cheese Quesadillas",
+          "$30 / dozen",
+          ""
+        ],
+        [
+          "Churros",
+          "$30 / dozen",
+          ""
+        ],
+        [
+          "Chicken Fajitas · half tray",
+          "$55",
+          "Suggested for 10."
+        ],
+        [
+          "Steak Fajitas · half tray",
+          "$60",
+          "Suggested for 10."
+        ],
+        [
+          "Carnitas · half tray",
+          "$65",
+          "Suggested for 10."
+        ],
+        [
+          "Fajita additions",
+          "$30",
+          "Two dozen tortillas, a pint of guacamole, and cheese and pico de gallo. See PDF for full quantities."
+        ],
+        [
+          "Carnitas additions",
+          "$30",
+          "Two dozen tortillas, a pint of guacamole, salsa negra, cilantro and onion. See PDF for full quantities."
+        ],
+        [
+          "Bag of Chips",
+          "$8",
+          ""
+        ],
+        [
+          "Guacamole",
+          "$12–$20",
+          "8 oz $12; 16 oz $20."
+        ],
+        [
+          "Salsa / Pico de Gallo",
+          "$6–$10 each",
+          "8 oz $6; 16 oz $10."
+        ],
+        [
+          "Mexican Rice / Beans",
+          "$8–$16 each",
+          "16 oz $8; 32 oz $16. Beans: regular, black or whole pinto. Suggested servings: 16 oz for 2–4; 32 oz for 5–8."
+        ],
+        [
+          "Plates, forks & napkins",
+          "$0.50 / person",
+          ""
+        ],
+        [
+          "Disposable serving utensils",
+          "$1 each",
+          ""
+        ]
+      ]
+    ]
+  ]
+}

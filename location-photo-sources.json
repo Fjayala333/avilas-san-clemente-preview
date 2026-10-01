@@ -1,0 +1,129 @@
+{
+  "checked": "2026-09-09",
+  "sourceDirectory": "https://avilaselranchito.com/locations/",
+  "usage": "Owner-requested location collage. Official-site originals except Santa Ana, updated September 11, 2026 with the owner's supplied current photograph and a web-sized copy. No AI reconstruction of restaurant photographs.",
+  "photos": [
+    {
+      "location": "San Clemente",
+      "src": "assets/locations/san-clemente.jpg",
+      "width": 495,
+      "height": 330,
+      "alt": "San Clemente: White round corner tower, striped awnings and restaurant sign at Avenida Del Mar and Ola Vista",
+      "sourcePage": "https://avilaselranchito.com/san-clemente/",
+      "sourceUrl": "https://avilaselranchito.com/wp-content/uploads/2018/07/sanclemente.jpg",
+      "position": "50% 50%"
+    },
+    {
+      "location": "Huntington Park",
+      "src": "assets/locations/huntington-park.jpg",
+      "width": 495,
+      "height": 330,
+      "alt": "Huntington Park: Original brick storefront with teal awnings, mural, Mexican and American flags",
+      "sourcePage": "https://avilaselranchito.com/huntington-park/",
+      "sourceUrl": "https://avilaselranchito.com/wp-content/uploads/2018/07/hutngingtonpark.jpg",
+      "position": "50% 50%"
+    },
+    {
+      "location": "Corona del Mar",
+      "src": "assets/locations/corona-del-mar.webp",
+      "width": 2560,
+      "height": 2274,
+      "alt": "Corona del Mar: Brick corner tower with weather vane, orange awning, green window frames, palm and restaurant sign",
+      "sourcePage": "https://avilascdm.com/",
+      "sourceUrl": "https://avilascdm.com/wp-content/uploads/2025/05/Avilas-CDM-scaled.webp",
+      "position": "55% 60%"
+    },
+    {
+      "location": "Costa Mesa",
+      "src": "assets/locations/costa-mesa.jpg",
+      "width": 495,
+      "height": 330,
+      "alt": "Costa Mesa: Peach stucco entrance tower with burgundy awnings, green trim and palm-lined patio",
+      "sourcePage": "https://avilaselranchito.com/costa-mesa/",
+      "sourceUrl": "https://avilaselranchito.com/wp-content/uploads/2018/07/costamesa.jpg",
+      "position": "50% 50%"
+    },
+    {
+      "location": "Foothill Ranch",
+      "src": "assets/locations/foothill-ranch.jpg",
+      "width": 495,
+      "height": 330,
+      "alt": "Foothill Ranch: Foothill Ranch exterior facade with large red and green restaurant sign and patio heaters below",
+      "sourcePage": "https://avilaselranchito.com/foothill-ranch/",
+      "sourceUrl": "https://avilaselranchito.com/wp-content/uploads/2018/07/foothillranch.jpg",
+      "position": "50% 30%"
+    },
+    {
+      "location": "Laguna Beach",
+      "src": "assets/locations/laguna-beach.jpg",
+      "width": 550,
+      "height": 394,
+      "alt": "Laguna Beach: Shingled restaurant facade and open bar window beneath a red patio umbrella",
+      "sourcePage": "https://avilaslagunabeach.com/",
+      "sourceUrl": "https://avilaslagunabeach.com/wp-content/uploads/2023/10/laguna-beach.jpg",
+      "position": "50% 50%"
+    },
+    {
+      "location": "Laguna Niguel",
+      "src": "assets/locations/laguna-niguel.jpg",
+      "width": 2560,
+      "height": 1707,
+      "alt": "Laguna Niguel: White stucco restaurant with red sign, terracotta roof, broad entrance arches and patio tables",
+      "sourcePage": "https://www.avilaslagunaniguel.com/",
+      "sourceUrl": "https://www.avilaslagunaniguel.com/wp-content/uploads/2024/11/LagunaNigel_IMG_0140-scaled.jpg",
+      "position": "50% 50%"
+    },
+    {
+      "location": "Lake Forest",
+      "src": "assets/locations/lake-forest-exterior.jpg",
+      "width": 2560,
+      "height": 1553,
+      "alt": "Lake Forest: Wide exterior with lush tropical planting, green walls, wagon wheel and stone restaurant sign",
+      "sourcePage": "https://avilaslakeforest.com/gallery/",
+      "sourceUrl": "https://avilaslakeforest.com/wp-content/uploads/2026/05/ElRanchito-1-2-scaled.jpg",
+      "position": "50% 65%"
+    },
+    {
+      "location": "Newport Beach",
+      "src": "assets/locations/newport-beach.webp",
+      "width": 1632,
+      "height": 1259,
+      "alt": "Newport Beach: Cream stucco restaurant with red lettering, arched door and open dining windows",
+      "sourcePage": "https://avilasnewportbeach.com/",
+      "sourceUrl": "https://avilasnewportbeach.com/wp-content/uploads/2024/12/Avilas-ElRanchito-Newport-Beach-22-1.webp",
+      "position": "50% 42%"
+    },
+    {
+      "location": "Orange",
+      "src": "assets/locations/orange.jpg",
+      "width": 2560,
+      "height": 2474,
+      "alt": "Orange: pale-green church-shaped restaurant with tall shingled steeple, arched windows and front restaurant sign",
+      "sourcePage": "https://www.avilasorange.com/",
+      "sourceUrl": "https://www.avilasorange.com/wp-content/uploads/2024/11/Orange-ext_HR-2-scaled.jpg",
+      "position": "50% 57%"
+    },
+    {
+      "location": "Santa Ana",
+      "src": "assets/locations/santa-ana-current-v1.jpg",
+      "width": 2400,
+      "height": 1600,
+      "alt": "Santa Ana: Current restaurant exterior with red tile roofs, blue awnings, palms, a cream-and-terracotta patio wall and roadside Avila’s El Ranchito sign",
+      "sourcePage": "assets/locations/santa-ana-current-v1.jpg",
+      "sourceUrl": "assets/locations/santa-ana-current-v1.jpg",
+      "position": "50% 50%",
+      "credit": "Current photograph supplied by the restaurant owner",
+      "updated": "2026-09-11"
+    },
+    {
+      "location": "Seal Beach",
+      "src": "assets/locations/seal-beach.jpg",
+      "width": 2560,
+      "height": 1371,
+      "alt": "Seal Beach: Red brick Main Street storefront with large white and red restaurant sign, open windows and wooden sidewalk bench",
+      "sourcePage": "https://avilassealbeach.com/",
+      "sourceUrl": "https://avilassealbeach.com/wp-content/uploads/2023/10/seal-beach-scaled.jpg",
+      "position": "50% 50%"
+    }
+  ]
+}

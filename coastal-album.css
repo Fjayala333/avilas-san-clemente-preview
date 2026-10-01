@@ -1,0 +1,74 @@
+/* Coastal's sea-glass album. Uses the shared manual photo index, never autoplay. */
+.coastal.story-page #family-album.memory-coastal {
+  --album-line:#173e5533;
+  padding:clamp(28px,4vw,52px) 0; border-top:1px solid var(--album-line);
+}
+.coastal.story-page #family-album.memory-coastal .album-heading {padding-bottom:38px}
+.coastal.story-page #family-album.memory-coastal .album-heading h2 {max-width:18ch}
+.coastal.story-page #family-album.memory-coastal .memory-layout {
+  display:grid;grid-template-columns:160px minmax(0,1fr);gap:clamp(22px,3vw,40px);align-items:center;
+}
+.coastal.story-page #family-album.memory-coastal .memory-index {gap:4px}
+.coastal.story-page #family-album.memory-coastal .memory-tab {
+  display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;padding:18px 10px;
+  min-height:78px;border:0;border-bottom:1px solid var(--album-line);
+}
+.coastal.story-page #family-album.memory-coastal .memory-tab .memory-thumb {display:none}
+.coastal.story-page #family-album.memory-coastal .memory-number {
+  display:grid;place-items:center;width:28px;height:28px;
+  border:1px solid #173e5540;border-radius:50%;font-size:.75rem;
+}
+.coastal.story-page #family-album.memory-coastal .memory-tab-title {font:400 1.125rem/1.3 var(--display)}
+.coastal.story-page #family-album.memory-coastal .memory-tab[aria-selected="true"] {background:#e1ecec;border-bottom-color:#173e55}
+.coastal.story-page #family-album.memory-coastal .memory-tab[aria-selected="true"] .memory-number {background:#173e55;color:#fffdf7;border-color:#173e55}
+.coastal.story-page #family-album.memory-coastal .memory-stage {
+  padding:clamp(20px,3vw,36px);background:#e1ecec;border-radius:24px 4px 24px 4px;
+  border:1px solid #173e5525;box-shadow:7px 7px 0 #fbfaf5,8px 8px 0 #173e5528;
+}
+.coastal.story-page #family-album.memory-coastal .memory-page {
+  display:grid;grid-template-columns:minmax(0,1.45fr) minmax(160px,.72fr);
+  gap:clamp(20px,3vw,40px);align-items:center;
+}
+.coastal.story-page #family-album.memory-coastal .memory-page .photo-open {
+  padding:12px;background:#fffdf8;border:1px solid #173e5520;
+  box-shadow:0 10px 20px #173e5510;
+}
+.coastal.story-page #family-album.memory-coastal .memory-page .photo-open img {
+  height:clamp(280px,34vw,450px);object-fit:contain;
+}
+.coastal.story-page #family-album.memory-coastal .memory-page figcaption {padding:8px 0}
+.coastal.story-page #family-album.memory-coastal .memory-folio {
+  border-top:1px solid #173e5560;padding-top:20px;margin-bottom:24px;letter-spacing:.04em;
+}
+.coastal.story-page #family-album.memory-coastal .memory-caption-title {font-style:italic;font-size:clamp(1.75rem,2.5vw,2.6rem)}
+.coastal.story-page #family-album.memory-coastal .memory-credit {margin-top:24px}
+.coastal.story-page #family-album.memory-coastal .recognition-archive .photo-item {margin-top:0}
+@media(max-width:1050px) and (min-width:861px) {
+  .coastal.story-page #family-album.memory-coastal .memory-layout {grid-template-columns:130px minmax(0,1fr);gap:20px}
+  .coastal.story-page #family-album.memory-coastal .memory-page {grid-template-columns:minmax(0,1.1fr) minmax(140px,.8fr);gap:20px}
+  .coastal.story-page #family-album.memory-coastal .memory-stage {padding:22px}
+}
+@media(max-width:860px) {
+  .coastal.story-page #family-album.memory-coastal {padding:30px 0}
+  .coastal.story-page #family-album.memory-coastal .memory-layout {display:flex;flex-direction:column;gap:24px}
+  .coastal.story-page #family-album.memory-coastal .memory-page {display:flex;flex-direction:column;gap:0;align-items:stretch}
+  .coastal.story-page #family-album.memory-coastal .memory-index {display:flex;gap:12px}
+  .coastal.story-page #family-album.memory-coastal .memory-tab {display:flex;flex-direction:column;padding:10px;border:1px solid #173e5525}
+  .coastal.story-page #family-album.memory-coastal .memory-tab .memory-thumb {display:block;background:#e1ecec}
+  .coastal.story-page #family-album.memory-coastal .memory-tab .memory-number {display:none}
+  .coastal.story-page #family-album.memory-coastal .memory-tab[aria-selected="true"] {border:2px solid #173e55}
+  .coastal.story-page #family-album.memory-coastal .memory-stage {padding:22px;box-shadow:4px 4px 0 #fbfaf5,5px 5px 0 #173e5528}
+}
+@media(max-width:560px) {
+  .coastal.story-page #family-album.memory-coastal .memory-page {display:flex;flex-direction:column;gap:0;align-items:stretch}
+  .coastal.story-page #family-album.memory-coastal .memory-stage {padding:18px}
+  .coastal.story-page #family-album.memory-coastal .memory-page .photo-open {padding:8px}
+  .coastal.story-page #family-album.memory-coastal .memory-page .photo-open img {height:clamp(240px,72vw,340px)}
+  .coastal.story-page #family-album.memory-coastal .memory-page figcaption {padding:22px 0 0}
+  .coastal.story-page #family-album.memory-coastal .memory-folio {padding-top:14px;margin-bottom:16px}
+  .coastal.story-page #family-album.memory-coastal .memory-credit {margin-top:12px}
+}
+@media print {
+  .coastal.story-page #family-album.memory-coastal .memory-layout {display:block}
+  .coastal.story-page #family-album.memory-coastal .memory-stage {background:none;box-shadow:none;border:0}
+}

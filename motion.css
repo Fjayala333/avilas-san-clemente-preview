@@ -1,0 +1,134 @@
+/* Balanced motion pass. Images remain ordinary, replaceable HTML assets. */
+:root{--motion-ease:cubic-bezier(.22,.75,.25,1)}
+/* Still is the baseline, including without JS. Only enhanced desktop scenes move. */
+.coastal-panoramas img,.coastal-panoramas .coastal-side:first-child img,
+.hacienda-arch img,.family-hero>.hero-ground,.modern-banner>img,
+.heritage-ground img,.album figure,.journal-page{transform:none}
+.threshold-photo::before,.threshold-photo::after{display:none}
+.threshold-photo{clip-path:inset(0 round 36% 36% 0 0)}
+.journal-spread{perspective:1400px}
+.headline-line{display:block}
+.motion-ready .reveal,.motion-ready .wipe{opacity:1;transform:none;clip-path:none;transition:none}
+.motion-ready .reveal.is-visible,.motion-ready .motion-enter.is-visible{
+ animation:gentle-arrive .7s var(--motion-ease) both
+}
+.motion-ready .wipe.is-visible{animation:photo-unveil .85s var(--motion-ease) both}
+.motion-enhanced .modern-heading .headline-line{
+ animation:headline-arrive .8s var(--motion-ease) both
+}
+.motion-enhanced .modern-heading .headline-line:nth-child(2){animation-delay:.13s}
+.motion-enhanced .modern-heading>p{animation:gentle-arrive .65s .2s var(--motion-ease) both}
+.focus-photo img{transition:transform .75s var(--motion-ease),transform-origin .75s var(--motion-ease)}
+.focus-photo img.focus-arrive{animation:focus-arrive .38s ease-out}
+.menu-enhanced .menu-paper [role=tabpanel]:not([hidden]):not(#all-day){
+ animation:menu-arrive .22s ease-out
+}
+.menu-tabs button,.menu-switch button{
+ transition:background-color .2s ease,color .2s ease,border-color .2s ease
+}
+.nav a{position:relative}
+.nav a::after{
+ content:"";position:absolute;left:0;right:0;bottom:5px;height:1px;
+ background:currentColor;transform:scaleX(0);transform-origin:left;
+ transition:transform .25s var(--motion-ease)
+}
+.nav a[aria-current=page]::after{display:none}
+.text-link{transition:color .2s ease}
+.btn:active{transform:translateY(0) scale(.98)}
+.menu-links a:hover{padding-inline:0}
+.menu-links a{transition:color .2s ease,transform .25s var(--motion-ease)}
+.motion:disabled{cursor:default;text-decoration:none;opacity:.8}
+html.motion-stopped{scroll-behavior:auto}
+
+@media(min-width:801px){
+ /* Coastal: lateral gallery, with independent photographic planes. */
+ .motion-enhanced .coastal-panoramas .coastal-center img{
+  transform:translateX(calc((var(--travel,1) - .5)*-4%)) scale(1.06)
+ }
+ .motion-enhanced .coastal-panoramas .coastal-side:first-child img{
+  transform:translateY(calc((var(--travel,1) - .5)*-12%)) scale(1.14)
+ }
+ .motion-enhanced .coastal-panoramas .room img{
+  transform:translateY(calc((var(--travel,1) - .5)*9%)) scale(1.11)
+ }
+ .motion-enhanced .coastal-room .photo img{
+  transform:translateY(calc((var(--travel,1) - .5)*-9%)) scale(1.1)
+ }
+ /* Hacienda: a real photo opens from an intimate arch into a broad room. */
+ .threshold-photo{height:clamp(340px,34vw,490px)}
+ .motion-enhanced .threshold-photo{
+  clip-path:inset(0 calc((1 - var(--scene,1))*17%) 0
+   round calc(38% - var(--scene,1)*32%) calc(38% - var(--scene,1)*32%) 0 0)
+ }
+ .motion-enhanced .threshold-photo img{
+  transform:scale(calc(1.12 - var(--scene,1)*.1))
+ }
+ .motion-enhanced .hacienda-arch img{
+  transform:translateY(calc((var(--travel,1) - .5)*5%)) scale(1.06)
+ }
+ /* Family: independent timings make these feel like two prints, not a grid. */
+ .album-section{overflow:clip}
+ .motion-enhanced .album figure:first-child{
+  transform:translate3d(calc((1 - var(--scene,1))*-28px),calc((1 - var(--scene,1))*55px),0)
+   rotate(calc((1 - var(--scene,1))*-9deg))
+ }
+ .motion-enhanced .album figure:last-child{
+  transform:translate3d(calc((1 - var(--scene-second,1))*28px),calc((1 - var(--scene-second,1))*75px),0)
+   rotate(calc((1 - var(--scene-second,1))*9deg))
+ }
+ .motion-ready .welcome-note.is-visible{animation:note-settle .9s var(--motion-ease) both}
+ /* Heritage: the photo opens further; the text leaf stays nearly flat to read. */
+ .motion-enhanced .journal-page:first-child{
+  transform:rotateY(calc((1 - var(--scene,1))*32deg))
+ }
+ .motion-enhanced .journal-page:last-child{
+  transform:rotateY(calc((1 - var(--scene-second,1))*-12deg))
+ }
+ .story-year{position:relative;white-space:nowrap}
+ .story-year::after{
+  content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;
+  background:currentColor;transform-origin:left
+ }
+ .motion-enhanced .story-year::after{transform:scaleX(var(--scene-second,1))}
+}
+@media(hover:hover) and (pointer:fine){
+ .nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+ .menu-links a:hover{transform:translateX(5px)}
+ .btn:hover{transform:translateY(-3px)}
+ .focus-options button:hover{color:var(--accent)}
+}
+@keyframes gentle-arrive{from{opacity:.7;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes photo-unveil{from{clip-path:inset(0 0 7% 0)}to{clip-path:inset(0)}}
+@keyframes headline-arrive{from{opacity:.65;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes note-settle{from{opacity:.8;transform:translateY(18px) rotate(-3deg)}to{opacity:1;transform:rotate(-1.5deg)}}
+@keyframes menu-arrive{from{opacity:.72}to{opacity:1}}
+@keyframes focus-arrive{from{opacity:.76}to{opacity:1}}
+@media(max-width:800px){
+ .motion-ready .reveal.is-visible,.motion-ready .motion-enter.is-visible{animation-duration:.45s}
+ .motion-enhanced .modern-heading .headline-line{animation-name:gentle-arrive;animation-duration:.5s}
+ .motion-ready .wipe.is-visible{animation-name:menu-arrive;animation-duration:.4s}
+ .threshold-photo{clip-path:inset(0 round 30% 30% 0 0)}
+ .focus-photo img{transition-duration:.3s}
+}
+/* These overrides include pseudo-elements and all continuous scene transforms. */
+.motion-off *,.motion-off *::before,.motion-off *::after{animation:none!important;transition:none!important}
+.motion-off .coastal-panoramas img,.motion-off .coastal-room .photo img,
+.motion-off .hacienda-arch img,.motion-off .threshold-photo img,
+.motion-off .album figure,.motion-off .journal-page{transform:none!important}
+.motion-off .threshold-photo{clip-path:inset(0 round 6% 6% 0 0)}
+.motion-off .reveal,.motion-off .motion-enter,.motion-off .headline-line{opacity:1!important}
+.motion-off .story-year::after{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ html{scroll-behavior:auto}
+ .coastal-panoramas img,.coastal-room .photo img,.hacienda-arch img,.threshold-photo img,
+ .album figure,.journal-page{transform:none!important}
+ .threshold-photo{clip-path:inset(0 round 6% 6% 0 0)!important}
+ .reveal,.motion-enter,.headline-line{opacity:1!important;transform:none!important}
+ .story-year::after{transform:scaleX(1)!important}
+}
+@media print{
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .reveal,.motion-enter,.journal-page,.album figure{opacity:1!important;transform:none!important}
+ .threshold-photo,.wipe{clip-path:none!important}
+}

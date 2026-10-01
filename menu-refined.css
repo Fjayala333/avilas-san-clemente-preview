@@ -1,0 +1,69 @@
+/* A menu-first reading surface. Existing content and tab logic are unchanged. */
+.clean-menu main.menu-shell{padding-top:20px}
+.clean-menu .menu-intro{max-width:960px;margin-inline:auto;padding-bottom:22px;align-items:center}
+.clean-menu .menu-intro h1{font-size:clamp(38px,4vw,52px);line-height:1.08}
+.clean-menu .menu-intro p{margin-top:6px}
+.clean-menu #menu-choices{scroll-margin-top:24px}
+.clean-menu.menu-enhanced .menu-tabs{max-width:960px;margin:0 auto 22px;gap:28px;border-bottom:1px solid var(--menu-line);flex-wrap:wrap}
+.clean-menu .menu-tabs button{flex:0 1 auto;min-height:48px;padding:12px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--menu-muted);text-align:center}
+.clean-menu .menu-tabs button small{display:none}
+.clean-menu .menu-tabs button span{font:500 16px/1.4 var(--text);letter-spacing:0}
+.clean-menu .menu-tabs button[aria-selected=true]{background:transparent;color:var(--menu-ink);border-color:var(--menu-ink)}
+.clean-menu .menu-tabs button[aria-selected=true] span{font-weight:700}
+.clean-menu .menu-paper{max-width:960px;margin:0 auto;padding:0;background:transparent;border:0;color:var(--menu-ink)}
+.clean-menu .menu-switch{width:fit-content;justify-content:flex-start;gap:0;margin:0 0 16px;padding:3px;background:#e9eee8;border:0;border-radius:6px}
+.clean-menu .menu-switch button{min-height:40px;padding:8px 15px;background:transparent;border:0;border-radius:4px;color:var(--menu-muted);font:500 14px/1.4 var(--text);letter-spacing:0;text-transform:none}
+.clean-menu .menu-switch button[aria-selected=true]{background:var(--menu-paper);color:var(--menu-ink);box-shadow:0 1px 3px #183e301c}
+.clean-menu .menu-description{max-width:68ch;margin:0 0 30px;text-align:left;font:400 15px/1.6 var(--text);color:var(--menu-muted)}
+.clean-menu .menu-scroll,.clean-menu.menu-enhanced .menu-scroll{max-width:none;max-height:none;overflow:visible;margin:0;padding:0}
+.clean-menu .menu-category{margin:0 0 38px;padding:0;background:transparent;border:0;scroll-margin-top:24px}
+.clean-menu .menu-category h2{margin:0;padding:0 0 12px;border:0;border-bottom:1px solid var(--menu-line);text-align:left;font:500 clamp(27px,3vw,34px)/1.15 var(--display);letter-spacing:-.025em;text-transform:none}
+.clean-menu .menu-category h2::after{content:none}
+.clean-menu .category-note{max-width:75ch;margin:14px 0 4px;text-align:left;font:400 14px/1.65 var(--text)}
+.clean-menu .dish{grid-template-columns:minmax(0,1fr) auto;gap:7px 24px;align-items:baseline;padding:18px 0;border:0;border-bottom:1px solid color-mix(in srgb,var(--menu-line) 65%,transparent);background:transparent}
+.clean-menu .dish h3{display:block;font:600 18px/1.4 var(--text);letter-spacing:0;color:var(--menu-ink);text-transform:none}
+.clean-menu .dish h3::after{content:none}
+.clean-menu .dish .price{font:600 14px/1.5 var(--text);font-variant-numeric:tabular-nums;max-width:15ch;padding:0;color:var(--menu-ink);text-align:right;white-space:normal}
+.clean-menu .dish p{grid-column:1/-1;max-width:75ch;font:400 16px/1.6 var(--text);color:var(--menu-muted)}
+.clean-menu .menu-footer-note{margin:4px 0 0;padding:16px 0;text-align:left;font:400 14px/1.6 var(--text);border-bottom:1px solid var(--menu-line)}
+.clean-menu .menu-sources{max-width:960px;margin-inline:auto;padding-top:12px}
+.clean-menu button:focus-visible{outline:2px solid var(--menu-ink);outline-offset:3px}
+.clean-menu .menu-tabs button:active,.clean-menu .menu-switch button:active{transform:translateY(1px)}
+@media(hover:hover) and (pointer:fine){
+ .clean-menu .menu-tabs button:hover{color:var(--menu-ink);border-bottom-color:var(--menu-ink)}
+ .clean-menu .menu-switch button:hover{color:var(--menu-ink);box-shadow:none}
+}
+/* Wide screens get readable paired dishes; source order stays row by row. */
+@media(min-width:1050px){
+ .clean-menu .menu-category{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:44px;align-items:start}
+ .clean-menu .menu-category>h2,.clean-menu .menu-category>.category-note{grid-column:1/-1}
+ .clean-menu .dish{height:100%;align-content:start;gap:7px 16px}
+ .clean-menu .dish .price{max-width:12ch}
+}
+/* Compact, fully visible choices on phones. No horizontal or nested menu scrolling. */
+@media(max-width:650px){
+ .clean-menu .menu-intro{align-items:flex-start;padding-bottom:20px}
+ .clean-menu .menu-intro h1{font-size:38px}
+ .clean-menu.menu-enhanced .menu-tabs{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;margin-bottom:20px}
+ .clean-menu .menu-tabs button{padding:12px 2px;min-height:46px;text-align:left}
+ .clean-menu .menu-tabs button span{font-size:15px}
+ .clean-menu .menu-paper{padding:0}
+ .clean-menu .menu-switch{margin-bottom:14px}
+ .clean-menu .menu-switch button{font-size:14px;padding:8px 13px;min-height:40px}
+ .clean-menu .menu-description{font-size:15px;margin-bottom:26px}
+ .clean-menu .menu-category{margin-bottom:32px}
+ .clean-menu .menu-category h2{font-size:28px}
+ .clean-menu .dish{padding:16px 0;gap:6px 16px}
+ .clean-menu .dish h3{font-size:18px}
+ .clean-menu .dish .price{font-size:14px;max-width:11ch}
+ .clean-menu .dish p{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ .clean-menu .menu-tabs button:active,.clean-menu .menu-switch button:active{transform:none}
+}
+.clean-menu.motion-off .menu-tabs button:active,.clean-menu.motion-off .menu-switch button:active{transform:none}
+@media print{
+ .clean-menu .menu-category{display:block}
+ .clean-menu .dish{height:auto;break-inside:avoid}
+}
+

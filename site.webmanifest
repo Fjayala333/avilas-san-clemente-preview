@@ -1,0 +1,12 @@
+{
+  "name": "Avila’s El Ranchito · San Clemente",
+  "short_name": "Avila’s SC",
+  "start_url": "/avilas-san-clemente-preview/",
+  "display": "standalone",
+  "background_color": "#fbf7ee",
+  "theme_color": "#063d4e",
+  "icons": [
+    { "src": "/avilas-san-clemente-preview/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/avilas-san-clemente-preview/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

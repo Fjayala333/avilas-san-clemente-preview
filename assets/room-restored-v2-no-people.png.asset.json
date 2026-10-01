@@ -1,0 +1,16 @@
+{
+  "title": "San Clemente dining room — people removed",
+  "file": "room-restored-v2-no-people.png",
+  "dimensions": {
+    "width": 1473,
+    "height": 1068
+  },
+  "source": "room-restored-v1.png",
+  "original": "original/room.png",
+  "previousVersionsPreserved": true,
+  "requestedEdit": "Remove people",
+  "requestDate": "2026-09-10",
+  "method": "Built-in image editing tool",
+  "disclosure": "AI-enhanced and edited derivative. People were removed and the occluded background reconstructed; not an unedited photograph.",
+  "prompt": "Use case: precise-object-edit. Input Image 1 is the edit target: the already-enhanced real restaurant interior. Remove the people, especially the patrons at the bar around x=66.9%, y=33.2%. Remove ALL real people visible in the restaurant scene: the people seated/standing at the bar at center-right, the person's head behind the right-hand orange partition near the plants, and the small distant person near the left windows, along with any remaining human reflections. Naturally reconstruct only the small background areas those people occlude, continuing the existing bar stools, bar counter, shelving, windows and floor. Do not remove people pictured on the small television screens, since those are part of the room furnishings. KEEP EVERYTHING ELSE UNCHANGED: exact camera viewpoint, framing, crop/aspect ratio, perspective, architecture, fireplace and turquoise wall art, ceiling, colorful papel picado, windows, tables, chairs, bar stools, cushions, plants, bottles, dishes, napkins, salt shakers, wood grain, lighting, shadows, contrast and warm color balance. No renovation, no rearrangement, no extra decor, no new people. Preserve the existing natural photograph look and image detail; no extra sharpening, no relighting, no stylization. The result should be the same image with the real people cleanly removed."
+}

@@ -1,0 +1,128 @@
+/* Shared navigation chrome for the five San Clemente alternatives. */
+html {
+  scroll-padding-top: calc(var(--site-nav-height, 90px) + 16px);
+}
+.site-nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--ink) 7%, transparent);
+}
+.site-nav-bar .header {
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 88px;
+  padding-block: 10px;
+  border-bottom: 0;
+}
+body .site-nav-bar .header .brand img.avila-logo {
+  width: 144px;
+  height: auto;
+}
+.site-nav-bar .nav {
+  gap: clamp(16px, 2.4vw, 34px);
+}
+.site-nav-bar .nav a,
+.site-nav-bar .nav-toggle {
+  min-height: 44px;
+}
+.back-to-top {
+  position: fixed;
+  right: calc(20px + env(safe-area-inset-right, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 70;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--on-accent);
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--ink) 20%, transparent);
+  text-decoration: none;
+  font: 400 1.8rem/1 var(--text);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.back-to-top:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px var(--paper);
+}
+/* Keep the fixed arrow clear of the final row of footer actions. */
+body .footer {
+  padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
+}
+.modern .back-to-top { border-radius: 6px; }
+.heritage .back-to-top { border: 3px double var(--on-accent); }
+html.motion-stopped { scroll-behavior: auto; }
+@media (hover: hover) and (pointer: fine) {
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 22px color-mix(in srgb, var(--ink) 26%, transparent);
+  }
+}
+@media (max-width: 800px) {
+  body .site-nav-bar .header .brand img.avila-logo {
+    width: 116px;
+  }
+  .site-nav-bar .header {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    max-height: calc(100dvh - env(safe-area-inset-top, 0px) - 16px);
+    overflow-y: auto;
+  }
+  .site-nav-bar .nav-toggle {
+    position: static;
+    margin-left: auto;
+  }
+  .site-nav-bar .nav,
+  .js-nav .site-nav-bar .nav.open {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    flex-basis: 100%;
+    gap: 4px 12px;
+    width: 100%;
+    padding-block: 8px 4px;
+  }
+  .js-nav .site-nav-bar .nav:not(.open) { display: none; }
+  .site-nav-bar .nav a { justify-content: center; }
+  .back-to-top {
+    width: 48px;
+    height: 48px;
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-width: 520px) {
+  .site-nav-bar .brand span { display: none; }
+}
+/* Coastal combines Locations and Visit into one navigation destination. */
+@media (max-width: 800px) {
+  .coastal .site-nav-bar .nav,
+  .js-nav .coastal .site-nav-bar .nav.open { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .coastal .site-nav-bar .nav a:nth-child(3) { grid-column: auto; }
+}
+@media (max-width: 360px) {
+  .site-nav-bar .nav,
+  .js-nav .site-nav-bar .nav.open {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .back-to-top, .back-to-top:hover { transition: none; transform: none; }
+}
+.motion-off .back-to-top { transition: none; transform: none; }
+@media print {
+  .site-nav-bar { position: static; box-shadow: none; }
+  .back-to-top { display: none; }
+  body .footer { padding-bottom: 24px; }
+}

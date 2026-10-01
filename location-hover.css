@@ -1,0 +1,56 @@
+/* The article stays still: visual movement must not move the hover target.
+   Individual rotate/translate properties compose with Coastal's existing flip. */
+.locations-page .location-explorer .place-card{translate:none}
+
+@media(min-width:801px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .locations-page:not(.motion-off) .location-explorer:not(.places-list) .place-card{
+  position:relative;
+ }
+ .locations-page:not(.motion-off) .location-explorer:not(.places-list) .place-card:hover,
+ .locations-page:not(.motion-off) .location-explorer:not(.places-list) .place-card:focus-within{z-index:2}
+
+ /* A light, two-sided postcard. Keep the 780ms flip transition intact. */
+ .coastal.locations-page:not(.motion-off) .cards-ready:not(.places-list) .place-inner{
+  rotate:0deg;translate:0 0;
+  transition:transform 780ms cubic-bezier(.22,.61,.36,1),rotate 220ms cubic-bezier(.23,1,.32,1),translate 220ms cubic-bezier(.23,1,.32,1);
+ }
+ .coastal.locations-page:not(.motion-off) .cards-ready:not(.places-list) .place-card:hover:not(:focus-within)>.place-inner{
+  rotate:1 -1 .3 2deg;translate:0 -5px;
+ }
+
+ /* Slightly different weights: a heavier tiled frame and a lighter poster. */
+ .locations-page:is(.hacienda,.modern):not(.motion-off) .cards-ready:not(.places-list) .place-inner{
+  rotate:0deg;translate:0 0;
+  transition:rotate 220ms cubic-bezier(.23,1,.32,1),translate 220ms cubic-bezier(.23,1,.32,1);
+ }
+ .hacienda.locations-page:not(.motion-off) .cards-ready:not(.places-list) .place-card:hover:not(.is-open):not(:focus-within)>.place-inner{
+  rotate:1 -.6 0 1.6deg;translate:0 -4px;
+ }
+ .modern.locations-page:not(.motion-off) .cards-ready:not(.places-list) .place-card:hover:not(.is-open):not(:focus-within)>.place-inner{
+  rotate:1 1 .15 2deg;translate:0 -6px;
+ }
+
+ /* Only the photograph moves in the wide Family row and Heritage cabinet. */
+ .locations-page:is(.family,.heritage):not(.motion-off) .cards-ready:not(.places-list) .place-front>.location-photo{
+  rotate:0deg;translate:0 0;transform-origin:50% 65%;
+  transition:rotate 220ms cubic-bezier(.23,1,.32,1),translate 220ms cubic-bezier(.23,1,.32,1);
+ }
+ .family.locations-page:not(.motion-off) .cards-ready:not(.places-list) .place-card:hover:not(.is-open):not(:focus-within) .place-front>.location-photo{
+  rotate:-.9deg;translate:0 -4px;
+ }
+ .heritage.locations-page:not(.motion-off) .cards-ready:not(.places-list) .place-card:hover:not(.is-open):not(:focus-within) .place-front>.location-photo{
+  rotate:.65deg;translate:0 -3px;
+ }
+}
+
+/* Preserve instant readable face swaps; never reset the flip's transform here. */
+.locations-page.motion-off .place-inner,
+.locations-page.motion-off .place-front>.location-photo,
+.locations-page .places-list .place-inner,
+.locations-page .places-list .place-front>.location-photo{rotate:none!important;translate:none!important}
+@media(prefers-reduced-motion:reduce),(hover:none),(pointer:coarse),(max-width:800px){
+ .locations-page .place-inner,.locations-page .place-front>.location-photo{rotate:none!important;translate:none!important}
+}
+@media print{
+ .locations-page .place-inner,.locations-page .place-front>.location-photo{rotate:none!important;translate:none!important}
+}

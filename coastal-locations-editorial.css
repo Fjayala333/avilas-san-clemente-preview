@@ -1,0 +1,385 @@
+/* Coastal locations: selected editorial mosaic direction.
+   The original static location records remain in the document for no-JS and print. */
+.coastal.locations-page.editorial-locations-page{
+  /* Keep this page on the same Coastal tokens used across the rest of the site. */
+  --location-paper:var(--paper);
+  --location-paper-bright:color-mix(in srgb,var(--paper) 88%,white);
+  --location-navy:var(--ink);
+  --location-coral:var(--accent);
+  --location-muted:var(--muted);
+  --location-surface:var(--surface);
+  --location-on-dark:var(--on-accent);
+  --location-coral-soft:color-mix(in srgb,var(--location-coral) 46%,white);
+  --location-line:color-mix(in srgb,var(--location-navy) 18%,transparent);
+  --avila-order:var(--location-coral);
+  --avila-order-dark:color-mix(in srgb,var(--location-coral) 82%,black);
+  --avila-ink:var(--location-navy);
+  --avila-cream:var(--location-paper);
+  background-color:var(--location-paper);
+  background-image:radial-gradient(circle at 18% 8%,color-mix(in srgb,var(--location-coral) 3.5%,transparent),transparent 24%),radial-gradient(circle at 86% 28%,color-mix(in srgb,var(--location-navy) 4.5%,transparent),transparent 26%);
+}
+.editorial-locations-page main.shell{max-width:1500px}
+.editorial-locations-page .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+/* A compact title rather than a billboard. */
+.editorial-locations-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);align-items:end;gap:clamp(42px,7vw,110px);padding:clamp(46px,6.5vw,86px) 0 34px}
+.editorial-locations-hero .eyebrow{margin-bottom:10px;color:var(--location-coral);font-size:10px;font-weight:700;letter-spacing:.24em}
+.editorial-locations-hero h1{font-size:clamp(58px,7vw,96px);line-height:.84;letter-spacing:-.055em}
+.editorial-locations-hero__copy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:34px;align-items:end}
+.editorial-locations-hero__copy>p{font:500 clamp(18px,1.6vw,23px)/1.43 var(--display);max-width:34ch}
+.editorial-locations-hero__note{color:var(--location-coral);font:italic 500 clamp(24px,2.5vw,38px)/.92 var(--display);text-align:center;transform:rotate(-3deg)}
+.editorial-locations-hero__note span{display:block}
+
+.editorial-location-tools{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:16px;padding-top:8px}
+.editorial-location-meta{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex:none}
+.editorial-location-meta .motion{font-size:11px;white-space:nowrap}
+.editorial-location-meta{flex-wrap:wrap;max-width:380px;gap:4px 18px}
+.editorial-visit-shortcut{flex-basis:100%;text-align:right;font-size:12px;font-weight:600;min-height:32px}
+.coastal-visit-desk{padding:38px clamp(22px,3.5vw,48px);margin-bottom:26px;background:var(--location-navy);color:var(--location-paper-bright);scroll-margin-top:calc(var(--site-nav-height,120px) + 16px)}
+.coastal-visit-desk>header{padding-bottom:28px;border-bottom:1px solid color-mix(in srgb,var(--location-on-dark) 22%,transparent);margin-bottom:28px}
+.coastal-visit-desk .eyebrow{color:var(--location-coral-soft);font-size:10px;letter-spacing:.2em;margin-bottom:8px}
+.coastal-visit-desk h2{font-size:clamp(40px,4.8vw,64px);margin-bottom:10px}
+.coastal-visit-desk__grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.coastal-visit-desk__grid>div{min-width:0}
+.coastal-visit-desk h3{font:500 29px/1.1 var(--display);margin-bottom:18px}
+.coastal-visit-desk address{font-style:normal;font-size:15px;line-height:1.65}
+.coastal-visit-desk .visit-phone{display:inline-block;margin-top:8px}
+.coastal-visit-desk p{font-size:14px;line-height:1.65}
+.coastal-visit-desk .actions{gap:8px;margin-top:20px}
+.coastal-visit-desk .btn{color:var(--location-on-dark);border-color:color-mix(in srgb,var(--location-on-dark) 50%,transparent);font-size:12px;padding:10px 13px;gap:8px}
+.coastal-visit-desk .btn.primary{background:var(--location-coral);border-color:var(--location-coral)}
+.coastal-visit-desk .hours{font-size:14px;gap:10px 14px;margin-top:0}
+.coastal-visit-desk .hours dd{white-space:nowrap}
+.coastal-visit-desk .visit-note{font-size:12px;color:var(--location-surface);margin-top:18px}
+.coastal-visit-desk .visit-links{display:flex;flex-direction:column;align-items:start;gap:10px;margin-top:18px;font-size:14px}
+@media(max-width:1100px){.coastal-visit-desk__grid{grid-template-columns:1fr 1fr}.coastal-visit-desk__grid>div:last-child{grid-column:1/-1}}
+@media(max-width:800px){.editorial-visit-shortcut{text-align:left}.editorial-location-meta{max-width:none}.coastal-visit-desk__grid{grid-template-columns:1fr;gap:26px}.coastal-visit-desk__grid>div+div{border-top:1px solid color-mix(in srgb,var(--location-on-dark) 22%,transparent);padding-top:26px}.coastal-visit-desk{padding:28px 22px}}
+.editorial-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.editorial-filters>span{margin-right:8px;font-size:9px;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
+.editorial-filters button{appearance:none;min-height:38px;padding:8px 15px;border:1px solid var(--location-line);background:var(--location-paper-bright);font-size:11px;transition:background-color 220ms ease,color 220ms ease,border-color 220ms ease}
+.editorial-filters button[aria-pressed="true"]{background:var(--location-coral);border-color:var(--location-coral);color:var(--location-on-dark)}
+.editorial-filter-status{min-height:1.4em;margin:0;font-size:11px;color:var(--muted);text-align:right}
+
+/* One continuous gallery, with only the same narrow gutters between rows. */
+.editorial-location-showcase.sc-section{padding-block:0 13px}
+.editorial-location-showcase .editorial-location-board{padding-bottom:0;margin-bottom:13px}
+.editorial-location-board{display:grid;grid-template-columns:1.55fr .78fr 1.06fr .72fr;grid-template-rows:300px 230px;gap:13px}
+.editorial-location-tile{position:relative;min-width:0;overflow:hidden;background:var(--location-paper-bright);border:1px solid var(--location-line);color:var(--location-navy);text-decoration:none;transition:opacity 220ms ease,filter 220ms ease,translate 220ms ease,box-shadow 220ms ease}
+.editorial-location-tile img{width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 50%);transform:translate3d(0,calc((var(--travel,.5) - .5)*10px),0) scale(1.035);transition:scale 650ms cubic-bezier(.2,.75,.2,1)}
+.editorial-location-tile:hover,.editorial-location-tile:focus-visible{z-index:2;translate:0 -4px;box-shadow:0 18px 42px color-mix(in srgb,var(--location-navy) 14%,transparent)}
+.editorial-location-tile:hover img,.editorial-location-tile:focus-visible img{scale:1.015}
+.editorial-location-tile:focus-visible{outline:3px solid var(--location-navy);outline-offset:4px}
+.editorial-location-tile.is-muted{opacity:.27;filter:grayscale(.68)}
+.editorial-location-tile.is-highlighted{opacity:1;filter:none}
+.editorial-location-tile--flagship{grid-column:1;grid-row:1;--focus:50% 50%}
+.editorial-location-tile--portrait{grid-column:2;grid-row:1;display:grid;grid-template-rows:minmax(0,1fr) 78px}
+.editorial-location-tile--portrait img{min-height:0}
+.editorial-location-tile--scenic{grid-column:3;grid-row:1;--focus:54% 62%}
+.editorial-location-tile--copy{grid-column:4;grid-row:1;padding:28px 25px;display:flex;flex-direction:column;justify-content:center;overflow:visible}
+.editorial-location-tile--copy:before{content:"";width:22px;height:1px;background:var(--location-coral);margin-bottom:15px}
+.editorial-location-tile--copy h2{margin:0 0 17px;font:500 clamp(35px,3.3vw,53px)/.83 var(--display);letter-spacing:-.045em}
+.editorial-location-tile--copy>p:not(.eyebrow){margin:0 0 22px;font:500 17px/1.35 var(--display)}
+.editorial-location-tile--copy .eyebrow{margin-bottom:8px;color:var(--location-coral);font-size:9px;letter-spacing:.18em}
+.editorial-location-tile--copy span:last-child,.editorial-promise span:last-child{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px}
+.editorial-location-tile--costa{grid-column:1;grid-row:2;display:grid;grid-template-rows:minmax(0,1fr) 78px}
+.editorial-location-tile--foothill{grid-column:2;grid-row:2;display:grid;grid-template-rows:minmax(0,1fr) 78px}
+.editorial-location-tile--laguna{grid-column:3;grid-row:2;display:grid;grid-template-rows:minmax(0,1fr) 78px}
+.editorial-location-caption{position:absolute;inset:auto 0 0;padding:38px 18px 15px;color:var(--location-on-dark);background:linear-gradient(transparent,color-mix(in srgb,var(--location-navy) 93%,transparent));display:flex;justify-content:space-between;align-items:end;gap:12px}
+.editorial-location-caption h2{margin:0;font:500 clamp(26px,2.55vw,38px)/.95 var(--display)}
+.editorial-location-caption p{margin:5px 0 0;font-size:10px;letter-spacing:.06em}
+.editorial-location-caption strong{font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.editorial-location-caption--paper{position:static;padding:12px 15px;background:var(--location-paper-bright);color:var(--location-navy);align-items:center}
+.editorial-location-caption--paper h2{font-size:25px}.editorial-location-caption--paper p{font-size:10px}
+.editorial-promise{grid-column:4;grid-row:2;padding:25px;display:flex;flex-direction:column;justify-content:center;background:var(--location-navy);border:0;color:var(--location-on-dark)}
+.editorial-promise strong{font:500 30px/1 var(--display)}
+.editorial-promise p{margin:11px 0 15px;font-size:11px;line-height:1.55;opacity:.8}
+
+/* Remaining branches flow directly after the opening rows. */
+.editorial-location-continuation{scroll-margin-top:120px}
+.editorial-location-continuation{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:265px 245px;gap:13px}
+.editorial-location-continuation .editorial-location-tile{display:block}
+.editorial-location-continuation .editorial-location-caption{padding-top:54px}
+.editorial-location-tile--newport{grid-column:span 5;--focus:50% 44%}
+.editorial-location-tile--orange{grid-column:span 3;--focus:50% 57%}
+.editorial-location-tile--niguel{grid-column:span 4}
+.editorial-location-tile--santa-ana{grid-column:span 5;--focus:50% 50%}
+.editorial-location-tile--lake-forest{grid-column:span 4;--focus:50% 63%}
+.editorial-location-tile--seal-beach{grid-column:span 3}
+
+.editorial-plan-strip{margin-bottom:26px;padding:clamp(28px,4.5vw,54px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px;align-items:center;background:var(--location-navy);color:var(--location-on-dark)}
+.editorial-plan-strip .eyebrow{margin-bottom:9px;color:var(--location-coral-soft);font-size:10px;letter-spacing:.2em}
+.editorial-plan-strip h2{font-size:clamp(36px,4vw,58px);line-height:.98}
+.editorial-plan-strip p{margin-top:14px;font-size:14px;opacity:.82}
+.editorial-plan-strip .btn{border-color:var(--location-on-dark);color:var(--location-on-dark);white-space:nowrap}
+.editorial-locations-page .directory-note{margin:0 0 54px;padding-top:18px;border-top:1px solid var(--location-line);font-size:12px;line-height:1.6;color:var(--muted)}
+
+/* Enhanced static records become one shared details drawer. */
+.editorial-enhanced .editorial-records{height:0;margin:0;padding:0;overflow:visible}
+.editorial-enhanced .editorial-records>.visually-hidden{display:block}
+.editorial-enhanced .editorial-records .locations-directory{display:contents}
+.editorial-enhanced .editorial-records .place-card{display:contents}
+.editorial-enhanced .editorial-records .place-inner{display:contents;background:none;border:0;box-shadow:none;transform:none}
+.editorial-enhanced .editorial-records .place-front{display:none!important}
+.editorial-enhanced .editorial-records .place-details{position:fixed;z-index:201;top:0;right:0;bottom:0;width:min(520px,100%);padding:clamp(28px,4vw,48px);display:flex!important;gap:24px;overflow-y:auto;background:var(--location-paper-bright);border:0;border-left:1px solid var(--location-line);box-shadow:-22px 0 60px color-mix(in srgb,var(--location-navy) 20%,transparent);opacity:0;visibility:hidden;pointer-events:none;transform:translateX(100%);transition:transform 320ms cubic-bezier(.2,.8,.2,1),opacity 180ms ease,visibility 0s linear 320ms}
+.editorial-enhanced .editorial-records .place-card.is-open .place-details{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
+.editorial-enhanced .editorial-records .detail-top{padding-bottom:16px;border-bottom:1px solid var(--location-line)}
+.editorial-enhanced .editorial-records .detail-top h3{font:500 clamp(38px,4vw,56px)/.95 var(--display)}
+.editorial-enhanced .editorial-records .place-close{order:-1;margin-left:auto;padding:0;min-height:40px;text-decoration:none;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.editorial-enhanced .editorial-records .place-details .location-reason{font:500 20px/1.45 var(--display)}
+.editorial-enhanced .editorial-records .place-details address{font-style:normal}
+.editorial-enhanced .editorial-records .location-hours{padding-top:20px;border-top:1px solid var(--location-line)}
+.editorial-enhanced .editorial-records .location-actions{padding-top:4px}
+.location-drawer-scrim{position:fixed;z-index:200;inset:0;border:0;background:color-mix(in srgb,var(--location-navy) 62%,transparent);backdrop-filter:blur(2px);cursor:pointer}
+.location-drawer-scrim[hidden]{display:none}
+.location-drawer-open{overflow:hidden}
+
+.motion-ready .editorial-locations-page .motion-enter{opacity:0;transform:translateY(15px);transition:opacity 600ms ease,transform 600ms cubic-bezier(.2,.8,.2,1)}
+.motion-ready .editorial-locations-page .motion-enter.is-visible{opacity:1;transform:none}
+.motion-off .editorial-location-tile img{transform:none!important;scale:1!important}
+
+@media(max-width:1100px){
+  .editorial-location-board{grid-template-columns:1.35fr 1fr;grid-template-rows:290px 230px 230px 220px}
+  .editorial-location-tile--flagship{grid-column:1;grid-row:1}.editorial-location-tile--portrait{grid-column:2;grid-row:1}.editorial-location-tile--scenic{grid-column:1;grid-row:2}.editorial-location-tile--copy{grid-column:2;grid-row:2}.editorial-location-tile--costa{grid-column:1;grid-row:3}.editorial-location-tile--foothill{grid-column:2;grid-row:3}.editorial-location-tile--laguna{display:grid;grid-column:1;grid-row:4}.editorial-promise{display:flex;grid-column:2;grid-row:4}
+  .editorial-location-continuation{grid-template-rows:250px 235px 225px}.editorial-location-continuation .editorial-location-tile{grid-column:span 6}
+}
+@media(max-width:800px){
+  .editorial-location-showcase.sc-section{padding-bottom:9px}.editorial-location-showcase .editorial-location-board{margin-bottom:9px}
+  .editorial-locations-hero{grid-template-columns:1fr;gap:22px;padding:34px 0 24px}.editorial-locations-hero h1{font-size:clamp(54px,14vw,76px)}.editorial-locations-hero__copy{grid-template-columns:1fr}.editorial-locations-hero__copy>p{font-size:18px}.editorial-locations-hero__note{display:none}
+  .editorial-location-tools{align-items:start;flex-direction:column}.editorial-filters{width:100%;flex-wrap:wrap;overflow:visible;padding:0}.editorial-filters>span{flex-basis:100%;margin-bottom:2px}.editorial-filters button{flex:none}.editorial-location-meta{width:100%;justify-content:space-between}.editorial-filter-status{text-align:left}
+  .editorial-location-board{grid-template-columns:1fr 1fr;grid-template-rows:270px 210px 210px 190px 190px;gap:9px;padding-bottom:68px}.editorial-location-tile--flagship{grid-column:1/-1;grid-row:1}.editorial-location-tile--portrait{grid-column:1;grid-row:2}.editorial-location-tile--copy{grid-column:2;grid-row:2;padding:19px}.editorial-location-tile--copy h2{font-size:34px}.editorial-location-tile--scenic{grid-column:1/-1;grid-row:3}.editorial-location-tile--costa{display:grid;grid-column:1;grid-row:4}.editorial-location-tile--foothill{display:grid;grid-column:2;grid-row:4}.editorial-location-tile--laguna{display:grid;grid-column:1;grid-row:5}.editorial-promise{display:flex;grid-column:2;grid-row:5}.editorial-location-caption h2{font-size:30px}.editorial-location-caption--paper h2{font-size:21px}
+  .editorial-all-locations__head{grid-template-columns:1fr;gap:14px}.editorial-all-locations__head>p{justify-self:start}.editorial-location-continuation{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:210px;gap:9px}.editorial-location-continuation .editorial-location-tile{grid-column:span 1}.editorial-location-tile--newport,.editorial-location-tile--santa-ana{grid-column:1/-1!important;height:245px}
+  .editorial-plan-strip{grid-template-columns:1fr;gap:22px}.editorial-plan-strip .btn{justify-self:start}
+  .editorial-enhanced .editorial-records .place-details{top:auto;left:0;width:100%;height:min(82svh,700px);border-left:0;border-top:1px solid var(--location-line);border-radius:22px 22px 0 0;transform:translateY(100%)}
+  .editorial-enhanced .editorial-records .place-card.is-open .place-details{transform:none}
+}
+@media(max-width:500px){
+  .editorial-locations-hero__copy>p{font-size:17px}.editorial-location-board{grid-template-columns:1fr;grid-template-rows:250px repeat(5,190px)}.editorial-location-tile--flagship{grid-column:1;grid-row:1}.editorial-location-tile--portrait{grid-column:1;grid-row:2}.editorial-location-tile--scenic{grid-column:1;grid-row:3}.editorial-location-tile--costa{grid-column:1;grid-row:4}.editorial-location-tile--foothill{grid-column:1;grid-row:5}.editorial-location-tile--laguna{grid-column:1;grid-row:6}.editorial-location-tile--copy,.editorial-promise{display:none}.editorial-location-caption--paper{position:absolute;inset:auto 0 0;background:linear-gradient(transparent,color-mix(in srgb,var(--location-navy) 92%,transparent));color:var(--location-on-dark);padding:34px 13px 11px}.editorial-location-tile--portrait,.editorial-location-tile--costa,.editorial-location-tile--foothill,.editorial-location-tile--laguna{display:block}.editorial-location-tile--portrait img,.editorial-location-tile--costa img,.editorial-location-tile--foothill img,.editorial-location-tile--laguna img{height:100%}
+  .editorial-location-continuation{grid-template-columns:1fr;grid-auto-rows:220px}.editorial-location-continuation .editorial-location-tile,.editorial-location-tile--newport,.editorial-location-tile--santa-ana{grid-column:1!important;height:auto}
+  .editorial-plan-strip{padding:27px 22px}.editorial-enhanced .editorial-records .place-details{padding:25px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  .editorial-location-tile,.editorial-location-tile img,.editorial-enhanced .editorial-records .place-details{transition:none!important}.editorial-location-tile img{transform:none!important;scale:1!important}.motion-ready .editorial-locations-page .motion-enter{opacity:1;transform:none;transition:none}
+}
+/* Visit details lead on phones; the location gallery sits to their left on desktop. */
+.coastal-locations-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:36px;align-items:start;padding-top:32px;padding-bottom:24px}
+.coastal-locations-layout .coastal-visit-desk{grid-column:2;grid-row:1;padding:0 0 0 28px;margin:0;border-left:1px solid var(--location-line);background:none;color:var(--location-navy)}
+.coastal-locations-layout .coastal-visit-desk>header{padding-bottom:20px;margin-bottom:22px;border-color:var(--location-line)}
+.coastal-locations-layout .coastal-visit-desk h1{font:500 54px/.98 var(--display);letter-spacing:-.045em;margin:0 0 12px}
+.coastal-locations-layout .coastal-visit-desk .eyebrow{color:var(--location-coral)}
+.coastal-locations-layout .coastal-visit-desk__grid{display:grid;grid-template-columns:1fr;gap:24px}
+.coastal-locations-layout .coastal-visit-desk__grid>div+div{border-top:1px solid var(--location-line);padding-top:22px}
+.coastal-locations-layout .coastal-visit-desk h3{font-size:26px;margin-bottom:12px}
+.coastal-locations-layout .coastal-visit-desk .visit-note{color:var(--muted);margin-top:12px}
+.coastal-locations-layout .coastal-visit-desk .btn{color:var(--location-navy);border-color:var(--location-navy)}
+.coastal-locations-layout .coastal-visit-desk .btn.primary{color:var(--location-on-dark);border-color:var(--location-coral)}
+.coastal-locations-layout .coastal-visit-desk .hours{font-size:13px;gap:8px 12px;margin-bottom:12px}
+.coastal-locations-layout .editorial-location-showcase{grid-column:1;grid-row:1;min-width:0}
+.locations-gallery-heading{margin-bottom:24px}
+.locations-gallery-heading .eyebrow{font-size:10px;letter-spacing:.2em;color:var(--location-coral);margin-bottom:8px}
+.locations-gallery-heading h2{font-size:clamp(44px,4.6vw,66px);line-height:.98;margin-bottom:10px}
+.locations-gallery-heading>p:last-child{font:500 19px/1.4 var(--display)}
+.coastal-locations-layout .editorial-location-tools{display:block}
+.coastal-locations-layout .editorial-filters>span{flex-basis:100%;margin-bottom:2px}
+.coastal-locations-layout .editorial-location-meta{max-width:none;width:100%;justify-content:space-between;margin-top:8px}
+.coastal-locations-layout .editorial-location-board{grid-template-columns:1fr 1fr;grid-template-rows:300px 245px 220px 220px}
+.coastal-locations-layout .editorial-location-tile--flagship{grid-column:1/-1;grid-row:1}
+.coastal-locations-layout .editorial-location-tile--portrait{grid-column:1;grid-row:2}
+.coastal-locations-layout .editorial-location-tile--scenic{grid-column:2;grid-row:2}
+.coastal-locations-layout .editorial-location-tile--copy{display:none}
+.coastal-locations-layout .editorial-location-tile--costa{grid-column:1;grid-row:3}
+.coastal-locations-layout .editorial-location-tile--foothill{grid-column:2;grid-row:3}
+.coastal-locations-layout .editorial-location-tile--laguna{grid-column:1;grid-row:4}
+.coastal-locations-layout .editorial-promise{grid-column:2;grid-row:4}
+.coastal-locations-layout .editorial-location-continuation{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,240px)}
+.coastal-locations-layout .editorial-location-continuation .editorial-location-tile{grid-column:span 1!important;height:auto}
+@media(min-width:1001px){
+ .coastal-locations-layout{
+  display:flex;flex-direction:column;gap:34px;padding-top:32px;
+ }
+ .coastal-locations-layout .coastal-visit-desk{
+  width:100%;padding:30px clamp(28px,3vw,46px);margin:0;border:1px solid var(--location-line);
+  background:var(--location-paper-bright);display:grid;
+  grid-template-columns:minmax(230px,.75fr) minmax(0,2.25fr);gap:clamp(30px,4vw,64px);
+ }
+ .coastal-locations-layout .coastal-visit-desk>header{
+  display:flex;flex-direction:column;justify-content:center;padding:0;margin:0;border:0;
+ }
+ .coastal-locations-layout .coastal-visit-desk__grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));gap:0;
+ }
+ .coastal-locations-layout .coastal-visit-desk__grid>div{padding:2px clamp(20px,2.2vw,34px)}
+ .coastal-locations-layout .coastal-visit-desk__grid>div:first-child{padding-left:0}
+ .coastal-locations-layout .coastal-visit-desk__grid>div+div{
+  border-top:0;border-left:1px solid var(--location-line);padding-top:2px;
+ }
+ .coastal-locations-layout .coastal-visit-desk__grid>div:last-child{padding-right:0}
+ .coastal-locations-layout .editorial-location-showcase{width:100%}
+ .coastal-locations-layout .editorial-location-board{grid-template-rows:auto 245px 220px 220px}
+ .coastal-locations-layout .editorial-location-tile--flagship{aspect-ratio:1672/941}
+}
+@media(max-width:1000px){
+ .coastal-locations-layout{display:flex;flex-direction:column;gap:30px;padding-top:26px}
+ .coastal-locations-layout .coastal-visit-desk{width:100%;padding:0 0 26px;border-left:0;border-bottom:1px solid var(--location-line)}
+ .coastal-locations-layout .coastal-visit-desk__grid{grid-template-columns:1fr 1fr}
+ .coastal-locations-layout .coastal-visit-desk__grid>div+div{border:0;padding-top:0}
+ .coastal-locations-layout .coastal-visit-desk__grid>div:last-child{grid-column:1/-1;border-top:1px solid var(--location-line);padding-top:20px}
+ .coastal-locations-layout .editorial-location-showcase{width:100%}
+}
+@media(max-width:600px){
+ .coastal-locations-layout .coastal-visit-desk__grid{grid-template-columns:1fr}
+ .coastal-locations-layout .coastal-visit-desk__grid>div+div{border-top:1px solid var(--location-line);padding-top:20px}
+ .coastal-locations-layout .coastal-visit-desk h1{font-size:48px}
+ .coastal-locations-layout .editorial-location-board{grid-template-columns:1fr;grid-template-rows:250px repeat(5,210px)}
+ .coastal-locations-layout .editorial-location-tile--portrait{grid-column:1;grid-row:2}
+ .coastal-locations-layout .editorial-location-tile--scenic{grid-column:1;grid-row:3}
+ .coastal-locations-layout .editorial-location-tile--costa{grid-column:1;grid-row:4}
+ .coastal-locations-layout .editorial-location-tile--foothill{grid-column:1;grid-row:5}
+ .coastal-locations-layout .editorial-location-tile--laguna{grid-column:1;grid-row:6}
+ .coastal-locations-layout .editorial-promise{display:none}
+ .coastal-locations-layout .editorial-location-continuation{grid-template-columns:1fr;grid-template-rows:repeat(6,220px)}
+}
+/* Card motion: one short entrance, gentle lift, and a sliding invitation. */
+.editorial-locations-page .editorial-location-tile{--card-opacity:1}
+.editorial-locations-page .editorial-location-tile.is-muted{--card-opacity:.27}
+.motion-ready .editorial-locations-page .editorial-location-tile.motion-enter{
+ animation:none;opacity:0;transform:translateY(16px);
+ transition:opacity 220ms ease,filter 220ms ease,translate 240ms ease,box-shadow 240ms ease;
+}
+.motion-ready .editorial-locations-page .editorial-location-tile.motion-enter.is-visible{
+ animation:coastal-card-arrive 560ms cubic-bezier(.22,.75,.25,1) var(--card-arrival-delay,0ms) both;
+}
+.motion-ready .editorial-locations-page .editorial-location-tile.motion-enter.card-arrived{
+ animation:none;opacity:var(--card-opacity);transform:none;
+}
+@keyframes coastal-card-arrive{
+ from{opacity:0;transform:translateY(16px)}
+ to{opacity:var(--card-opacity);transform:none}
+}
+.editorial-location-caption .location-card-action{
+ display:block;margin-top:7px;font:600 10px/1.3 var(--text);letter-spacing:.08em;text-transform:uppercase;
+ opacity:1;transform:none;transition:opacity 220ms ease,transform 260ms cubic-bezier(.22,.75,.25,1);
+}
+.location-card-action>span{display:inline-block;margin-left:6px}
+.editorial-location-caption--paper{position:relative;z-index:1}
+.coastal-locations-layout :is(.editorial-location-tile--portrait,.editorial-location-tile--costa,.editorial-location-tile--foothill,.editorial-location-tile--laguna){grid-template-rows:minmax(0,1fr) 100px}
+.editorial-locations-page .editorial-location-tile:hover{translate:none;box-shadow:none}
+.editorial-locations-page .editorial-location-tile:hover img{scale:1}
+@media(hover:hover) and (pointer:fine) and (min-width:801px){
+ .editorial-location-caption .location-card-action{opacity:0;transform:translateY(7px)}
+ .editorial-locations-page .editorial-location-tile:is(:hover,:focus-visible){translate:0 -5px;box-shadow:0 14px 28px color-mix(in srgb,var(--location-navy) 16%,transparent)}
+ .editorial-locations-page .editorial-location-tile:is(:hover,:focus-visible) img{scale:1.015}
+ .editorial-location-tile:is(:hover,:focus-visible) .location-card-action{opacity:1;transform:none}
+}
+.motion-ready .editorial-locations-page .editorial-location-tile.motion-enter:focus-visible{animation:none;opacity:var(--card-opacity);transform:none}
+@media(max-width:500px){.editorial-location-caption--paper{position:absolute}}
+.motion-off.editorial-locations-page .editorial-location-tile.motion-enter{
+ animation:none!important;opacity:var(--card-opacity)!important;transform:none!important;translate:none!important;
+}
+.motion-off.editorial-locations-page .location-card-action{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+ .motion-ready .editorial-locations-page .editorial-location-tile.motion-enter{animation:none!important;opacity:var(--card-opacity)!important;transform:none!important;translate:none!important}
+ .editorial-locations-page .editorial-location-tile img{scale:1!important}
+ .editorial-locations-page .location-card-action{opacity:1;transform:none}
+}
+
+/* Responsive location gallery refinement: three-up desktop, two-up tablet, one-up mobile. */
+@media(min-width:1181px){
+ .coastal-locations-layout .editorial-location-board{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:auto 230px 220px 136px;
+ }
+ .coastal-locations-layout .editorial-location-tile--flagship{grid-column:1/3;grid-row:1}
+ .coastal-locations-layout .editorial-location-tile--portrait{grid-column:3;grid-row:1}
+ .coastal-locations-layout .editorial-location-tile--scenic{grid-column:1/3;grid-row:2}
+ .coastal-locations-layout .editorial-location-tile--copy{display:flex;grid-column:3;grid-row:2}
+ .coastal-locations-layout .editorial-location-tile--costa{grid-column:1;grid-row:3}
+ .coastal-locations-layout .editorial-location-tile--foothill{grid-column:2;grid-row:3}
+ .coastal-locations-layout .editorial-location-tile--laguna{grid-column:3;grid-row:3}
+ .coastal-locations-layout .editorial-promise{
+  grid-column:1/-1;grid-row:4;display:grid;grid-template-columns:1fr 1.4fr auto;
+  align-items:center;gap:28px;padding:24px 28px;
+ }
+ .coastal-locations-layout .editorial-promise strong{font-size:30px;line-height:.95}
+ .coastal-locations-layout .editorial-promise p{margin:0}
+ .coastal-locations-layout .editorial-location-continuation{
+  grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,225px);
+ }
+}
+
+@media(min-width:601px) and (max-width:1000px){
+ .coastal-locations-layout{gap:24px}
+ .coastal-locations-layout .coastal-visit-desk{padding-bottom:22px}
+ .coastal-locations-layout .editorial-location-board{grid-template-rows:290px 225px 210px 190px}
+ .coastal-locations-layout .editorial-location-continuation{grid-auto-rows:210px}
+ .locations-gallery-heading{display:grid;grid-template-columns:1fr auto;align-items:end;gap:12px 30px}
+ .locations-gallery-heading .eyebrow{grid-column:1/-1;margin-bottom:-4px}
+ .locations-gallery-heading>p:last-child{max-width:22ch;text-align:right}
+}
+
+@media(max-width:800px){
+ .coastal-locations-layout .editorial-location-tools{overflow:hidden}
+ .coastal-locations-layout .editorial-filters{
+  display:flex;width:100%;max-width:100%;flex-wrap:nowrap;gap:7px;overflow-x:auto;
+  padding:0 0 8px;scroll-snap-type:x proximity;scrollbar-width:thin;
+ }
+ .coastal-locations-layout .editorial-filters>span,
+ .coastal-locations-layout .editorial-filters button{flex:0 0 auto;scroll-snap-align:start}
+ .coastal-locations-layout .editorial-filters>span{display:flex;align-items:center;margin:0 5px 0 0}
+}
+
+@media(max-width:600px){
+ .coastal-locations-layout{gap:22px;padding-top:18px}
+ .coastal-locations-layout .coastal-visit-desk{
+  padding:22px 18px;border:1px solid var(--location-line);background:var(--location-paper-bright);
+   box-shadow:0 12px 28px color-mix(in srgb,var(--location-navy) 6%,transparent);
+ }
+ .coastal-locations-layout .coastal-visit-desk>header{padding-bottom:16px;margin-bottom:18px}
+ .coastal-locations-layout .coastal-visit-desk h1{font-size:44px}
+ .coastal-locations-layout .coastal-visit-desk h3{font-size:23px}
+ .locations-gallery-heading{margin-bottom:18px}
+ .locations-gallery-heading h2{font-size:46px}
+ .coastal-locations-layout .editorial-location-tools{margin-bottom:10px}
+ .coastal-locations-layout .editorial-location-meta{margin-top:1px}
+ .coastal-locations-layout .editorial-location-board{
+  grid-template-columns:1fr;grid-template-rows:238px repeat(5,190px) 138px;gap:11px;padding-bottom:0;
+ }
+ .coastal-locations-layout .editorial-location-tile--flagship{grid-column:1;grid-row:1}
+ .coastal-locations-layout .editorial-location-tile--portrait{grid-column:1;grid-row:2}
+ .coastal-locations-layout .editorial-location-tile--scenic{grid-column:1;grid-row:3}
+ .coastal-locations-layout .editorial-location-tile--costa{grid-column:1;grid-row:4}
+ .coastal-locations-layout .editorial-location-tile--foothill{grid-column:1;grid-row:5}
+ .coastal-locations-layout .editorial-location-tile--laguna{grid-column:1;grid-row:6}
+ .coastal-locations-layout .editorial-location-tile--copy{display:none}
+ .coastal-locations-layout .editorial-promise{display:flex;grid-column:1;grid-row:7;padding:20px}
+ .coastal-locations-layout .editorial-promise strong{font-size:27px}
+ .coastal-locations-layout .editorial-promise p{font-size:12px;max-width:24ch}
+ .coastal-locations-layout :is(.editorial-location-tile--portrait,.editorial-location-tile--costa,.editorial-location-tile--foothill,.editorial-location-tile--laguna){display:block}
+ .coastal-locations-layout :is(.editorial-location-tile--portrait,.editorial-location-tile--costa,.editorial-location-tile--foothill,.editorial-location-tile--laguna) img{height:100%}
+ .coastal-locations-layout .editorial-location-caption--paper{
+  position:absolute;inset:auto 0 0;padding:38px 14px 12px;
+   background:linear-gradient(transparent,color-mix(in srgb,var(--location-navy) 94%,transparent));color:var(--location-on-dark);
+ }
+ .coastal-locations-layout .editorial-location-caption h2,
+ .coastal-locations-layout .editorial-location-caption--paper h2{font-size:27px}
+ .coastal-locations-layout .editorial-location-continuation{
+  grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:190px;gap:11px;
+ }
+ .coastal-locations-layout .editorial-location-continuation .editorial-location-tile{height:auto}
+ .editorial-location-caption .location-card-action{font-size:9px}
+}
+
+/* Shared chrome inherits the same Coastal palette on this page. */
+.editorial-locations-page .nav .nav-order,
+.editorial-locations-page .mobile-actions a:last-child,
+.editorial-locations-page .location-actions .order-location{
+ color:var(--location-on-dark);
+}
+.editorial-locations-page .nav .nav-order:is(:hover,:focus-visible){
+ background:color-mix(in srgb,var(--location-navy) 88%,white);
+ color:var(--location-on-dark);
+}
+@media print{
+ .coastal-locations-layout{display:block}.coastal-locations-layout .coastal-visit-desk{border:0;padding:0}
+  .editorial-locations-hero,.editorial-location-tools,.editorial-location-board,.editorial-all-locations,.editorial-plan-strip,.location-drawer-scrim{display:none!important}
+  .editorial-enhanced .editorial-records{height:auto!important;overflow:visible!important}.editorial-enhanced .editorial-records .locations-directory{display:block!important}.editorial-enhanced .editorial-records .place-card,.editorial-enhanced .editorial-records .place-inner{display:block!important}.editorial-enhanced .editorial-records .place-front{display:block!important}.editorial-enhanced .editorial-records .place-details{position:static!important;display:block!important;width:auto!important;opacity:1!important;visibility:visible!important;transform:none!important;overflow:visible!important;box-shadow:none!important;border:0!important}
+}

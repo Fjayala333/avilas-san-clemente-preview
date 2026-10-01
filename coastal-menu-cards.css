@@ -1,0 +1,46 @@
+/* A photo-led Coastal menu landing; detail views keep the complete original menu. */
+.coastal.clean-menu{--menu-ink:#173e55;--menu-muted:#526674;--menu-paper:#fbfaf5;--menu-line:#d5e0e5;--menu-accent:#b14d3d;--ink:#173e55;--muted:#526674}
+.coastal.clean-menu main.menu-shell{max-width:1440px;padding-top:38px}
+.coastal.clean-menu .menu-intro{position:relative;display:flex;align-items:center;gap:28px;padding:0 0 30px}
+.coastal.clean-menu .menu-intro h1{font:600 clamp(52px,6.4vw,82px)/1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.045em;margin:8px 0 12px}
+.coastal.clean-menu .menu-intro p{font:500 18px/1.45 'Cormorant Garamond',Georgia,serif;max-width:38ch}
+.coastal.clean-menu .menu-intro .coastal-menu-eyebrow{font:600 12px/1.5 Georgia,serif;letter-spacing:.24em;text-transform:uppercase;color:var(--menu-accent)}
+.coastal.clean-menu .menu-intro .coastal-menu-handnote{order:1;margin-left:auto;margin-right:16px;color:var(--menu-accent);font:400 clamp(28px,3vw,42px)/.98 CoastalMenuHand,cursive;transform:rotate(-7deg);text-align:center}
+.coastal.clean-menu .menu-intro-actions{order:2;display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.coastal.clean-menu.menu-enhanced .menu-tabs{display:flex;gap:9px;flex-wrap:wrap;padding:12px 0 18px;border:0;top:var(--site-nav-height,132px);background:var(--menu-paper)}
+.coastal.clean-menu .menu-tabs::after{display:none}
+.coastal.clean-menu .menu-tabs button{border:1px solid transparent;border-radius:14px;padding:12px 24px;min-height:46px;background:#e6edf0;color:var(--menu-ink)}
+.coastal.clean-menu .menu-tabs button span{font:600 16px/1.25 'Cormorant Garamond',Georgia,serif}
+.coastal.clean-menu .menu-tabs button[aria-selected=true]{background:var(--menu-accent);color:white;border-color:var(--menu-accent)}
+.coastal.clean-menu .menu-tabs button::after{display:none}
+.coastal-category-landing{scroll-margin-top:calc(var(--site-nav-height,132px) + 90px)}
+.coastal-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.coastal-category-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--menu-line);border-radius:13px;background:var(--menu-paper);text-decoration:none;box-shadow:0 4px 12px #173e5505;transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.coastal-category-card>img{display:block;width:100%;height:auto;aspect-ratio:1.65;object-fit:cover;transition:transform .4s ease}
+.coastal-card-copy{position:relative;display:grid;grid-template-columns:1fr;align-content:start;gap:7px;padding:18px 18px 20px;flex:1;min-height:155px}
+.coastal.clean-menu .coastal-card-copy h2{font:600 clamp(23px,2.1vw,29px)/1.06 'Cormorant Garamond',Georgia,serif;letter-spacing:-.035em;margin:0}
+.coastal-card-count{font:500 12px/1.4 Georgia,serif;color:#526674;letter-spacing:.12em;text-transform:uppercase}
+.coastal.clean-menu .coastal-card-copy p{font:500 16px/1.35 'Cormorant Garamond',Georgia,serif;margin:0;padding-right:31px;color:var(--menu-muted)}
+.coastal-card-arrow{position:absolute;bottom:18px;right:15px;width:31px;height:31px;display:grid;place-items:center;border-radius:50%;background:var(--menu-accent);color:white;font:21px/1 Georgia,serif}
+.coastal-category-card:focus-visible{outline:3px solid var(--menu-ink);outline-offset:4px}
+@media(hover:hover) and (pointer:fine){.coastal-category-card:hover{transform:translateY(-5px);box-shadow:0 12px 24px #173e5516;border-color:#8daab9}.coastal-category-card:hover>img{transform:scale(1.025)}}
+.coastal-more-categories{display:flex;align-items:center;gap:18px;margin:30px 0 18px;color:var(--menu-accent);font:600 13px/1.4 Georgia,serif;letter-spacing:.15em;text-transform:uppercase}
+.coastal-more-categories::after{content:'';height:1px;background:var(--menu-line);flex:1}
+.coastal-category-grid--extras{padding-bottom:18px}
+.coastal.clean-menu .coastal-menu-signoff{display:flex;align-items:center;justify-content:center;gap:24px;max-width:none;padding:12px 0 28px;text-align:center;font:500 12px/1.5 Georgia,serif;text-transform:uppercase;letter-spacing:.16em;color:var(--menu-accent)}
+.coastal-menu-signoff::before,.coastal-menu-signoff::after{content:'';height:1px;background:#adc3cf;flex:1}
+.coastal-cards-ready .menu-paper{display:block;border:1px solid var(--menu-line);border-radius:12px;overflow:hidden;scroll-margin-top:calc(var(--site-nav-height,132px) + 90px)}
+.coastal-cards-ready .menu-paper[hidden],.coastal-cards-ready [hidden]{display:none!important}
+.coastal-cards-ready .menu-switch,.coastal-cards-ready .menu-description{display:none!important}
+.coastal.clean-menu.coastal-cards-ready .menu-scroll{max-height:none;min-height:0;overflow:visible;padding:0;border:0}
+.coastal-detail-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 24px;border-bottom:1px solid var(--menu-line)}
+.coastal-detail-toolbar a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:var(--menu-accent)}
+.coastal-detail-toolbar p{font:600 22px/1.2 'Cormorant Garamond',Georgia,serif}
+.coastal-cards-ready .coastal-category-heading h2:focus{outline:2px solid var(--menu-accent);outline-offset:5px}
+.coastal-cards-ready .menu-footer-note{padding:18px 24px}
+@media(max-width:1050px){.coastal-category-grid{gap:15px}.coastal-card-copy{padding:16px 13px;min-height:170px}.coastal.clean-menu .menu-intro .coastal-menu-handnote{display:none}.coastal.clean-menu .menu-intro-actions{margin-left:auto}}
+@media(max-width:800px){.coastal-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.coastal-card-copy{min-height:140px}.coastal.clean-menu .coastal-card-copy h2{font-size:29px}.coastal.clean-menu.menu-enhanced .menu-tabs{flex-wrap:nowrap;gap:8px;padding:10px 0 16px;overflow-x:auto}.coastal.clean-menu .menu-tabs button{padding:11px 18px;white-space:nowrap}.coastal.clean-menu .menu-intro{align-items:flex-start}.coastal.clean-menu .menu-intro h1{font-size:62px}.coastal-detail-toolbar{padding:12px 18px}}
+@media(max-width:550px){.coastal.clean-menu main.menu-shell{padding-top:24px}.coastal.clean-menu .menu-intro{flex-wrap:wrap;gap:16px}.coastal.clean-menu .menu-intro-actions{flex-direction:row;align-items:center;justify-content:space-between;width:100%;margin:0;gap:15px}.coastal.clean-menu .menu-intro p{max-width:34ch}.coastal.clean-menu .menu-intro h1{font-size:58px}.coastal.clean-menu .coastal-card-copy h2{font-size:26px}.coastal-card-copy{padding:14px 12px;min-height:165px}.coastal.clean-menu .coastal-card-copy p{font-size:16px}.coastal-card-arrow{right:10px;bottom:13px}.coastal-more-categories{margin:24px 0 16px;gap:12px;font-size:12px}.coastal-detail-toolbar p{font-size:19px}.coastal.clean-menu .coastal-menu-signoff{gap:12px;letter-spacing:.08em}}
+@media(max-width:420px){.coastal-category-grid{grid-template-columns:minmax(0,1fr)}.coastal-category-card>img{aspect-ratio:1.8}.coastal-card-copy{min-height:0;padding:18px}.coastal.clean-menu .coastal-card-copy h2{font-size:30px}.coastal-card-copy p{padding-right:38px}.coastal-card-arrow{right:18px;bottom:18px}}
+@media(prefers-reduced-motion:reduce){.coastal-category-card,.coastal-category-card>img{transition:none}.coastal-category-card:hover,.coastal-category-card:hover>img{transform:none}}
+@media print{.coastal-category-landing,.coastal-detail-toolbar,.coastal-menu-handnote{display:none!important}.coastal.clean-menu.coastal-cards-ready .menu-paper,.coastal.clean-menu.coastal-cards-ready .menu-paper [hidden]{display:block!important}}

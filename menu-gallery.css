@@ -1,0 +1,141 @@
+/* Approved Instagram photos. Scoped to menu pages only. */
+.menu-gallery-page .menu-intro-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:flex-end}
+.menu-gallery-page .menu-jump-link,.menu-gallery-page .menu-photo-jump{font:600 14px/1.4 var(--text);display:inline-flex;align-items:center;min-height:44px;text-underline-offset:5px}
+.menu-gallery-page .menu-gallery.menu-gallery-bottom{margin-top:clamp(28px,4vw,48px);scroll-margin-top:24px}
+.menu-gallery-page .gallery-return{margin:0 0 12px}
+.menu-gallery-page #menu-choices{scroll-margin-top:24px}
+.menu-gallery-page .menu-gallery{--gallery-ink:var(--ink);--gallery-ground:var(--paper);color:var(--gallery-ink);margin:0 0 20px}
+.menu-gallery-page .gallery-heading{min-width:0}
+.menu-gallery-page .gallery-heading h2{font:500 clamp(30px,3.2vw,44px)/1.06 var(--display);letter-spacing:-.035em;text-transform:none;max-width:14ch}
+.menu-gallery-page .gallery-heading p{font:400 16px/1.6 var(--text);max-width:29ch;margin-top:16px}
+.menu-gallery-page .gallery-photos{min-width:0}
+.menu-gallery-page .menu-photo{min-width:0;display:flex;flex-direction:column;color:inherit;text-decoration:none;position:relative}
+.menu-gallery-page .menu-photo-media{display:block;overflow:hidden;background:var(--surface);min-width:0}
+.menu-gallery-page .menu-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 240ms cubic-bezier(.23,1,.32,1)}
+.menu-gallery-page .menu-photo-soup img{object-position:50% 48%}
+.menu-gallery-page .menu-photo-table img{object-position:50% 100%}
+.menu-gallery-page .menu-photo-drinks img{object-position:58% 42%}
+.menu-gallery-page .menu-photo-caption{display:flex;align-items:start;justify-content:space-between;gap:12px;padding:12px 0 4px;min-height:54px;font:500 16px/1.3 var(--text)}
+.menu-gallery-page .menu-photo-caption small{display:block;margin-top:5px;font:400 14px/1.35 var(--text)}
+.menu-gallery-page .photo-arrow{display:inline-flex;align-items:center;justify-content:center;font-size:22px;line-height:1;min-width:28px;min-height:28px}
+.menu-gallery-page .menu-photo:focus-visible{outline:3px solid currentColor;outline-offset:5px;z-index:3}
+.menu-gallery-page .menu-photo:focus-visible .menu-photo-caption{text-decoration:underline}
+.menu-gallery-page .menu-photo:active img{transform:scale(.99)}
+.menu-gallery-page .gallery-credit{display:flex;gap:6px 16px;flex-wrap:wrap;font:400 12px/1.5 var(--text);padding:8px 0 16px;margin:0}
+.menu-gallery-page .gallery-credit a{display:inline-flex;align-items:center;min-height:32px}
+.menu-gallery-page .gallery-credit a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.menu-gallery-page .gallery-inview .gallery-arrival{animation:gallery-arrive 650ms cubic-bezier(.23,1,.32,1) both}
+.menu-gallery-page .gallery-arrival:nth-child(2){animation-delay:50ms}
+.menu-gallery-page .gallery-arrival:nth-child(3){animation-delay:100ms}
+@keyframes gallery-arrive{from{opacity:.7;transform:translateY(12px) rotate(var(--gallery-rest-angle,0deg))}to{opacity:1;transform:translateY(0) rotate(var(--gallery-rest-angle,0deg))}}
+@media(hover:hover) and (pointer:fine){
+ .menu-gallery-page .menu-photo:hover img{transform:scale(1.035)}
+ .menu-gallery-page .menu-photo:hover .menu-photo-caption>span:first-child{text-decoration:underline}
+}
+
+/* Coastal: caption on open space, staggered photographic columns. */
+.menu-gallery-page .gallery-coastal{display:grid;grid-template-columns:.72fr 1.6fr;gap:36px;align-items:center;padding:10px 0 16px}
+.menu-gallery-page .gallery-coastal .gallery-heading h2{font-size:clamp(34px,3.9vw,52px);font-style:italic}
+.menu-gallery-page .gallery-coastal .gallery-photos{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;align-items:start}
+.menu-gallery-page .gallery-coastal .menu-photo-soup{grid-column:1;grid-row:1/3;padding-top:24px}
+.menu-gallery-page .gallery-coastal .menu-photo-soup .menu-photo-media{height:272px}
+.menu-gallery-page .gallery-coastal .menu-photo-table .menu-photo-media{height:126px}
+.menu-gallery-page .gallery-coastal .menu-photo-drinks{padding-top:8px}
+.menu-gallery-page .gallery-coastal .menu-photo-drinks .menu-photo-media{height:116px}
+.menu-gallery-page .gallery-coastal .menu-photo-caption{font-family:var(--display);font-size:21px;padding-top:9px;min-height:44px}
+.menu-gallery-page .gallery-coastal .menu-photo-caption small{display:none}
+
+/* Hacienda: an arched centerpiece, framed by two lower photographs. */
+.menu-gallery-page .gallery-hacienda{text-align:center;padding:8px 24px 0;background:#eddbce}
+.menu-gallery-page .gallery-hacienda .gallery-heading h2{max-width:none;font-size:clamp(28px,3vw,40px);padding-top:12px}
+.menu-gallery-page .gallery-hacienda .gallery-heading p{margin:10px auto 0;max-width:none}
+.menu-gallery-page .gallery-hacienda .gallery-photos{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:28px;align-items:end;margin-top:18px}
+.menu-gallery-page .gallery-hacienda .menu-photo-soup{grid-column:2;grid-row:1}
+.menu-gallery-page .gallery-hacienda .menu-photo-table{grid-column:1;grid-row:1}
+.menu-gallery-page .gallery-hacienda .menu-photo-drinks{grid-column:3;grid-row:1}
+.menu-gallery-page .gallery-hacienda .menu-photo-soup .menu-photo-media{height:228px;border-radius:150px 150px 0 0}
+.menu-gallery-page .gallery-hacienda .menu-photo-table .menu-photo-media{height:144px;border-radius:3px}
+.menu-gallery-page .gallery-hacienda .menu-photo-drinks .menu-photo-media{height:170px;border-radius:100px 100px 0 0}
+.menu-gallery-page .gallery-hacienda .menu-photo-caption{text-align:left;padding-bottom:16px}
+
+/* Family Gathering: the whole meal leads, with two smaller side-by-side moments. */
+.menu-gallery-page .gallery-family{background:#f2ca52;padding:24px;display:grid;grid-template-columns:1.4fr 1fr;gap:20px 28px;align-items:start;color:#174637}
+.menu-gallery-page .gallery-family .gallery-heading{grid-column:2;grid-row:1}
+.menu-gallery-page .gallery-family .gallery-heading h2{font-size:clamp(30px,3.5vw,46px)}
+.menu-gallery-page .gallery-family .gallery-heading p{margin-top:10px}
+.menu-gallery-page .gallery-family .gallery-photos{display:contents}
+.menu-gallery-page .gallery-family .menu-photo-table{--gallery-rest-angle:-1deg;grid-column:1;grid-row:1/3;transform:rotate(-1deg);background:#fffaf1;padding:8px 8px 0;box-shadow:4px 8px 18px #17463720}
+.menu-gallery-page .gallery-family .menu-photo-table .menu-photo-media{height:284px}
+.menu-gallery-page .gallery-family .gallery-side-pair{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.menu-gallery-page .gallery-family .gallery-side-pair .menu-photo-media{height:156px}
+.menu-gallery-page .gallery-family .menu-photo-caption{padding-inline:4px}
+.menu-gallery-page .gallery-family .gallery-side-pair .menu-photo-caption{font-size:15px}
+.menu-gallery-page .gallery-family .gallery-side-pair .menu-photo-caption small{display:none}
+
+/* Modern: one tall photograph, a red typographic panel, two tightly cut details. */
+.menu-gallery-page .gallery-modern{display:grid;grid-template-columns:1.08fr 1fr .82fr;grid-template-rows:auto auto;gap:8px;background:#282624;padding:8px;color:#fffaf1}
+.menu-gallery-page .gallery-modern .gallery-heading{grid-column:2/4;grid-row:1;padding:20px 24px;background:#ad3327}
+.menu-gallery-page .gallery-modern .gallery-heading h2{font-family:'Archivo Black',Arial,sans-serif;font-size:clamp(29px,3vw,41px);max-width:16ch}
+.menu-gallery-page .gallery-modern .gallery-heading p{font-size:16px;max-width:none;margin-top:12px}
+.menu-gallery-page .gallery-modern .gallery-photos{display:contents}
+.menu-gallery-page .gallery-modern .menu-photo-soup{grid-column:1;grid-row:1/3}
+.menu-gallery-page .gallery-modern .menu-photo-soup .menu-photo-media{height:294px;min-height:0;flex:none}
+.menu-gallery-page .gallery-modern .menu-photo-table{grid-column:2;grid-row:2}
+.menu-gallery-page .gallery-modern .menu-photo-drinks{grid-column:3;grid-row:2}
+.menu-gallery-page .gallery-modern .menu-photo-table .menu-photo-media,.menu-gallery-page .gallery-modern .menu-photo-drinks .menu-photo-media{height:140px}
+.menu-gallery-page .gallery-modern .menu-photo-caption{padding:12px 10px 10px;font-size:15px}
+.menu-gallery-page .gallery-modern .menu-photo-caption small{font-size:13px;color:#ece1d5}
+
+/* Heritage: an open culinary folio, ruled type and adjacent table studies. */
+.menu-gallery-page .gallery-heritage{display:grid;grid-template-columns:1.05fr 1fr;gap:0 32px;padding:20px 0;border-block:1px solid currentColor}
+.menu-gallery-page .gallery-heritage .gallery-heading{grid-column:2;grid-row:1;padding:0 0 18px}
+.menu-gallery-page .gallery-heritage .gallery-heading h2{font-size:clamp(32px,3.7vw,50px);font-style:italic}
+.menu-gallery-page .gallery-heritage .gallery-heading p{margin-top:12px;max-width:33ch}
+.menu-gallery-page .gallery-heritage .gallery-photos{display:contents}
+.menu-gallery-page .gallery-heritage .menu-photo-soup{grid-column:1;grid-row:1/3}
+.menu-gallery-page .gallery-heritage .menu-photo-soup .menu-photo-media{height:270px}
+.menu-gallery-page .gallery-heritage .gallery-side-pair{grid-column:2;grid-row:2;display:grid;grid-template-columns:1.1fr 1fr;gap:18px;border-top:1px solid #8a6b3040;padding-top:16px}
+.menu-gallery-page .gallery-heritage .gallery-side-pair .menu-photo-media{height:122px}
+.menu-gallery-page .gallery-heritage .menu-photo-caption{font-family:var(--display);font-size:22px}
+.menu-gallery-page .gallery-heritage .menu-photo-caption small{font-family:var(--text);font-size:13px}
+.menu-gallery-page .gallery-heritage .gallery-side-pair .menu-photo-caption small{display:none}
+
+/* Recompose each small-screen menu into a short, manually controlled photo rail. */
+@media(max-width:800px){
+ .menu-gallery-page .menu-intro{align-items:start}
+ .menu-gallery-page .menu-intro-actions{gap:4px;flex-direction:column;align-items:flex-end}
+ .menu-gallery-page .menu-gallery{display:block;padding:18px 0 0;margin-bottom:12px;max-width:100%}
+ .menu-gallery-page .menu-gallery .gallery-heading{padding:0 0 18px}
+ .menu-gallery-page .menu-gallery .gallery-heading h2{font-size:clamp(29px,6.5vw,38px);max-width:none}
+ .menu-gallery-page .menu-gallery .gallery-heading p{margin-top:10px;max-width:36ch;font-size:16px}
+ .menu-gallery-page .menu-gallery .gallery-photos{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:6px;padding:6px 6px 14px;margin-inline:-6px;scrollbar-width:thin}
+ .menu-gallery-page .menu-gallery .gallery-side-pair{display:contents}
+ .menu-gallery-page .menu-gallery .menu-photo{flex:0 0 min(76vw,310px);width:min(76vw,310px);grid-column:auto;grid-row:auto;transform:none;padding:0;box-shadow:none;background:transparent;scroll-snap-align:start}
+ .menu-gallery-page .menu-gallery .menu-photo .menu-photo-media{height:176px;min-height:0;flex:none}
+ .menu-gallery-page .menu-gallery .menu-photo-caption{min-height:62px;padding:10px 0 0;text-align:left;font-size:18px}
+ .menu-gallery-page .menu-gallery .menu-photo-caption small{display:none}
+ .menu-gallery-page .gallery-hacienda{padding:18px 18px 0;text-align:left}
+ .menu-gallery-page .gallery-hacienda .menu-photo-soup .menu-photo-media{border-radius:120px 120px 0 0}
+ .menu-gallery-page .gallery-family{padding:18px 18px 0}
+ .menu-gallery-page .gallery-family .menu-photo-table{background:#fffaf1;padding:6px}
+ .menu-gallery-page .gallery-family .menu-photo-table .menu-photo-media{height:164px}
+ .menu-gallery-page .gallery-modern{padding:8px}
+ .menu-gallery-page .gallery-modern .gallery-heading{padding:18px}
+ .menu-gallery-page .gallery-modern .gallery-photos{margin:0;padding:6px 0 10px;scroll-padding-inline:0}
+ .menu-gallery-page .gallery-modern .menu-photo-caption{padding-inline:6px}
+ .menu-gallery-page .gallery-heritage .menu-photo-soup .menu-photo-media{height:176px}
+ .menu-gallery-page .gallery-inview .gallery-arrival{animation:none}
+}
+@media(max-width:390px){
+ .menu-gallery-page .menu-intro{flex-wrap:wrap;gap:8px}
+ .menu-gallery-page .menu-intro-actions{width:100%;flex-direction:row;justify-content:space-between;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+ .menu-gallery-page .menu-gallery *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .menu-gallery-page .menu-gallery .menu-photo,.menu-gallery-page .menu-gallery img{transform:none!important}
+}
+.menu-gallery-page.motion-off .menu-gallery *{animation:none!important;transition:none!important}
+.menu-gallery-page.motion-off .menu-gallery .menu-photo,.menu-gallery-page.motion-off .menu-gallery img{transform:none!important}
+@media print{
+ .menu-gallery-page .menu-gallery,.menu-gallery-page .gallery-credit,.menu-gallery-page .gallery-return,.menu-gallery-page .menu-photo-jump{display:none!important}
+}

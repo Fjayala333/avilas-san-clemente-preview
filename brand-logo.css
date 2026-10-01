@@ -1,0 +1,29 @@
+/* Owner-supplied Charro logo. Preserve the full image and intrinsic proportions. */
+img.avila-logo{background:transparent;border:0;box-shadow:none}
+/* Inverse luminance mask: retain the black mark, reveal the page through white.
+   The original PNG stays untouched; multiply remains the older-browser fallback. */
+@supports (mask-composite:exclude) and (mask-mode:luminance){
+ img.avila-logo{
+  mask-image:linear-gradient(#fff,#fff),url('assets/avila-charro-logo.png');
+  mask-mode:alpha,luminance;
+  mask-composite:exclude;
+  mask-size:100% 100%,100% 100%;
+  mask-position:center;
+  mask-repeat:no-repeat
+ }
+}
+body .header .brand img.avila-logo{
+ width:144px;height:auto;aspect-ratio:1426 / 1103;object-fit:contain;
+ flex-shrink:0;mix-blend-mode:multiply
+}
+body header .logo img.avila-logo{
+ display:block;width:144px;height:auto;aspect-ratio:1426 / 1103;
+ object-fit:contain;mix-blend-mode:multiply
+}
+.hacienda-story>img.avila-logo{width:220px;height:auto;object-fit:contain;mix-blend-mode:multiply}
+@media(max-width:800px){
+ body .header .brand img.avila-logo{width:108px;height:auto}
+ .hacienda-story>img.avila-logo{width:160px;height:auto}
+}
+@media(max-width:650px){body header .logo img.avila-logo{width:112px;height:auto}}
+@media(max-width:360px){body .header .brand{gap:10px}body .header .brand span{padding-left:10px}}

@@ -1,0 +1,338 @@
+/* Four fitted photo compositions. Family keeps its separate approved puzzle.
+   Sparse grid placement follows DOM order; originals and credits stay intact. */
+.menu-gallery-page #food-gallery.menu-puzzle {
+  --piece-paper: var(--paper);
+  --piece-ink: var(--ink);
+  --piece-gap: 12px;
+  padding: clamp(18px, 3vw, 38px);
+  border: 0;
+  background: var(--surface);
+  color: var(--ink);
+}
+.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading {
+  align-items: center;
+  gap: 24px;
+  padding: 8px 0 20px;
+  background: none;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading h2 {
+  font: 500 clamp(2.125rem, 4.1vw, 3.75rem)/1.08 var(--display);
+  letter-spacing: -.025em;
+  text-transform: none;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .gallery-menu-links {
+  margin: 0 0 24px;
+  gap: 4px 24px;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-collection {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(clamp(240px, 24vw, 295px), auto);
+  align-items: stretch;
+  gap: var(--piece-gap);
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item {
+  display: flex;
+  flex-direction: column;
+  grid-column: auto;
+  grid-row: auto;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  border: 0;
+  rotate: none;
+  box-shadow: none;
+  text-align: left;
+  background: var(--piece-paper);
+  color: var(--piece-ink);
+  transition: transform 350ms cubic-bezier(.22, 1, .36, 1), box-shadow 350ms ease;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-open {
+  flex: 1 0 150px;
+  min-width: 0;
+  min-height: 150px;
+  border-radius: 0;
+  background: var(--piece-paper);
+  color: var(--piece-ink);
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-open img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-full .photo-open img {
+  object-fit: contain;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item[data-source-code="table"] img {
+  object-position: center 65%;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 14px 16px 4px;
+  border: 0;
+  font: 500 1.25rem/1.25 var(--display);
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption small {
+  font: 400 .75rem/1.5 var(--text);
+  margin-top: 6px;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption a {
+  min-height: 44px;
+  font: 500 .875rem/1.4 var(--text);
+  color: inherit;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item .photo-credit a {
+  display: inline-flex;
+  max-width: 100%;
+}
+.menu-gallery-page #food-gallery.menu-puzzle .photo-item:focus-within { z-index: 3; }
+.menu-gallery-page #food-gallery.menu-puzzle .photo-open:focus-visible {
+  outline: 3px solid var(--piece-ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--piece-paper);
+}
+
+/* COASTAL — broad tidal spreads; the hero swaps banks every six photos.
+   AAAABB / AAAACC / DDEEFF, then GGHHHH / IIHHHH / JJKKLL. */
+.coastal.menu-gallery-page #food-gallery.menu-puzzle { border-radius: 22px 0 22px 0; }
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-collection {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item { grid-column: span 2; }
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 1) {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 7) {
+  grid-column: span 2;
+  grid-row: auto;
+}
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 8) {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 1) .photo-open {
+  border-radius: 18px 0 0 0;
+}
+.coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption {
+  padding-inline: 18px;
+  font-size: 1.375rem;
+}
+
+/* HACIENDA — a three-column courtyard wall with alternating tall arch tiles.
+   ABC / ADD / EEF, then GHI / JJI / KLL. */
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle {
+  --piece-gap: 14px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 6px double var(--surface);
+}
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading {
+  display: block;
+  text-align: center;
+  padding-block: 14px 24px;
+}
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading h2 {
+  max-width: none;
+  padding: 0;
+}
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading p {
+  margin: 14px auto 0;
+  max-width: 42ch;
+}
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .gallery-menu-links { justify-content: center; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-collection {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item { padding: 7px 7px 0; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 1) { grid-row: span 2; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 4),
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 5) { grid-column: span 2; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 7) { grid-row: auto; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 9) { grid-row: span 2; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 11) { grid-column: auto; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 12) { grid-column: span 2; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 1) .photo-open,
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 9) .photo-open {
+  border-radius: 140px 140px 0 0;
+}
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(12n + 7) .photo-open { border-radius: 0; }
+.hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption {
+  border-top: 1px solid var(--surface);
+  padding: 12px 10px 2px;
+}
+
+/* MODERN — sharp, closely fitted editorial blocks in nine-image spreads.
+   AAABBB / AAABBB / CCDDEE / FFGGHH / FFGGII. */
+.modern.menu-gallery-page #food-gallery.menu-puzzle {
+  --piece-gap: 6px;
+  --piece-paper: #282624;
+  --piece-ink: #fffaf1;
+  background: #282624;
+  color: #fffaf1;
+  padding: clamp(16px, 2.3vw, 30px);
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading { border-bottom: 1px solid #fffaf14d; }
+.modern.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading h2 {
+  font-weight: 400;
+  font-size: clamp(2.375rem, 4.5vw, 4rem);
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .gallery-menu-links { margin-top: 14px; }
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-collection {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item {
+  grid-column: span 2;
+  border-bottom: 1px solid #fffaf14d;
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(9n + 1),
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(9n + 2) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(9n + 6),
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(9n + 7) { grid-row: span 2; }
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption {
+  font-weight: 400;
+  padding: 14px 12px 4px;
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(9n + 1) figcaption,
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(9n + 2) figcaption {
+  font-size: 1.625rem;
+}
+.modern.menu-gallery-page #food-gallery.menu-puzzle .photo-open:after {
+  border-radius: 0;
+  width: 38px;
+  height: 38px;
+}
+
+/* HERITAGE — fitted album leaves; wide pieces have marginal captions.
+   AABBCC / AADDDD / EEEFFF. No scattered/rotated resting cards. */
+.heritage.menu-gallery-page #food-gallery.menu-puzzle {
+  --piece-gap: 14px;
+  background: var(--surface);
+  border-block: 3px double var(--accent);
+}
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .gallery-heading h2 { font-style: italic; }
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-collection {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item {
+  grid-column: span 2;
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 1) { grid-row: span 2; }
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 4) { grid-column: span 4; }
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 5),
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 6) { grid-column: span 3; }
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 4),
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 5),
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 6) {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(140px, 1fr);
+}
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption {
+  font-size: 1.375rem;
+  font-style: italic;
+  padding: 12px 10px 0;
+}
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 4) figcaption,
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 5) figcaption,
+.heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 6) figcaption {
+  align-self: center;
+  padding: 12px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .coastal.menu-gallery-page #food-gallery.menu-puzzle .photo-item:hover {
+    z-index: 2;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px #173e551f;
+  }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:hover {
+    box-shadow: inset 0 0 0 2px var(--accent);
+  }
+  .heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item:hover {
+    z-index: 2;
+    transform: translateY(-2px) rotate(-.25deg);
+    box-shadow: 0 7px 16px #29375420;
+  }
+  .menu-gallery-page #food-gallery.menu-puzzle .photo-full .photo-open:hover img { transform: none; }
+}
+
+/* Smaller screens get compact fitted rows, not shrunken desktop pieces.
+   Explicit resets supersede the shared gallery's older mobile !important spans. */
+@media (max-width: 920px) {
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-collection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+  }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item:nth-child(n) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item:nth-child(3n + 1) { grid-column: 1 / -1 !important; }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(n) { grid-column: auto !important; }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(3n) { grid-column: 1 / -1 !important; }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item .photo-open {
+    flex: 0 0 auto;
+    min-height: 0;
+    aspect-ratio: 1;
+  }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item:nth-child(3n + 1) .photo-open { aspect-ratio: 16 / 10; }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(n) .photo-open {
+    aspect-ratio: 1;
+    border-radius: 0;
+  }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(3n) .photo-open { aspect-ratio: 16 / 10; }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item:nth-child(6n + 1) .photo-open { border-radius: 80px 80px 0 0; }
+  .heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item figcaption { align-self: stretch; }
+}
+@media (max-width: 600px) {
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle {
+    --piece-gap: 8px;
+    padding: 22px 10px 18px;
+  }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .gallery-heading { display: block; }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .gallery-heading p { margin-top: 14px; }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .gallery-menu-links { gap: 0 18px; }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item:nth-child(n) figcaption {
+    padding: 10px 9px 2px;
+    font-size: 1.125rem;
+  }
+  .heritage.menu-gallery-page #food-gallery.menu-puzzle .photo-item { padding: 5px; }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle { border-width: 3px; }
+  .hacienda.menu-gallery-page #food-gallery.menu-puzzle .photo-item { padding: 5px 5px 0; }
+}
+@media (max-width: 380px) {
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-collection { grid-template-columns: minmax(0, 1fr); }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item:nth-child(n) { grid-column: 1 / -1 !important; }
+  .menu-gallery-page:is(.coastal,.hacienda,.modern,.heritage) #food-gallery.menu-puzzle .photo-item:nth-child(n) .photo-open { aspect-ratio: 4 / 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-gallery-page #food-gallery.menu-puzzle .photo-item,
+  .menu-gallery-page #food-gallery.menu-puzzle .photo-open img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+.menu-gallery-page.motion-off #food-gallery.menu-puzzle .photo-item,
+.menu-gallery-page.motion-off #food-gallery.menu-puzzle .photo-open img {
+  transition: none !important;
+  transform: none !important;
+}

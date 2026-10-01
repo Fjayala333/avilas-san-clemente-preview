@@ -1,0 +1,35 @@
+/* Owner-selected ChatGPT artwork. Kept separate from authentic documentary photos. */
+.coastal-hero{position:relative;max-width:1390px;margin:18px auto 0;min-height:650px;padding:45px;overflow:hidden;display:block;background:url('assets/hero-avila-sunlit-ola-vista.png') center 48%/cover no-repeat}
+.coastal-hero>div:first-child{position:relative;z-index:2;max-width:525px;padding:30px 35px;background:#fbfaf5}
+.coastal-hero h1{font-size:clamp(43px,5.4vw,78px)}
+.coastal-hero .copy{font-size:17px}
+.coastal-hero .postcard{position:absolute;bottom:25px;right:35px;width:230px;padding:10px 10px 40px;transform:rotate(calc(4deg - var(--scene,0)*4deg))}
+.coastal-hero .postcard .photo{height:165px}
+.coastal-hero .postcard .coastal-stamp{display:none}
+.coastal-hero .postcard figcaption{font-size:10px;left:10px;right:10px;bottom:13px}
+.coastal-hero .postcard::before{inset:7px -9px -9px 10px}
+.coastal .coastal-rule{margin-top:30px}
+.motion-off .postcard,.motion-off .journal-page,.motion-off .album figure{transform:none!important}
+@media(max-width:800px){.coastal-hero{margin:5px 0 0;min-height:0;padding:290px 15px 20px;background-size:auto 360px;background-position:61% top;background-color:#e6edf0}.coastal-hero>div:first-child{padding:25px;max-width:none}.coastal-hero h1{font-size:clamp(41px,10vw,64px)}.coastal-hero .postcard{display:none}.coastal-hero .actions{margin-top:20px}.coastal-hero .btn{font-size:12px;padding:12px}}
+@media(prefers-reduced-motion:reduce){.postcard,.journal-page,.album figure{transform:none!important}}
+@media(max-width:800px){
+ .coastal-hero{padding-top:180px;background-size:auto 270px}
+ .coastal-hero>div:first-child{padding:20px}
+ .coastal-hero h1{font-size:clamp(38px,9.5vw,58px)}
+ .coastal-hero .copy{margin-top:17px;font-size:16px}
+ .hacienda-arch{height:230px}
+ .hacienda-welcome{margin-top:-35px;padding:20px 15px}
+ .hacienda-welcome h1{font-size:clamp(36px,9.5vw,55px)}
+ .family-hero{min-height:0}
+ .family-hero>.hero-ground{height:260px}
+ .welcome-note{margin-top:180px;padding:20px}
+ .welcome-note h1{font-size:clamp(35px,9.1vw,55px)}
+ .welcome-note .copy,.welcome-note p{font-size:15px}
+ .modern-banner{height:320px}
+ .modern-heading h1{font-size:clamp(35px,9.5vw,56px)}
+ .modern-heading p{margin-top:14px;font-size:13px}
+ .heritage-ground{height:200px}
+ .heritage-title{padding:20px;margin-top:-25px}
+ .heritage-title h1{font-size:clamp(37px,9.7vw,57px)}
+ .heritage-title .copy{margin-top:17px;font-size:15px}
+}

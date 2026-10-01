@@ -1,0 +1,185 @@
+/* Coastal home: keep the complete photograph, never a cropped strip. */
+.coastal.home .coastal-editorial {
+  max-width: none;
+  padding-block: clamp(18px, 2.2vw, 34px) 0;
+  background: #f0ebdf;
+}
+.coastal.home .coastal-editorial-cover,
+.coastal.home .coastal-editorial .coastal-gallery-caption {
+  max-width: 1240px;
+}
+.coastal.home .coastal-editorial-photo {
+  margin: 0;
+  min-width: 0;
+  overflow: visible;
+}
+.coastal.home .coastal-editorial-photo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: none;
+  box-shadow: 0 12px 28px #173e5510;
+}
+.coastal.home .coastal-editorial-photo figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 20px;
+  padding-block: 14px 16px;
+  border-bottom: 1px solid #173e5530;
+  font: italic 1.25rem/1.4 var(--display);
+  letter-spacing: 0;
+}
+.coastal.home .coastal-photo-location {
+  align-self: center;
+  font: .875rem/1.5 var(--text);
+  color: var(--muted);
+}
+.coastal.home .coastal-editorial .coastal-gallery-caption {
+  padding-block: clamp(30px, 4vw, 58px);
+  background: transparent;
+}
+.coastal.home .coastal-editorial .eyebrow { font-size: .75rem; }
+.coastal.home .coastal-party-trays{grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:clamp(32px,7vw,100px)}
+.coastal-party-trays figure{width:100%;max-width:430px;margin-inline:auto}
+.coastal-party-trays figure>img{width:100%;height:auto;display:block}
+.coastal-party-trays .eyebrow{color:var(--accent)}
+.coastal-party-trays .actions{align-items:center;gap:14px 24px}
+.coastal-party-trays .note{color:var(--muted)}
+
+/* One compact journey replaces the repeated invitation, menu teaser and history blocks. */
+.coastal-chapters{
+  padding-block:clamp(64px,8vw,112px);
+  background:#e6edf0;
+  border-block:1px solid #173e5522;
+}
+.coastal-chapters__header{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+  gap:clamp(32px,7vw,100px);
+  align-items:end;
+  margin-bottom:clamp(42px,6vw,76px);
+}
+.coastal-chapters__header h2{
+  margin:0;
+  font-size:clamp(50px,6.4vw,88px);
+  line-height:.92;
+  letter-spacing:-.045em;
+}
+.coastal-chapters__header h2 em{color:#b14d3d}
+.coastal-chapters__header>p{
+  max-width:38ch;
+  margin:0 0 4px;
+  font:500 clamp(18px,1.7vw,23px)/1.48 var(--display);
+}
+.coastal-chapters__grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(16px,2vw,28px);
+  padding-top:36px;
+}
+.coastal-chapters__grid:before{
+  content:"";
+  position:absolute;
+  inset:5px 0 auto;
+  height:1px;
+  background:#173e5570;
+}
+.coastal-chapter{
+  position:relative;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  background:#fbfaf5;
+}
+.coastal-chapter:before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  top:-37px;
+  left:20px;
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:#b14d3d;
+  box-shadow:0 0 0 8px #e6edf0;
+}
+.coastal-chapter figure{
+  position:relative;
+  margin:0;
+  height:clamp(230px,24vw,350px);
+  overflow:hidden;
+  background:#d8e1e4;
+}
+.coastal-chapter figure:after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0;
+  box-shadow:inset 0 0 0 1px #173e5518;
+  pointer-events:none;
+}
+.coastal-chapter img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 650ms cubic-bezier(.2,.75,.2,1);
+}
+.coastal-chapter:first-child img{object-position:50% 50%}
+.coastal-chapter:nth-child(2) img{
+  object-fit:cover;
+  object-position:50% 47%;
+}
+.coastal-chapter:nth-child(3) img{object-position:50% 56%}
+.coastal-chapter__copy{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:clamp(22px,2.8vw,34px);
+}
+.coastal-chapter__date{
+  margin:0 0 12px;
+  color:#b14d3d;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.coastal-chapter h3{
+  margin:0 0 13px;
+  font:500 clamp(28px,3vw,42px)/1 var(--display);
+  letter-spacing:-.025em;
+}
+.coastal-chapter__copy>p:not(.coastal-chapter__date){
+  margin:0 0 22px;
+  line-height:1.58;
+}
+.coastal-chapter .text-link{margin-top:auto;align-self:flex-start}
+@media(hover:hover) and (pointer:fine){
+  .coastal-chapter:hover img{transform:scale(1.025)}
+}
+@media (max-width: 800px) {
+  .coastal.home .coastal-party-trays{grid-template-columns:1fr;gap:28px}
+  .coastal.home .coastal-editorial-photo figcaption { font-size: 1.125rem; }
+  .coastal-chapters{padding-block:54px 62px}
+  .coastal-chapters__header{grid-template-columns:1fr;gap:18px;margin-bottom:42px}
+  .coastal-chapters__header h2{font-size:clamp(46px,11vw,66px)}
+  .coastal-chapters__header>p{font-size:18px}
+  .coastal-chapters__grid{grid-template-columns:1fr;gap:18px;padding-top:0;padding-left:18px}
+  .coastal-chapters__grid:before{inset:0 auto 0 4px;width:1px;height:auto}
+  .coastal-chapter{display:grid;grid-template-columns:minmax(125px,.78fr) minmax(0,1.22fr)}
+  .coastal-chapter:before{top:26px;left:-20px;width:11px;height:11px;box-shadow:0 0 0 6px #e6edf0}
+  .coastal-chapter figure{height:100%;min-height:260px}
+  .coastal-chapter__copy{padding:22px 20px}
+  .coastal-chapter h3{font-size:29px}
+}
+@media (max-width: 520px) {
+  .coastal-chapters__grid{padding-left:14px}
+  .coastal-chapter{display:flex}
+  .coastal-chapter:before{left:-16px}
+  .coastal-chapter figure{height:220px;min-height:0}
+}

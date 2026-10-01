@@ -1,0 +1,219 @@
+/* Five location experiences. All restaurant information is static HTML.
+   Without enhancement, every address, schedule and link remains visible. */
+.locations-page .locations-intro{padding-bottom:28px}
+.places-toolbar{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:8px 0 32px;padding-block:20px;border-block:1px solid color-mix(in srgb,var(--ink) 22%,transparent)}
+.places-toolbar h2{font-size:clamp(28px,3vw,42px);max-width:25ch;letter-spacing:-.035em}
+.places-hint{margin-top:12px;font-size:16px;line-height:1.5;color:var(--muted)}
+.places-controls{display:flex;flex-direction:column;align-items:end;gap:12px;flex-shrink:0}
+.places-view{display:none;gap:4px;padding:4px;border:1px solid var(--ink)}
+.cards-ready .places-view{display:flex}
+.places-view button{background:transparent;border:0;padding:9px 15px;min-height:44px;font-size:14px;font-weight:600}
+.places-view button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.places-controls .motion{font-size:14px;min-height:44px}
+.locations-page .places-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:0 0 60px;align-items:start}
+.locations-page .place-card{display:block;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;scroll-margin-top:28px;perspective:1600px}
+.place-inner{position:relative;background:#fffdf6;color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);box-shadow:0 12px 30px #173e5514}
+.place-front{min-width:0;background:#fffdf6;position:relative}
+.locations-page .location-photo{display:block;width:auto;max-width:none;padding:0;margin:0;grid-column:auto;grid-row:auto}
+.place-photo{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--surface)}
+.place-photo img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--photo-position,50% 50%)}
+.front-caption{padding:24px;display:flex;flex-direction:column;align-items:start;gap:14px}
+.front-caption h2{font-size:clamp(28px,2.7vw,42px);line-height:1.05;letter-spacing:-.035em;overflow-wrap:anywhere}
+.front-caption .location-hook{margin:0;font-size:16px;font-weight:400;line-height:1.5;color:var(--ink)}
+.place-open,.place-close{display:none;min-height:44px;font-size:14px;font-weight:600;line-height:1.4;border:0;background:transparent;padding:10px 0;text-align:left;text-decoration:underline;text-underline-offset:5px}
+.cards-ready .place-open,.cards-ready .place-close{display:inline-flex;gap:16px;align-items:center}
+.place-open{margin-top:auto}
+.place-open span{font-size:22px}
+.place-details{position:relative;padding:24px;min-width:0;display:flex;flex-direction:column;gap:18px;background:#fffdf6;color:var(--ink)}
+.place-details:focus{outline:none}
+.place-details:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.detail-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:start;gap:8px}
+.detail-top h3{font:400 28px/1.12 var(--display);letter-spacing:-.035em;flex:1 0 100%;overflow-wrap:anywhere}
+.place-close{padding-block:0;min-height:44px}
+.locations-page .place-details .location-body,.locations-page .place-details .location-hours{grid-column:auto;grid-row:auto;max-width:none}
+.place-details .location-reason{font-size:16px;line-height:1.55}
+.place-details .location-body address{font-size:16px;line-height:1.6;margin-top:14px}
+.place-details .location-hours h3{font:600 16px/1.4 var(--text);margin-bottom:8px}
+.place-details .location-hours dl>div{gap:12px;margin-bottom:6px}
+.place-details .location-hours dt{max-width:60%}
+.place-details .location-hours dd{white-space:normal}
+.place-details .hours-note{font-size:14px;line-height:1.5}
+.locations-page .place-details .location-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding:0;border:0}
+.place-details .location-actions .btn{padding:10px 12px;gap:6px;font-size:14px;min-height:44px;white-space:normal}
+.place-details .location-actions .location-source{margin-left:0;flex-basis:100%;font-size:14px;min-height:44px}
+.place-credit{font-size:12px;line-height:1.5;min-height:28px;align-content:center}
+.places-view button:active,.place-open:active,.place-close:active{transform:translateY(1px)}
+.places-view button:focus-visible,.place-open:focus-visible,.place-close:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.places-controls button:disabled{cursor:default;opacity:.7}
+
+/* COASTAL: a true, two-sided postcard. Both faces size the card, never clip it. */
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-inner{display:grid;transform-style:preserve-3d;transition:transform 780ms cubic-bezier(.22,.61,.36,1)}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-front,
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-details{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-front{display:flex;flex-direction:column;padding:12px}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .location-photo{flex:1;display:flex}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-photo{width:100%;min-height:290px;aspect-ratio:auto}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-photo img{position:absolute;inset:0}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .front-caption{min-height:200px;padding:24px 12px 12px}
+.cards-ready:not(.places-list) [data-card-kind="flip"] .place-details{transform:rotateY(180deg)}
+.cards-ready:not(.places-list) [data-card-kind="flip"].is-open .place-inner{transform:rotateY(180deg)}
+
+/* HACIENDA: arched tiled frames, with two photo shutters parting at the seam. */
+.hacienda.locations-page .places-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.hacienda .place-inner{border:7px double #8b3f31;padding:14px;background:#eddbce}
+.hacienda .place-front{background:#fffbf2}
+.hacienda .place-photo{border-radius:48% 48% 0 0;aspect-ratio:1.6}
+.hacienda .front-caption{align-items:center;text-align:center;padding:26px}
+.hacienda .front-caption h2{font-size:clamp(32px,3.4vw,48px)}
+.hacienda .place-details{background:#fffbf2}
+.place-shutters{display:none;position:absolute;inset:0;overflow:hidden;border-radius:inherit}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-inner{display:grid}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-front,
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-details{grid-area:1/1}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-front{z-index:2;display:flex;flex-direction:column;transition:opacity 180ms ease-out 200ms}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .location-photo{flex:1;display:flex}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-photo{width:100%;min-height:320px;aspect-ratio:auto}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-photo img{position:absolute;inset:0}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-shutters{display:block}
+.cards-ready:not(.places-list) [data-card-kind="shutters"] .place-photo>img{opacity:0}
+.place-shutters span{position:absolute;inset:0;background-image:var(--place-photo);background-size:cover;background-position:var(--photo-position);transition:transform 500ms cubic-bezier(.22,.8,.25,1)}
+.place-shutters span:first-child{clip-path:inset(0 50% 0 0)}
+.place-shutters span:last-child{clip-path:inset(0 0 0 50%)}
+.cards-ready:not(.places-list) [data-card-kind="shutters"].is-open .place-front{opacity:0;pointer-events:none}
+.cards-ready:not(.places-list) [data-card-kind="shutters"].is-open .place-shutters span:first-child{transform:translateX(-100%)}
+.cards-ready:not(.places-list) [data-card-kind="shutters"].is-open .place-shutters span:last-child{transform:translateX(100%)}
+
+/* FAMILY: an album cover that turns from its bound left edge. */
+.family.locations-page .places-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 40px}
+.family .place-inner{border:0;border-left:12px solid #174637;border-radius:0 12px 12px 0;background:#fffdf5;box-shadow:7px 10px 0 #e5d4a4,0 18px 35px #17463720}
+.family .place-front{padding:24px;background:#f4df96;border-radius:0 12px 12px 0}
+.family .place-photo{border:10px solid #fffdf5;transform:rotate(var(--card-angle));box-shadow:0 10px 18px #17463720;aspect-ratio:1.5}
+.family .front-caption{padding:28px 4px 4px}
+.family .front-caption h2{font-size:clamp(34px,3.5vw,52px)}
+.family .place-details{border-radius:0 12px 12px 0;padding:30px}
+.cards-ready:not(.places-list) [data-card-kind="album"] .place-inner{display:grid;perspective:1600px}
+.cards-ready:not(.places-list) [data-card-kind="album"] .place-front,
+.cards-ready:not(.places-list) [data-card-kind="album"] .place-details{grid-area:1/1}
+.cards-ready:not(.places-list) [data-card-kind="album"] .place-front{z-index:2;transform-origin:left center;backface-visibility:hidden;transition:transform 500ms cubic-bezier(.22,.8,.25,1),opacity 120ms ease-out 260ms;display:flex;flex-direction:column}
+.cards-ready:not(.places-list) [data-card-kind="album"] .location-photo{flex:1;display:flex}
+.cards-ready:not(.places-list) [data-card-kind="album"] .place-photo{width:100%;min-height:300px;aspect-ratio:auto}
+.cards-ready:not(.places-list) [data-card-kind="album"] .place-photo img{position:absolute;inset:0}
+.cards-ready:not(.places-list) [data-card-kind="album"] .front-caption{min-height:220px}
+.cards-ready:not(.places-list) [data-card-kind="album"].is-open .place-front{transform:rotateY(-110deg);opacity:0;pointer-events:none}
+
+/* MODERN: a wall of restaurant posters. A diagonal cover wipe reveals the facts. */
+.modern.locations-page .places-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.modern .place-inner{border:0;box-shadow:0 14px 30px #28262420}
+.modern .place-front{display:flex;flex-direction:column;background:#282624;color:#fffaf1}
+.modern .place-photo{aspect-ratio:1.15;min-height:290px}
+.modern .front-caption{padding:28px 24px;gap:20px}
+.modern .front-caption h2{font-size:clamp(34px,3.25vw,49px);text-transform:uppercase;font-weight:800;line-height:.98;letter-spacing:-.05em}
+.modern .front-caption .location-hook{color:inherit}
+.modern .place-open{color:inherit;margin-top:auto;text-decoration:none;border:1px solid currentColor;justify-content:space-between;width:100%;padding:12px 14px;min-height:50px}
+.modern .place-card:nth-child(3n+2) .place-front{background:#e6dcd0;color:#282624}
+.modern .place-card:nth-child(3n+3) .place-front{background:#ad3327;color:#fffaf1}
+.modern .place-details{padding:26px;background:#f7f3ec;border:1px solid #282624}
+.modern .detail-top h3{font-size:32px;font-weight:800;text-transform:uppercase}
+.modern .place-open:focus-visible{outline-color:currentColor}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .place-inner{display:grid}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .place-front,
+.cards-ready:not(.places-list) [data-card-kind="poster"] .place-details{grid-area:1/1}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .place-front{z-index:2;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transition:clip-path 620ms cubic-bezier(.22,.8,.25,1)}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .location-photo{flex:1;display:flex}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .place-photo{width:100%;aspect-ratio:auto}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .place-photo img{position:absolute;inset:0}
+.cards-ready:not(.places-list) [data-card-kind="poster"] .front-caption{min-height:250px}
+.cards-ready:not(.places-list) [data-card-kind="poster"].is-open .place-front{clip-path:polygon(0 0,0 0,0 0,0 0);pointer-events:none}
+
+/* HERITAGE: a collection of folded restaurant guides, opening into two-page spreads. */
+.heritage.locations-page .places-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1180px;gap:36px;align-items:start}
+.heritage .place-inner{background:#fcf8ec;border:1px solid #293754;box-shadow:5px 6px 0 #e5dac2,6px 7px 0 #29375450,0 18px 36px #29375419}
+.heritage .place-front{display:flex;flex-direction:column;padding:24px;background:#fcf8ec;border-left:10px solid #293754}
+.heritage .place-photo{aspect-ratio:1.45;min-height:0;border:1px solid #29375435;padding:8px;background:#fcf8ec}
+.heritage .place-photo img{height:100%;object-fit:cover}
+.heritage .front-caption{padding:28px 0 2px;align-items:center;text-align:center;gap:16px}
+.heritage .front-caption h2{font:italic clamp(36px,3.8vw,54px)/1.02 var(--display);letter-spacing:-.04em}
+.heritage .front-caption .location-hook{font-size:16px}
+.heritage .place-open{font-size:14px;margin-top:4px;min-height:48px;border-block:1px solid #29375450;justify-content:center;padding:10px 20px}
+.heritage .place-details{background:#fcf8ec;padding:32px;border-top:1px solid #29375440}
+.heritage .detail-top h3{font-style:italic;font-size:36px}
+.heritage .place-details .location-hours{border-top:4px double #29375440;padding-top:18px}
+.cards-ready:not(.places-list) [data-card-kind="guide"]:not(.is-open) .place-details{display:none}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open{grid-column:1/-1}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);perspective:1800px}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-front{border-left:10px solid #293754;padding:32px}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-details{border-top:0;border-left:1px solid #29375440;box-shadow:inset 14px 0 20px -18px #29375490;transform-origin:left center;animation:guide-unfold 600ms cubic-bezier(.22,.8,.25,1) both}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open .location-photo{flex:1;display:flex;max-height:430px}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-photo{width:100%;min-height:260px;aspect-ratio:auto}
+.cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-photo img{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px)}
+@keyframes guide-unfold{from{opacity:0;transform:rotateY(-65deg)}to{opacity:1;transform:rotateY(0)}}
+
+/* List view is the same content, not a second directory or a second data set. */
+.locations-page .places-list .places-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+.locations-page .places-list .place-inner{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);padding:0;border:1px solid color-mix(in srgb,var(--ink) 30%,transparent);border-radius:0;outline:0;box-shadow:none;transform:none}
+.locations-page .places-list .place-front{display:block;padding:20px;background:#fffdf6;color:var(--ink);border-radius:0;transform:none}
+.locations-page .places-list .location-photo{display:block;order:0}
+.locations-page .places-list .place-photo{aspect-ratio:3/2;height:auto;min-height:0;border:0;border-radius:0;filter:none;transform:none;box-shadow:none}
+.locations-page .places-list .place-photo img{position:static;height:100%;visibility:visible}
+.locations-page .places-list .front-caption{padding:20px 0 0;min-height:0;border:0;text-align:left;align-items:start}
+.locations-page .places-list .front-caption h2{font-size:32px;color:var(--ink)}
+.locations-page .places-list .front-caption .location-hook{color:var(--ink)}
+.locations-page .places-list .place-details{display:flex;padding:24px;border:0;border-radius:0;transform:none;animation:none;opacity:1}
+.locations-page .places-list .detail-top,.locations-page .places-list .place-open,.locations-page .places-list .place-close,.locations-page .places-list .place-shutters{display:none}
+
+@media(hover:hover) and (pointer:fine){
+ .place-card{transition:translate 180ms ease-out}
+ .place-card:not([data-card-kind="flip"]):hover{translate:0 -4px}
+ /* The untransformed Coastal article remains the stable hover target. */
+ .places-view button:hover,.place-open:hover,.place-close:hover{text-decoration:underline;text-underline-offset:5px}
+}
+@media(max-width:1100px){
+ .locations-page .places-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .modern.locations-page .location-explorer:not(.places-list) .places-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+ .places-toolbar{align-items:start;flex-direction:column;gap:18px}
+ .places-controls{width:100%;flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
+ .places-view button{padding-inline:12px}
+ .locations-page .places-grid,.hacienda.locations-page .places-grid,.family.locations-page .places-grid,.heritage.locations-page .places-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+ .place-details,.family .place-details{padding:22px}
+ .hacienda .place-inner{padding:8px}
+ .family .place-front{padding:18px}
+ .modern.locations-page .location-explorer:not(.places-list) .places-grid{grid-template-columns:minmax(0,1fr)}
+ .modern .front-caption{padding:24px}
+ .modern .place-details{padding:24px}
+ .heritage .place-front{padding:20px}
+ .heritage .place-details{padding:24px}
+ .cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-inner{grid-template-columns:minmax(0,1fr)}
+ .cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-front{padding:20px}
+ .cards-ready:not(.places-list) [data-card-kind="guide"].is-open .place-details{border-left:0;border-top:4px double #29375440;box-shadow:none;animation:guide-mobile 350ms ease-out}
+ .cards-ready:not(.places-list) [data-card-kind="guide"].is-open .location-photo{max-height:none}
+ @keyframes guide-mobile{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+ .locations-page .places-list .place-inner{grid-template-columns:minmax(0,1fr)}
+ .locations-page .places-list .place-details{padding-top:0}
+ .cards-ready:not(.places-list) [data-card-kind="flip"] .place-photo{min-height:240px}
+ .cards-ready:not(.places-list) [data-card-kind="shutters"] .place-photo{min-height:270px}
+ .cards-ready:not(.places-list) [data-card-kind="album"] .place-photo{min-height:260px}
+}
+/* Pause motion also changes 3D faces into instant, legible replacements. */
+.motion-off .location-explorer *, .motion-off .place-card{animation:none!important;transition:none!important;translate:none!important}
+.motion-off .cards-ready:not(.places-list) [data-card-kind="flip"] .place-inner,
+.motion-off .cards-ready:not(.places-list) [data-card-kind="flip"] .place-details,
+.motion-off .cards-ready:not(.places-list) [data-card-kind="album"] .place-front{transform:none!important}
+.motion-off .cards-ready:not(.places-list) [data-card-kind="flip"]:not(.is-open) .place-details{visibility:hidden}
+.motion-off .cards-ready:not(.places-list) [data-card-kind="flip"].is-open .place-front{visibility:hidden}
+@media(prefers-reduced-motion:reduce){
+ .location-explorer *, .place-card{animation:none!important;transition:none!important;translate:none!important}
+ .cards-ready:not(.places-list) [data-card-kind="flip"] .place-inner,
+ .cards-ready:not(.places-list) [data-card-kind="flip"] .place-details,
+ .cards-ready:not(.places-list) [data-card-kind="album"] .place-front{transform:none!important}
+ .cards-ready:not(.places-list) [data-card-kind="flip"]:not(.is-open) .place-details{visibility:hidden}
+ .cards-ready:not(.places-list) [data-card-kind="flip"].is-open .place-front{visibility:hidden}
+}
+@media print{
+ .locations-page .places-grid{display:block!important}
+ .place-card{break-inside:avoid;margin-bottom:24px!important}
+ .locations-page .place-inner,.locations-page .place-front,.locations-page .place-details{display:block!important;position:static!important;transform:none!important;opacity:1!important;visibility:visible!important;animation:none!important}
+ .place-open,.place-close,.places-controls,.place-shutters{display:none!important}
+ .place-photo{max-height:200px}
+}

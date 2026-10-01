@@ -1,0 +1,117 @@
+/* Coastal-only family recipe spread. Originals stay unaltered. */
+.coastal.story-page .story-beginnings .beginnings-photos{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);align-items:center;gap:24px 40px;width:100%;max-width:960px;margin-inline:auto}
+.coastal.story-page .beginnings-photos .story-frame{max-width:none;padding:16px;background:#fffdf6;border:1px solid #e1e6df;box-shadow:0 12px 30px #173e5512}
+.coastal.story-page .beginnings-photos .story-frame img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none}
+.coastal.story-page .beginnings-photos .beginnings-soup img{aspect-ratio:1;object-fit:cover;object-position:50% 52%}
+.coastal.story-page .beginnings-photos figcaption{margin-top:12px;font:500 1rem/1.5 var(--text)}
+.coastal.story-page .beginnings-photos figcaption span{display:block;font-size:.8125rem;color:var(--muted)}
+.coastal.story-page .beginnings-photos .recipe-credits{grid-column:1/-1;color:var(--muted);font-size:.875rem}
+.coastal.story-page .beginnings-photos .recipe-credits summary{cursor:pointer;padding-block:12px;min-height:44px}
+.coastal.story-page .beginnings-photos .recipe-credits p{font-size:.875rem}
+.coastal.story-page .beginnings-photos .recipe-credits a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:600px){
+ .coastal.story-page .story-beginnings .beginnings-photos{grid-template-columns:minmax(0,1fr);gap:24px}
+ .coastal.story-page .beginnings-photos .beginnings-soup{width:min(100%,300px);justify-self:end}
+}
+.coastal.story-page #mamas-table{
+ display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.88fr);
+ gap:clamp(36px,6vw,84px);align-items:center;padding-block:clamp(48px,6vw,84px);
+}
+.coastal.story-page #mamas-table .mama-photo-pair{
+ display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0;align-items:start;isolation:isolate;min-width:0;
+}
+.coastal.story-page #mamas-table .mama-portrait{
+ grid-column:1/12;grid-row:1;width:auto;max-width:none;justify-self:stretch;
+ padding:18px 18px 20px;background:#fffdf6;border:1px solid #e1e6df;
+ box-shadow:0 14px 36px #173e5514;
+}
+.coastal.story-page #mamas-table .mama-portrait .photo-open{background:#e6edf0}
+.coastal.story-page #mamas-table .mama-portrait img{
+ display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none;
+}
+.coastal.story-page #mamas-table .mama-portrait figcaption{
+ max-width:62%;margin:0;padding-top:16px;font:500 1rem/1.45 var(--text);color:var(--ink);
+}
+.coastal.story-page #mamas-table .mama-portrait figcaption span{
+ display:block;margin-top:4px;font:400 .8125rem/1.4 var(--text);color:var(--muted);
+}
+/* The overlap is in the caption/mount area, below the full portrait image. */
+.coastal.story-page #mamas-table .mama-soup-companion{
+ grid-column:8/-1;grid-row:2;width:auto;max-width:none;justify-self:stretch;
+ margin:-70px 0 0;padding:10px 10px 0;background:#fffdf6;
+ border:1px solid #e1e6df;box-shadow:0 10px 28px #173e551b;position:relative;z-index:1;
+}
+.coastal.story-page #mamas-table .mama-soup-companion img{
+ display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 52%;border:0;
+}
+.coastal.story-page #mamas-table .mama-soup-companion figcaption{
+ margin:0;padding:12px 4px 14px;font:italic 500 clamp(1rem,1.65vw,1.3rem)/1.3 var(--display);color:var(--ink);
+}
+.coastal.story-page #mamas-table .photo-open:after{width:32px;height:32px;right:8px;bottom:8px;font-size:18px}
+.coastal.story-page #mamas-table .photo-open:active{transform:scale(.99)}
+.coastal.story-page #mamas-table .story-copy{max-width:41ch}
+.coastal.story-page #mamas-table h2{
+ margin:0 0 24px;font:500 clamp(2.35rem,4.1vw,3.65rem)/1.06 var(--display);
+ letter-spacing:-.035em;max-width:17ch;text-wrap:balance;
+}
+.coastal.story-page #mamas-table h2 em{font-weight:inherit;color:#b14d3d}
+.coastal.story-page #mamas-table .story-copy>p{
+ margin:0;max-width:39ch;font:400 1.0625rem/1.8 var(--text);text-wrap:pretty;
+}
+.coastal.story-page #mamas-table .recipe-menu-link{
+ display:inline-flex;align-items:center;justify-content:space-between;gap:24px;
+ padding:12px 0;margin-top:22px;min-height:48px;border-bottom:1px solid currentColor;
+ color:var(--ink);font:600 .9375rem/1.4 var(--text);text-decoration:none;
+}
+.coastal.story-page #mamas-table .recipe-menu-link span{
+ display:inline-block;font-size:23px;transition:transform 180ms cubic-bezier(.23,1,.32,1);
+}
+.coastal.story-page #mamas-table .recipe-menu-link:active{transform:translateY(1px)}
+.coastal.story-page #mamas-table .recipe-credits{margin-top:22px;color:var(--muted);max-width:42ch}
+.coastal.story-page #mamas-table .recipe-credits summary{
+ cursor:pointer;min-height:44px;padding:12px 0;font:400 .875rem/1.4 var(--text);
+ text-underline-offset:4px;
+}
+.coastal.story-page #mamas-table .recipe-credits>div{padding:10px 0 4px;border-top:1px solid #173e5526}
+.coastal.story-page #mamas-table .recipe-credits p{font:400 .875rem/1.65 var(--text);margin:0}
+.coastal.story-page #mamas-table .recipe-credits a{
+ display:inline-flex;align-items:center;min-height:44px;margin-block:2px 12px;font:500 .875rem/1.5 var(--text);
+}
+.coastal.story-page #mamas-table a:focus-visible,.coastal.story-page #mamas-table summary:focus-visible{
+ outline:3px solid var(--ink);outline-offset:4px;
+}
+.motion-ready .coastal.story-page #mamas-table .mama-soup-companion.is-visible{animation-delay:60ms}
+@media(hover:hover) and (pointer:fine){
+ .coastal.story-page #mamas-table .recipe-menu-link:hover span{transform:translate(2px,-2px)}
+ .coastal.story-page #mamas-table .recipe-credits summary:hover{text-decoration:underline}
+}
+@media(max-width:900px){
+ .coastal.story-page #mamas-table{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px}
+ .coastal.story-page #mamas-table .mama-portrait{grid-column:1/-1;padding:12px}
+ .coastal.story-page #mamas-table .mama-portrait figcaption{max-width:none;padding-top:14px}
+ .coastal.story-page #mamas-table .mama-soup-companion{grid-column:6/-1;margin:18px 0 0}
+ .coastal.story-page #mamas-table h2{font-size:clamp(2.15rem,4vw,3rem)}
+}
+@media(max-width:800px){
+ .coastal.story-page #mamas-table{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:44px}
+ .coastal.story-page #mamas-table .mama-photo-pair{max-width:580px;width:100%;margin-inline:auto}
+ .coastal.story-page #mamas-table .mama-soup-companion{grid-column:7/-1;max-width:245px;justify-self:end}
+ .coastal.story-page #mamas-table .story-copy{max-width:45ch;margin-inline:auto;width:100%}
+ .coastal.story-page #mamas-table h2{font-size:clamp(2.3rem,7.6vw,3.1rem)}
+ .coastal.story-page #mamas-table .story-copy>p{font-size:1rem}
+ .coastal.story-page #mamas-table .mama-soup-companion figcaption{font-size:1.1rem}
+}
+@media(prefers-reduced-motion:reduce){
+ .coastal.story-page #mamas-table .motion-enter,.coastal.story-page #mamas-table .photo-open,
+ .coastal.story-page #mamas-table .photo-open img,.coastal.story-page #mamas-table .recipe-menu-link,
+ .coastal.story-page #mamas-table .recipe-menu-link span{animation:none!important;transition:none!important;transform:none!important}
+}
+.coastal.story-page.motion-off #mamas-table .motion-enter,.coastal.story-page.motion-off #mamas-table .photo-open,
+.coastal.story-page.motion-off #mamas-table .photo-open img,.coastal.story-page.motion-off #mamas-table .recipe-menu-link,
+.coastal.story-page.motion-off #mamas-table .recipe-menu-link span{animation:none!important;transition:none!important;transform:none!important}
+@media print{
+ .coastal.story-page #mamas-table{display:block}
+ .coastal.story-page #mamas-table .mama-portrait,.coastal.story-page #mamas-table .mama-soup-companion{box-shadow:none}
+ .coastal.story-page #mamas-table .mama-soup-companion{margin-top:18px}
+ .coastal.story-page #mamas-table .story-copy{margin-top:24px}
+}

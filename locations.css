@@ -1,0 +1,91 @@
+/* Real, static location information. No JS is needed to read or navigate. */
+.locations-intro{border-top:1px solid color-mix(in srgb,var(--ink) 25%,transparent);padding-block:clamp(35px,6vw,78px) 32px}
+.locations-intro h1{font-size:clamp(44px,6.2vw,88px);margin-block:16px 24px;max-width:16ch}
+.locations-intro>p:last-child{font-size:18px;max-width:53ch}
+.location-jump{display:flex;flex-wrap:wrap;gap:4px 24px;padding-block:12px 26px}
+.location-jump a{min-height:44px;display:inline-flex;align-items:center;font-size:14px}
+.location-entry{min-width:0;scroll-margin-top:28px;display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:24px 36px;border-top:1px solid color-mix(in srgb,var(--ink) 35%,transparent);padding-block:38px}
+.location-title h2{font-size:clamp(32px,3vw,46px)}
+.location-hook{margin-top:12px;font-size:16px;font-weight:600}
+.location-reason{font-size:16px;line-height:1.7}
+.location-body address{font-style:normal;margin-top:20px;font-size:16px;line-height:1.75}
+.location-body address a{display:inline-flex;align-items:center;min-height:44px}
+.location-hours h3{font:600 16px/1.4 var(--text);margin-bottom:12px}
+.location-hours dl{margin:0;font-size:14px;font-variant-numeric:tabular-nums}
+.location-hours dl>div{display:flex;justify-content:space-between;gap:12px;margin-bottom:7px}
+.location-hours dt,.location-hours dd{margin:0}
+.location-hours dd{text-align:right;white-space:nowrap}
+.hours-note{font-size:14px;line-height:1.6;margin-top:12px;max-width:40ch}
+.location-actions{grid-column:1/-1;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.location-actions .btn{gap:12px;white-space:nowrap}
+.location-source{font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.location-actions .location-source{margin-left:auto}
+.locations-close{padding-block:65px 35px;border-top:1px solid color-mix(in srgb,var(--ink) 35%,transparent)}
+.locations-close h2{font-size:clamp(35px,4.4vw,62px)}
+.locations-close p{margin-block:22px 16px;font-size:18px}
+.directory-note{max-width:80ch;margin-bottom:40px;font-size:14px;line-height:1.7}
+.directory-note .location-source{display:inline}
+.coastal .location-home{border-top:3px solid var(--accent)}
+.coastal .location-title h2{font-style:italic}
+.hacienda .locations-intro{text-align:center}
+.hacienda .locations-intro h1,.hacienda .locations-intro>p{margin-inline:auto}
+.hacienda .location-jump{justify-content:center}
+.hacienda .locations-directory{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding-top:16px}
+.hacienda .location-entry{background:#fffbf2;border:1px solid color-mix(in srgb,var(--ink) 30%,transparent);padding:32px;grid-template-columns:1fr 1fr;gap:24px}
+.hacienda .location-title{grid-column:1/-1;padding-bottom:16px;border-bottom:4px double color-mix(in srgb,var(--ink) 30%,transparent)}
+.hacienda .location-actions .location-source{margin-left:0}
+.hacienda .locations-close{text-align:center;margin-top:55px}
+.hacienda .locations-close p{margin-inline:auto}
+.family .locations-intro{max-width:800px}
+.family .locations-directory{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.family .location-entry{border:0;background:#fffdf5;border-top:6px solid var(--surface);border-radius:8px;padding:30px;grid-template-columns:1fr 1fr;gap:20px;box-shadow:0 8px 25px #17463710}
+.family .location-title,.family .location-body{grid-column:1/-1}
+.family .location-hours{grid-column:1/-1;max-width:440px}
+.family .location-title h2{font-size:40px}
+.family .location-hook{color:var(--accent)}
+.family .location-actions .location-source{margin-left:0}
+.family .locations-close{margin-top:50px}
+.modern .locations-intro h1{font-size:clamp(40px,5.5vw,76px);max-width:19ch}
+.modern .locations-intro em{font-style:normal;color:var(--accent)}
+.modern .location-jump{border-top:2px solid var(--ink)}
+.modern .location-entry{grid-template-columns:1.25fr 1.1fr 1fr;border-top:2px solid var(--ink)}
+.modern .location-title h2{font-size:clamp(27px,2.8vw,40px);text-transform:uppercase}
+.modern .location-hook{color:var(--accent)}
+.modern .location-actions{grid-column:2/-1}
+.heritage .locations-intro{text-align:center;border-top:0}
+.heritage .locations-intro h1,.heritage .locations-intro>p{margin-inline:auto}
+.heritage .location-jump{justify-content:center;border-block:4px double color-mix(in srgb,var(--ink) 45%,transparent)}
+.heritage .locations-directory{max-width:1040px;margin:auto}
+.heritage .location-entry{grid-template-columns:1.25fr 1fr;column-gap:64px;padding-block:40px;border-top:0;border-bottom:4px double color-mix(in srgb,var(--ink) 35%,transparent)}
+.heritage .location-title{grid-column:1/-1}
+.heritage .location-title h2{font-size:48px}
+.heritage .location-hook{font:italic 26px/1.3 var(--display)}
+.heritage .location-body address{margin-top:16px}
+.heritage .locations-close{border:0;text-align:center}
+.heritage .locations-close p{margin-inline:auto}
+@media(hover:hover) and (pointer:fine){
+ .location-jump a:hover,.location-source:hover{color:var(--accent);text-decoration-thickness:2px}
+}
+@media(max-width:1100px){
+ .location-entry,.modern .location-entry{grid-template-columns:1fr 1fr}
+ .location-title,.modern .location-title{grid-column:1/-1}
+ .modern .location-actions{grid-column:1/-1}
+ .hacienda .location-entry{grid-template-columns:1fr}
+ .hacienda .location-title,.hacienda .location-actions{grid-column:1}
+}
+@media(max-width:700px){
+ .locations-intro h1,.modern .locations-intro h1{font-size:clamp(38px,9vw,58px);max-width:none}
+ .locations-intro>p:last-child{font-size:16px}
+ .location-jump{gap:0 20px;padding-bottom:20px}
+ .hacienda .locations-directory,.family .locations-directory{grid-template-columns:1fr}
+ .location-entry,.modern .location-entry,.heritage .location-entry{grid-template-columns:1fr;gap:22px;padding-block:28px}
+ .location-title,.location-body,.location-hours,.location-actions,.modern .location-actions,.heritage .location-title{grid-column:1/-1}
+ .hacienda .location-entry,.family .location-entry{padding:24px}
+ .location-title h2,.family .location-title h2,.heritage .location-title h2{font-size:36px}
+ .location-hours{max-width:450px}
+ .location-actions .location-source{margin-left:0;width:100%}
+ .location-actions .btn{font-size:14px;padding-inline:14px}
+ .locations-close{padding-top:45px}
+ .locations-close p{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.locations-page{scroll-behavior:auto}}

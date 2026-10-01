@@ -1,0 +1,165 @@
+/* Four local Our Story alternatives. Coastal and the menu galleries never load this file. */
+.story-page #family-album.memory-album {
+  --album-line: color-mix(in srgb, var(--ink) 22%, transparent);
+  padding:clamp(30px,4vw,56px); margin-block:24px 48px; min-width:0;
+}
+.story-page #family-album.memory-album .album-heading {align-items:center;gap:32px;padding-bottom:34px}
+.story-page #family-album.memory-album .album-heading h2 {font:400 clamp(2.1rem,4vw,3.5rem)/1.1 var(--display);letter-spacing:-.02em;max-width:22ch}
+.story-page #family-album.memory-album .album-heading p {max-width:40ch;font:400 1rem/1.75 var(--text)}
+.story-page #family-album.memory-album .memory-layout {min-width:0}
+.story-page #family-album.memory-album .memory-index[hidden],
+.story-page #family-album.memory-album .memory-page[hidden] {display:none!important}
+.story-page #family-album.memory-album .memory-stage {min-width:0}
+.story-page #family-album.memory-album .memory-page {
+  display:block;grid-column:auto!important;grid-row:auto!important;margin:0!important;
+  padding:0;border:0;rotate:none;background:none;min-width:0;box-shadow:none;
+}
+.story-page #family-album.memory-album .memory-page+.memory-page:not([hidden]) {margin-top:32px!important}
+.story-page #family-album.memory-album.album-ready .memory-page {margin-top:0!important;animation:memory-arrive 360ms ease-out both}
+.story-page #family-album.memory-album .memory-page .photo-open {background:transparent;border-radius:0}
+.story-page #family-album.memory-album .memory-page .photo-open img {
+  width:100%;height:clamp(280px,37vw,510px);aspect-ratio:auto;object-fit:contain;
+  transform:none;transition:none;
+}
+.story-page #family-album.memory-album .memory-page figcaption {border:0;margin:0;padding:24px 0 0;font:400 1rem/1.6 var(--text)}
+.story-page #family-album.memory-album .memory-folio {display:block;font:500 .8125rem/1.6 var(--text);letter-spacing:.08em;margin-bottom:10px}
+.story-page #family-album.memory-album .memory-caption-title {font:400 clamp(1.6rem,2.5vw,2.3rem)/1.15 var(--display);margin:0;text-transform:none;letter-spacing:-.015em}
+.story-page #family-album.memory-album .memory-credit {margin-top:14px;max-width:48ch}
+.story-page #family-album.memory-album .memory-credit summary {font:500 .875rem/1.6 var(--text);cursor:pointer;min-height:44px;padding-block:10px}
+.story-page #family-album.memory-album .memory-credit small {font:400 .875rem/1.6 var(--text);color:inherit;margin:0}
+.story-page #family-album.memory-album .memory-credit a {font:500 .875rem/1.6 var(--text);min-height:44px}
+.story-page #family-album.memory-album .memory-index {display:grid;gap:10px;min-width:0;align-content:start}
+.story-page #family-album.memory-album .memory-tab {
+  display:grid;grid-template-columns:64px 1fr;align-items:center;gap:12px;position:relative;
+  min-width:0;min-height:60px;width:100%;padding:10px;text-align:left;
+  background:transparent;border:1px solid transparent;color:inherit;cursor:pointer;
+  font:400 .9375rem/1.4 var(--text);transition:background-color 180ms,border-color 180ms,transform 240ms;
+}
+.story-page #family-album.memory-album .memory-tab[aria-selected="true"] {border-color:currentColor}
+.story-page #family-album.memory-album .memory-thumb {display:block;background:var(--surface);min-width:0}
+.story-page #family-album.memory-album .memory-thumb img {display:block;width:100%;height:64px;object-fit:contain}
+.story-page #family-album.memory-album .memory-number {display:none;font:400 .875rem/1.5 var(--text)}
+.story-page #family-album.memory-album :is(.memory-tab,.memory-page,.memory-credit summary):focus-visible {outline:3px solid var(--accent);outline-offset:5px}
+.story-page #family-album.memory-album .gallery-archive-note {font-size:.875rem;max-width:90ch}
+.story-page #family-album.memory-album .gallery-films {grid-template-columns:minmax(0,1fr);max-width:540px;margin-top:32px}
+.story-page #family-album.memory-album .gallery-film strong {font-size:1.45rem}
+.story-page #family-album.memory-album .recognition-archive {margin-top:28px}
+/* HACIENDA — an arched portrait alcove and a slender wall of family miniatures. */
+.hacienda.story-page #family-album.memory-hacienda {background:#eddbce;border:1px solid #994f3c55}
+.hacienda.story-page #family-album.memory-hacienda .memory-layout {display:grid;grid-template-columns:minmax(0,1.65fr) minmax(210px,.8fr);gap:clamp(24px,5vw,60px);align-items:center}
+.hacienda.story-page #family-album.memory-hacienda .memory-stage {grid-column:1;grid-row:1;padding:clamp(24px,4vw,48px);padding-top:clamp(45px,6vw,72px);border-radius:48% 48% 4px 4px / 110px 110px 4px 4px;background:#fff9ed;border:1px solid #994f3c55}
+.hacienda.story-page #family-album.memory-hacienda .memory-index {grid-column:2;grid-row:1;gap:14px}
+.hacienda.story-page #family-album.memory-hacienda .memory-tab {border-bottom-color:#994f3c55;padding:12px 8px}
+.hacienda.story-page #family-album.memory-hacienda .memory-tab[aria-selected="true"] {background:#fff9ed;border-color:#994f3c}
+.hacienda.story-page #family-album.memory-hacienda .memory-thumb {padding-top:8px;border-radius:50% 50% 0 0 / 20px 20px 0 0;background:#f5e9dc}
+.hacienda.story-page #family-album.memory-hacienda .memory-page figcaption {text-align:center}
+.hacienda.story-page #family-album.memory-hacienda .memory-credit {margin-inline:auto}
+.hacienda.story-page #family-album.memory-hacienda .memory-page .photo-open img {height:clamp(280px,34vw,440px)}
+/* FAMILY — a large keepsake print, with five little prints spread beneath it. */
+.family.story-page #family-album.memory-family {background:#e1e9d7;border:0;border-radius:10px}
+.family.story-page #family-album.memory-family .album-heading {align-items:start}
+.family.story-page #family-album.memory-family .memory-layout {display:flex;flex-direction:column;gap:32px}
+.family.story-page #family-album.memory-family .memory-stage {order:0;padding:clamp(14px,2.5vw,28px);background:#fffaf1;box-shadow:5px 7px 0 #17463714;max-width:910px;width:100%;align-self:center}
+.family.story-page #family-album.memory-family .memory-index {order:1;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;align-items:start;padding:10px 4px}
+.family.story-page #family-album.memory-family .memory-tab {display:flex;flex-direction:column;align-items:stretch;gap:10px;background:#fffaf1;padding:8px 8px 12px;rotate:-2deg;box-shadow:0 3px 10px #17463714;border:2px solid transparent}
+.family.story-page #family-album.memory-family .memory-tab:nth-child(even) {rotate:2deg;translate:0 8px}
+.family.story-page #family-album.memory-family .memory-tab[aria-selected="true"] {border-color:#174637;rotate:0;translate:0 -5px}
+.family.story-page #family-album.memory-family .memory-thumb img {height:100px}
+.family.story-page #family-album.memory-family .memory-tab-title {font:400 1rem/1.3 var(--display);padding-inline:3px}
+.family.story-page #family-album.memory-family .memory-page {display:grid;grid-template-columns:minmax(0,1.7fr) minmax(180px,.8fr);gap:clamp(20px,3vw,40px);align-items:center}
+.family.story-page #family-album.memory-family .memory-page figcaption {padding:0}
+.family.story-page #family-album.memory-family .memory-page .photo-open img {height:clamp(280px,34vw,410px)}
+/* MODERN — a dark editorial contact sheet, a numbered index, and one generous image. */
+.modern.story-page #family-album.memory-modern {--ink:#f7f3ec;--surface:#383632;--accent:#f5c6aa;--album-line:#f7f3ec35;background:#282624;color:var(--ink);border:0}
+.modern.story-page #family-album.memory-modern .memory-layout {display:grid;grid-template-columns:minmax(200px,.65fr) minmax(0,1.7fr);gap:clamp(28px,5vw,64px);align-items:start;border-block:1px solid var(--album-line);padding-block:30px}
+.modern.story-page #family-album.memory-modern .memory-index {gap:0}
+.modern.story-page #family-album.memory-modern .memory-tab {grid-template-columns:28px 1fr;padding:20px 10px;border:0;border-bottom:1px solid var(--album-line);gap:15px;min-height:82px}
+.modern.story-page #family-album.memory-modern .memory-thumb {display:none}
+.modern.story-page #family-album.memory-modern .memory-number {display:block;align-self:start;margin-top:4px;color:#f5c6aa}
+.modern.story-page #family-album.memory-modern .memory-tab-title {font:400 clamp(1.1rem,1.6vw,1.45rem)/1.3 var(--display)}
+.modern.story-page #family-album.memory-modern .memory-tab[aria-selected="true"] {background:#f7f3ec;color:#282624;box-shadow:inset 3px 0 #ad3327}
+.modern.story-page #family-album.memory-modern .memory-tab[aria-selected="true"] .memory-number {color:#ad3327}
+.modern.story-page #family-album.memory-modern .memory-page .photo-open {background:#201f1d}
+.modern.story-page #family-album.memory-modern .memory-page .photo-open img {height:clamp(300px,40vw,520px)}
+.modern.story-page #family-album.memory-modern .memory-page figcaption {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding-top:24px}
+.modern.story-page #family-album.memory-modern .memory-folio {grid-column:1/-1;color:#f5c6aa}
+.modern.story-page #family-album.memory-modern .memory-caption-title {grid-column:1}
+.modern.story-page #family-album.memory-modern .memory-credit {grid-column:2;margin:0;max-width:27ch}
+.modern.story-page #family-album.memory-modern .recognition-archive .photo-item figcaption small {color:inherit}
+/* HERITAGE — a bound album: text on the left leaf, a complete print on the right. */
+.heritage.story-page #family-album.memory-heritage {background:transparent;border-block:3px double #29375470;padding-inline:0}
+.heritage.story-page #family-album.memory-heritage .memory-layout {display:grid;grid-template-columns:155px minmax(0,1fr);gap:24px;align-items:start}
+.heritage.story-page #family-album.memory-heritage .memory-index {gap:3px;padding-top:18px}
+.heritage.story-page #family-album.memory-heritage .memory-tab {grid-template-columns:24px 1fr;gap:8px;padding:14px 8px;min-height:76px;border:0;border-left:2px solid transparent}
+.heritage.story-page #family-album.memory-heritage .memory-thumb {display:none}
+.heritage.story-page #family-album.memory-heritage .memory-number {display:block;color:#806021}
+.heritage.story-page #family-album.memory-heritage .memory-tab-title {font:italic 400 1.1rem/1.35 var(--display)}
+.heritage.story-page #family-album.memory-heritage .memory-tab[aria-selected="true"] {border-left-color:#806021;background:#e5dac280}
+.heritage.story-page #family-album.memory-heritage .memory-stage {background:#fffaf0;border:1px solid #80602155;box-shadow:3px 3px 0 #f4efdf,4px 4px 0 #80602155,7px 7px 0 #f4efdf,8px 8px 0 #80602135;padding:clamp(20px,3vw,40px)}
+.heritage.story-page #family-album.memory-heritage .memory-page {display:grid;grid-template-columns:minmax(140px,.66fr) minmax(0,1.35fr);gap:clamp(18px,3vw,36px);align-items:center}
+.heritage.story-page #family-album.memory-heritage .memory-page .photo-open {grid-column:2;grid-row:1;border:5px solid #f4efdf;outline:1px solid #80602155}
+.heritage.story-page #family-album.memory-heritage .memory-page .photo-open img {height:clamp(300px,34vw,450px)}
+.heritage.story-page #family-album.memory-heritage .memory-page figcaption {grid-column:1;grid-row:1;align-self:stretch;display:flex;flex-direction:column;justify-content:center;border-right:1px solid #80602145;padding:24px 24px 24px 0}
+.heritage.story-page #family-album.memory-heritage .memory-folio {font-size:.8125rem;letter-spacing:.035em;margin-bottom:30px}
+.heritage.story-page #family-album.memory-heritage .memory-caption-title {font-style:italic;font-size:clamp(1.7rem,2.6vw,2.5rem)}
+.heritage.story-page #family-album.memory-heritage .memory-credit {margin-top:30px}
+@keyframes memory-arrive {from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine) {
+  .story-page #family-album.memory-album .memory-tab:hover {background:color-mix(in srgb,var(--ink) 8%,transparent)}
+  .family.story-page #family-album.memory-family .memory-tab:hover {background:#fffaf1;transform:translateY(-4px)}
+  .modern.story-page #family-album.memory-modern .memory-tab[aria-selected="true"]:hover {background:#f7f3ec}
+}
+@media(max-width:1100px) {
+  .heritage.story-page #family-album.memory-heritage .memory-layout {grid-template-columns:130px minmax(0,1fr);gap:16px}
+  .heritage.story-page #family-album.memory-heritage .memory-page {grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px}
+  .modern.story-page #family-album.memory-modern .memory-page figcaption {display:block}
+  .modern.story-page #family-album.memory-modern .memory-credit {margin-top:12px}
+}
+@media(max-width:860px) {
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album {padding:30px 20px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .album-heading {display:block}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .album-heading p {margin-top:18px;max-width:52ch}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-layout {display:flex;flex-direction:column;grid-template-columns:none;gap:24px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-stage {order:0;width:100%;max-width:none;grid-column:auto;grid-row:auto}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-index {order:1;display:flex;overflow-x:auto;width:100%;gap:12px;padding:10px 5px 18px;scrollbar-width:thin;align-items:stretch;grid-column:auto;grid-row:auto;scroll-snap-type:x proximity;overscroll-behavior-inline:contain}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-tab {flex:0 0 136px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:10px;min-height:100px;rotate:0;translate:0;scroll-snap-align:start}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-tab-title {font-size:1rem;line-height:1.35}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-tab .memory-thumb {display:block}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-thumb img {height:76px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-tab .memory-number {display:none}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-tab[aria-selected="true"] {border:2px solid currentColor;translate:0;rotate:0;box-shadow:none}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page {display:flex;flex-direction:column;gap:0;align-items:stretch}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page .photo-open {order:0;width:100%;min-width:0;grid-column:auto;grid-row:auto}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page .photo-open img {height:clamp(240px,65vw,430px);object-fit:contain}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page figcaption {display:block;order:1;grid-column:auto;grid-row:auto;padding:22px 0 0;border:0;width:100%;min-width:0}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-folio {margin-bottom:10px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-credit {margin-top:12px}
+  .family.story-page #family-album.memory-family .memory-tab:nth-child(even) {rotate:0;translate:0}
+  .hacienda.story-page #family-album.memory-hacienda .memory-stage {padding:54px 24px 24px}
+  .heritage.story-page #family-album.memory-heritage {padding-inline:12px}
+  .heritage.story-page #family-album.memory-heritage .memory-stage {padding:24px}
+}
+@media(max-width:560px) {
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album {padding:26px 14px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page {display:flex;flex-direction:column;gap:0;align-items:stretch}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page .photo-open {order:0}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page .photo-open img {height:310px;height:clamp(250px,80vw,370px)}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-page figcaption {display:block;order:1;padding:22px 0 0;border:0}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-folio {margin-bottom:10px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-credit {margin-top:12px}
+  :is(.coastal,.hacienda,.family,.modern,.heritage).story-page #family-album.memory-album .memory-tab {flex-basis:122px}
+  .heritage.story-page #family-album.memory-heritage .memory-stage {padding:18px}
+  .family.story-page #family-album.memory-family .memory-stage {padding:14px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .story-page #family-album.memory-album :is(.memory-page,.memory-tab) {animation:none!important;transition:none!important;transform:none!important;rotate:none!important;translate:none!important}
+}
+.story-page.motion-off #family-album.memory-album :is(.memory-page,.memory-tab) {animation:none!important;transition:none!important;transform:none!important;rotate:none!important;translate:none!important}
+@media print {
+  .story-page #family-album.memory-album {background:none;color:#282624;--ink:#282624;--accent:#806021}
+  .story-page #family-album.memory-album .memory-index {display:none!important}
+  .story-page #family-album.memory-album .memory-layout {display:block}
+  .story-page #family-album.memory-album .memory-page[hidden] {display:block!important;margin-block:30px!important}
+  .story-page #family-album.memory-album .memory-stage {background:none;border:0;box-shadow:none}
+  .story-page #family-album.memory-album .memory-page {animation:none!important;break-inside:avoid}
+}

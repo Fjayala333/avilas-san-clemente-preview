@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/font-0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/font-1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/font-2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/font-3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/font-4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/font-5.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/font-6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/font-7.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/font-8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/font-9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/font-10.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/font-11.ttf) format('truetype');
+}
+
+/* Two type families per direction. Fonts served locally with OFL licenses. */
+body{--text:'DM Sans',Arial,sans-serif;font-family:var(--text)}
+body.coastal{--display:'Cormorant Garamond',Georgia,serif}
+body.hacienda{--display:'Fraunces',Cambria,serif}
+body.family{--display:'DM Serif Display',Georgia,serif}
+body.modern{--display:'Archivo Black',Arial,sans-serif}
+body.heritage{--display:'Cormorant Garamond',Georgia,serif}
+h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}
+h1,h2{letter-spacing:-.035em}h3{letter-spacing:-.015em}
+.coastal h1,.coastal h2,.heritage h1,.heritage h2{font-weight:500;line-height:1.08;letter-spacing:-.03em}
+.hacienda h1,.hacienda h2{font-weight:500;letter-spacing:-.045em;line-height:1.12}
+.family h1,.family h2{line-height:1.12;letter-spacing:-.025em}
+.modern h1,.modern h2{font-weight:400!important;letter-spacing:-.035em;line-height:1.07}
+.modern .dish h3,.modern .story-layout h2,.modern .contact-layout h2,.family .dish h3{font-family:var(--text)}
+.heritage .nav,.heritage .dish p{font-family:var(--text)}
+.coastal-stamp,.heritage-location{font-family:var(--display)}
+.stack>p,.story-layout p{line-height:1.75;max-width:60ch}
+.story-layout .source-link{font:12px/1.5 var(--text);display:block;margin-top:10px}
+.family-quote{margin:42px 0;padding:28px 0;border-block:1px solid #80808055}
+.family-quote blockquote{margin:0;font:italic 36px/1.2 var(--display)}
+.family-quote figcaption{margin-top:20px;font:13px/1.6 var(--text);max-width:50ch}
+.subhero h1{font-size:clamp(43px,5.8vw,82px)}.subhero>p:not(.eyebrow):not(.note){font-size:18px;line-height:1.65}
+.menu-category h2{letter-spacing:-.025em}.category-note{margin-bottom:26px}
+.dish h3{font-size:24px;line-height:1.25}.dish .price{font-family:var(--text);font-weight:500}
+.nav a{letter-spacing:.09em;text-transform:uppercase;font-size:12px}.brand span{letter-spacing:.1em}
+.btn{letter-spacing:.025em}.btn:active{transform:translateY(1px)}.hours{font-variant-numeric:tabular-nums}
+.coastal .header{display:grid;grid-template-columns:1fr 170px 1fr;min-height:110px;padding-block:16px}
+.coastal .brand{grid-column:2;grid-row:1;justify-self:center;position:relative;z-index:2}
+.coastal .brand span{display:none}.coastal .brand img{width:132px;height:65px}
+.coastal .nav{grid-column:1/-1;grid-row:1;display:grid;grid-template-columns:1fr 1fr 170px 1fr 1fr;gap:22px}
+.coastal .nav a{justify-self:center}.coastal .nav a:nth-child(3){grid-column:4}
+.coastal-gallery-hero{margin:0 auto 0;max-width:1600px}
+.coastal-panoramas{display:grid;grid-template-columns:.36fr 1fr .36fr;gap:22px;height:clamp(270px,34vw,455px);overflow:hidden}
+.coastal-panoramas figure{margin:0;overflow:hidden}.coastal-panoramas img{width:100%;height:100%;object-fit:cover;transform:scale(calc(1.035 - var(--scene,0)*.035))}
+.coastal-panoramas .coastal-side:first-child img{object-position:48% 65%;transform:scale(calc(1.09 - var(--scene,0)*.06))}
+.coastal-center img{object-position:50% 46%}.coastal-panoramas .room img{object-position:48% 50%}
+.coastal-gallery-caption{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:var(--paper);padding-block:24px 32px}
+.coastal-gallery-caption h1{font-size:clamp(46px,5.1vw,74px);line-height:.99;margin-top:12px}
+.coastal-gallery-caption h1 em{color:#b14d3d}.coastal-gallery-caption>div:last-child>p{font-size:16px;max-width:39ch}
+.coastal-gallery-caption .actions{margin-top:18px}.coastal-gallery-caption .eyebrow{font-size:10px}
+.coastal-invitation{padding-block:85px 95px;text-align:center}
+.coastal-invitation h2{font-size:clamp(40px,4.7vw,68px)}
+.coastal-invitation p{font:500 clamp(23px,2.4vw,32px)/1.45 var(--display);max-width:48ch;margin:24px auto}
+.coastal-invitation .text-link{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:800px){
+ .coastal .header{display:flex;min-height:85px;gap:16px}
+ .coastal .brand{margin-right:auto}.coastal .brand img{width:106px;height:55px}
+ .coastal .nav{display:flex;gap:12px}.coastal.js-nav .nav{display:none}
+ .js-nav .coastal .nav{display:none}.js-nav .coastal .nav.open{display:flex}
+ .coastal .nav-toggle{position:static}.coastal .nav a{font-size:11px}
+ .coastal-panoramas{height:270px;display:block;margin:0 16px}.coastal-side{display:none}
+ .coastal-center{height:100%}.coastal-center img{object-position:56% 45%}
+ .coastal-gallery-caption{grid-template-columns:1fr;gap:16px;padding:25px 22px 30px}
+ .coastal-gallery-caption h1{font-size:clamp(43px,11vw,63px)}
+ .coastal-gallery-caption h1 br{display:none}.coastal-gallery-caption h1 em{display:block}
+ .coastal-invitation{padding-block:50px 55px}
+ .subhero h1{font-size:clamp(39px,10vw,60px)}.subhero>p:not(.eyebrow):not(.note){font-size:16px}
+ .dish h3{font-size:21px}.family-quote blockquote{font-size:30px}
+ .modern-heading h1{font-size:clamp(35px,9.2vw,58px)}
+ .hacienda-welcome h1{font-size:clamp(34px,9vw,53px)}
+ .welcome-note h1{font-size:clamp(35px,9.4vw,53px)}
+ .heritage-title h1{font-size:clamp(38px,10.5vw,60px)}
+}
+@media(prefers-reduced-motion:reduce){.coastal-panoramas img{transform:none}}
+.motion-off .coastal-panoramas img{transform:none}

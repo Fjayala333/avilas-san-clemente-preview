@@ -1,0 +1,58 @@
+/* Clean restaurant menu, based on the owner-supplied reference. */
+.clean-menu{--menu-ink:#183e30;--menu-muted:#53665b;--menu-paper:#fffdf8;--menu-line:#d7ddd5;--menu-accent:#ad3327;--menu-gold:#c8a44c;--display:'Cormorant Garamond',Georgia,serif}
+.clean-menu main.menu-shell{max-width:1250px;margin:auto;padding:28px clamp(18px,4vw,55px) 65px}
+.clean-menu .menu-intro{display:flex;justify-content:space-between;align-items:end;gap:20px;padding:0 0 28px}
+.clean-menu .menu-intro h1{font:500 clamp(38px,4.5vw,60px)/1.06 var(--display);letter-spacing:-.03em;color:var(--menu-ink);text-transform:none}
+.clean-menu .menu-intro p{font-size:14px;color:var(--menu-muted);margin-top:8px}
+.clean-menu .menu-intro .text-link{font-size:14px}
+.clean-menu .menu-controls{display:none}
+.clean-menu.menu-enhanced .menu-controls{display:flex}
+.clean-menu .menu-tabs{gap:12px;margin-bottom:26px}
+.clean-menu .menu-tabs button{flex:1;min-width:0;padding:22px 18px;text-align:left;border:1px solid var(--menu-line);background:var(--menu-paper);color:var(--menu-ink);min-height:95px}
+.clean-menu .menu-tabs button small{display:block;font:600 12px/1.5 var(--text);letter-spacing:.15em;text-transform:uppercase;color:var(--menu-accent);margin-bottom:10px}
+.clean-menu .menu-tabs button span{font:500 clamp(23px,2.3vw,30px)/1.1 var(--display);letter-spacing:-.025em}
+.clean-menu .menu-tabs button[aria-selected=true]{background:var(--menu-ink);color:var(--menu-paper);border-color:var(--menu-gold)}
+.clean-menu .menu-tabs button[aria-selected=true] small{color:#edd180}
+.clean-menu .menu-paper{background:var(--menu-paper);border:1px solid #e8dcb8;border-top:2px solid #e8dcb8;padding:45px clamp(20px,5vw,72px) 26px;color:var(--menu-ink)}
+.clean-menu [hidden]{display:none!important}
+.clean-menu .menu-switch{justify-content:center;gap:10px;margin:0 0 25px;flex-wrap:wrap}
+.clean-menu .menu-switch button{border:0;border-radius:40px;padding:14px 21px;min-height:46px;background:#edf0e9;color:var(--menu-ink);font:700 12px/1.4 var(--text);letter-spacing:.08em;text-transform:uppercase}
+.clean-menu .menu-switch button[aria-selected=true]{background:var(--menu-accent);color:#fffdf8}
+.clean-menu .menu-description{max-width:68ch;margin:0 auto 30px;text-align:center;font:400 14px/1.7 var(--text);color:var(--menu-muted)}
+.clean-menu .menu-scroll{max-width:830px;margin:auto}
+.clean-menu.menu-enhanced .menu-scroll{max-height:72vh;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#a0a89f transparent;padding:0 24px 12px 8px;scroll-padding-top:16px}
+.clean-menu .menu-category{padding:0;margin:0 0 48px;background:none;border:0;scroll-margin-top:18px}
+.clean-menu .menu-category h2{font:500 clamp(30px,3.6vw,42px)/1.15 var(--display);text-align:center;text-transform:none;letter-spacing:-.035em;color:var(--menu-ink);margin:0 0 30px;padding:0;border:0}
+.clean-menu .menu-category h2::after{content:'';display:block;width:58px;height:2px;background:var(--menu-gold);margin:14px auto 0}
+.clean-menu .menu-category:target h2{text-decoration:none}
+.clean-menu .category-note{font:400 14px/1.7 var(--text);color:var(--menu-muted);margin:0 auto 24px;max-width:64ch;text-align:center}
+.clean-menu .dish{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;padding:20px 0;border:0;border-bottom:1px solid var(--menu-line)}
+.clean-menu .dish h3{display:flex;align-items:baseline;gap:12px;font:600 23px/1.25 var(--display);letter-spacing:-.02em;color:var(--menu-ink);text-transform:none}
+.clean-menu .dish h3::after{content:'';flex:1;min-width:16px;border-bottom:1px dotted #d4d8cf}
+.clean-menu .dish .price{font:600 14px/1.55 var(--text);font-variant-numeric:tabular-nums;color:var(--menu-accent);text-align:right;max-width:16ch;padding-top:3px}
+.clean-menu .dish p{font:400 15px/1.7 var(--text);grid-column:1/-1;color:var(--menu-muted);max-width:none}
+.clean-menu .menu-sources{padding-top:26px;max-width:900px;margin:0 auto;font:400 13px/1.7 var(--text);color:var(--menu-muted)}
+.clean-menu .menu-sources summary{cursor:pointer;min-height:44px;padding:10px 0;color:var(--menu-ink)}
+.clean-menu .menu-sources p{max-width:85ch;margin:12px 0}
+.clean-menu .menu-sources nav{display:flex;gap:16px;flex-wrap:wrap}
+.clean-menu .menu-sources nav a{display:inline-flex;align-items:center;min-height:44px}
+.clean-menu .menu-footer-note{text-align:center;margin:20px auto 0;font:400 13px/1.6 var(--text);color:var(--menu-muted)}
+.clean-menu button:focus-visible,.clean-menu .menu-scroll:focus-visible{outline:3px solid var(--menu-gold);outline-offset:4px}
+@media(hover:hover){.clean-menu .menu-tabs button:hover{border-color:var(--menu-gold)}.clean-menu .menu-switch button:hover{box-shadow:inset 0 0 0 1px currentColor}}
+@media(max-width:650px){
+ .clean-menu main.menu-shell{padding-top:20px}.clean-menu .menu-intro{align-items:start;padding-bottom:22px}
+ .clean-menu .menu-intro h1{font-size:40px}.clean-menu .menu-intro p{font-size:13px;max-width:26ch}
+ .clean-menu .menu-intro .text-link{font-size:13px;white-space:nowrap}
+ .clean-menu.menu-enhanced .menu-tabs{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:18px}
+ .clean-menu .menu-tabs button{padding:16px 13px;min-height:88px}.clean-menu .menu-tabs button small{margin-bottom:7px}
+ .clean-menu .menu-tabs button span{font-size:24px}
+ .clean-menu .menu-paper{padding:28px 18px 20px}
+ .clean-menu.menu-enhanced .menu-scroll{max-height:none;overflow:visible;padding:0}
+ .clean-menu .menu-switch{gap:8px}.clean-menu .menu-switch button{font-size:12px;padding:13px 16px}
+ .clean-menu .menu-description{font-size:14px;margin-bottom:26px}
+ .clean-menu .dish{gap:8px 10px;padding:18px 0}.clean-menu .dish h3{font-size:22px;display:block}.clean-menu .dish h3::after{display:none}
+ .clean-menu .dish .price{max-width:11ch;font-size:13px}.clean-menu .dish p{font-size:15px}
+ .clean-menu .menu-category h2{font-size:34px}.clean-menu .category-note{text-align:left}
+ .clean-menu .menu-category{margin-bottom:36px}
+}
+@media print{.clean-menu .menu-controls,.clean-menu .header,.clean-menu .topline,.clean-menu .footer{display:none!important}.clean-menu [hidden]{display:block!important}.clean-menu .menu-scroll{max-height:none!important;overflow:visible!important}.clean-menu .menu-paper{border:0;padding:0}.clean-menu .dish{break-inside:avoid}}
